@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Light.eot');
+    src: local('TT Firs Neue Light'), local('TTFirsNeue-Light'),
+        url('TTFirsNeue-Light.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Light.woff2') format('woff2'),
+        url('TTFirsNeue-Light.woff') format('woff'),
+        url('TTFirsNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Regular.eot');
+    src: local('TT Firs Neue Regular'), local('TTFirsNeue-Regular'),
+        url('TTFirsNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Regular.woff2') format('woff2'),
+        url('TTFirsNeue-Regular.woff') format('woff'),
+        url('TTFirsNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-DemiBold.eot');
+    src: local('TT Firs Neue DemiBold'), local('TTFirsNeue-DemiBold'),
+        url('TTFirsNeue-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-DemiBold.woff2') format('woff2'),
+        url('TTFirsNeue-DemiBold.woff') format('woff'),
+        url('TTFirsNeue-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Bold.eot');
+    src: local('TT Firs Neue Bold'), local('TTFirsNeue-Bold'),
+        url('TTFirsNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Bold.woff2') format('woff2'),
+        url('TTFirsNeue-Bold.woff') format('woff'),
+        url('TTFirsNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-ExtraBold.eot');
+    src: local('TT Firs Neue ExtraBold'), local('TTFirsNeue-ExtraBold'),
+        url('TTFirsNeue-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-ExtraBold.woff2') format('woff2'),
+        url('TTFirsNeue-ExtraBold.woff') format('woff'),
+        url('TTFirsNeue-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Medium.eot');
+    src: local('TT Firs Neue Medium'), local('TTFirsNeue-Medium'),
+        url('TTFirsNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Medium.woff2') format('woff2'),
+        url('TTFirsNeue-Medium.woff') format('woff'),
+        url('TTFirsNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Thin.eot');
+    src: local('TT Firs Neue Thin'), local('TTFirsNeue-Thin'),
+        url('TTFirsNeue-Thin.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Thin.woff2') format('woff2'),
+        url('TTFirsNeue-Thin.woff') format('woff'),
+        url('TTFirsNeue-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('TTFirsNeue-Black.eot');
+    src: local('TT Firs Neue Black'), local('TTFirsNeue-Black'),
+        url('TTFirsNeue-Black.eot?#iefix') format('embedded-opentype'),
+        url('TTFirsNeue-Black.woff2') format('woff2'),
+        url('TTFirsNeue-Black.woff') format('woff'),
+        url('TTFirsNeue-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Regular.eot');
+    src: url('Rawline-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Rawline-Regular.woff2') format('woff2'),
+        url('Rawline-Regular.woff') format('woff'),
+        url('Rawline-Regular.ttf') format('truetype'),
+        url('Rawline-Regular.svg#Rawline-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-SemiBold.eot');
+    src: url('Rawline-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Rawline-SemiBold.woff2') format('woff2'),
+        url('Rawline-SemiBold.woff') format('woff'),
+        url('Rawline-SemiBold.ttf') format('truetype'),
+        url('Rawline-SemiBold.svg#Rawline-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Medium.eot');
+    src: url('Rawline-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Rawline-Medium.woff2') format('woff2'),
+        url('Rawline-Medium.woff') format('woff'),
+        url('Rawline-Medium.ttf') format('truetype'),
+        url('Rawline-Medium.svg#Rawline-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rawline';
+    src: url('Rawline-Bold.eot');
+    src: url('Rawline-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Rawline-Bold.woff2') format('woff2'),
+        url('Rawline-Bold.woff') format('woff'),
+        url('Rawline-Bold.ttf') format('truetype'),
+        url('Rawline-Bold.svg#Rawline-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

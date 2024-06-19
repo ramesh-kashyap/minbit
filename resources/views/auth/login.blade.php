@@ -41,8 +41,8 @@
             </a>
         </div>
 
-        <form id="Login" method="get" class="contact__form">
-
+        <form id="Login" class="contact__form"  id="{{route('login')}}" method="POST" autocomplete="off" id="frmContactus">
+         {{ csrf_field() }}
         <div class="enter__row">
 
 
@@ -51,7 +51,7 @@
                         <img src="{{asset('')}}main/images/icon_input_mail.svg" alt="">
                         <p class="enter__input_name">Enter your email or login</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="login-email" name="email" type="text" class="order__input placeholder__input">
+                            <input id="login-email"name="username" id="uname" type="text" class="order__input placeholder__input">
                             <p class="place_span">
                                 <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
                                 your email...
@@ -65,7 +65,7 @@
                         <img src="{{asset('')}}main/images/icon_input_pass.svg" alt="">
                         <p class="enter__input_name">Enter your pass</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="login-pass" name="password" type="password" class="order__input placeholder__input order__input_pass">
+                            <input id="login-pass"  name="password" id="password" type="password" class="order__input placeholder__input order__input_pass">
                             <p class="place_span">
                                 <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
                                 your pass...
@@ -88,7 +88,7 @@
 
 
                 <div class="enter__item">
-                    <button class="enter__btn open__popup" data-popup="enter__popup">
+                    <button type="submit" name="submit" id="submit" class="enter__btn open__popup" data-popup="enter__popup">
                         <img src="{{asset('')}}main/images/icon_confirm_arrow.svg" alt="">
                         Confirm
                     </button>

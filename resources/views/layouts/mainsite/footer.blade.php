@@ -1,4 +1,3 @@
-
 <footer class="footer">
 	<div class="container">
 		<div class="footer__row d-flex align-items-center flex-wrap">
@@ -27,8 +26,8 @@
 				</li>
 			</ul>
 			<div class="footer__social">
-			    <a href="/cdn-cgi/l/email-protection#1f6c6a6f6f706d6b5f727e7673317276716b7d766b317c70" target="_blank" rel="noopener noreferrer">
-					<span><span class="__cf_email__" data-cfemail="e1929491918e9395a18c80888dcf8c888f95838895cf828e">[email&#160;protected]</span></span>
+			    <a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecae7ebe3e6a4e7e3e4fee8e3fea4e9e5" target="_blank" rel="noopener noreferrer">
+					<span><span class="__cf_email__" data-cfemail="d8abada8a8b7aaac98b5b9b1b4f6b5b1b6acbab1acf6bbb7">[email&#160;protected]</span></span>
 				</a>
 				<a href="https://facebook.com/profile.php/?id=61557032113574&name=xhp_nt__fb__action__open_user" target="_blank" rel="noopener noreferrer">
 					<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +164,7 @@
 
 </style>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script data-cfasync="false" src="{{asset('')}}main/js/email-decode.min.js"></script><script src="{{asset('')}}main/js/gsap.min.js"></script>
 <script src="{{asset('')}}main/js/rangeslider.min.js"></script>
 <script src="{{asset('')}}main/js/gsap.min.js"></script>
 
@@ -237,66 +236,404 @@ if(typeof $("#your-element-selector").html() != "undefined"){
 </script>
 
 
+<script>
+
+
+    function runAnimationM() {
+      var textWidthM = $(".mRHead .runText").width();
+      $(".mRHead .runText").animate({ "left": -textWidthM }, 20000, "linear", function() {
+        $(this).css("left", 0);
+        runAnimationM();
+      });
+    }
+    runAnimationM();
+
+    function runAnimationA() {
+      var textWidthA = $(".afSeHead .runText").width();
+      $(".afSeHead .runText").animate({ "left": -textWidthA }, 20000, "linear", function() {
+        $(this).css("left", 0);
+        runAnimationA();
+      });
+    }
+    runAnimationA();
+
+
+	$(document).ready(function() {
+		loadFaqData();
+
+		getHashTable($('.pgl__detail-list'));
+
+		$('.rlr__copy').click(function() {
+			copyAffiliateLink();
+		});
+
+		function copyAffiliateLink() {
+			var textToCopy = $('.rlr__referral').text();
+			var tempTextarea = $('<textarea>');
+			tempTextarea.val(textToCopy);
+			$('body').append(tempTextarea);
+			tempTextarea.select();
+			tempTextarea[0].setSelectionRange(0, 99999);
+			document.execCommand("copy");
+			tempTextarea.remove();
+		}
+
+
+	});
+
+	$(window).on("load", function() {
+		$("#sendvid").click(function(event) {
+			event.preventDefault()
+
+			video = $('#videourl').val();
+
+			$.ajax({
+				url: '/data/account/video.php',
+				data: {
+					video: video
+				},
+				type: 'POST',
+				success: function(data) {
+					$(".modal__overflow-layer,body,.modal__body").removeClass("visible");
+				}
+			});
+		});
+	});
+
+
+	function loadFaqData() {
+		$.getJSON("/faq.json", function(data) {
+
+			generateFaqHtml(data);
+			initializeFaq();
+
+			AOS.init({
+				easing: 'ease-in-out-sine'
+			});
+
+			$('.dashboard__coin-rate-list').slick({
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				variableWidth: true,
+				autoplay: true,
+				arrows: false,
+				dots: false,
+			});
+
+		});
+	}
+
+	function generateFaqHtml(data) {
+		$.each(data, function(index, category) {
+
+			var list = $(".faq__list-group:nth-of-type(" + (index + 1) + ")");
+
+			$.each(category.questions, function(index, question) {
+
+				$item =		'	<li class="faq__item" data-aos="animation">'+
+							'		<div class="faq__item-body">'+
+							'			<div class="faq__item-question">'+
+											question.question+
+							'			</div>'+
+							'			<div class="faq__item-answer">'+
+							'				<p>'+question.answer+'</p>'+
+							'			</div>'+
+							'		</div>'+
+							'	</li>';
+
+
+				list.append($item);
+
+			});
+
+		});
+	}
+	
+
+	function initializeFaq() {
+		$(".faq__item").click(function(e) {
+
+				$(this).find('.faq__item-body').toggleClass('open');
+  				$(this).find('.faq__item-answer').slideToggle('fast');
+
+				e.preventDefault();
+				e.stopPropagation();
+		});
+	}
+
+</script>
+
+
+<script>
+ $(document).ready(function () {
+ 	// Плавный скроллинг к якорям при клике на элементах-якорях
+ 	$('a[href^="#"]').on('click', function (event) {
+ 		event.preventDefault();
+
+ 		var target = $(this.getAttribute('href'));
+
+ 		if (target.length) {
+ 			$('html, body').animate({
+ 				scrollTop: target.offset().top
+ 			}, 1000);
+ 		}
+ 	});
+
+	$('body').attr('style','overflow-x:hidden;');
+
+ 	$('.calc__range-row .rangeslider__handle').append($('.calc__range-row .mn__point'));
+ });
+ AOS.init({
+ 	easing: 'ease-in-out-sine'
+ });
+</script>
+
+<script>
+
+	$(".action__auth,.user__profile,.action__deposit").click(function() {
+		$("body").toggleClass("hidden");
+		$(".modal__body").toggleClass("visible");
+
+	});
+	$(".modal__close-button").click(function() {
+		$("body").removeClass("hidden");
+		$(".deposit-block").removeClass("visible");
+		$(".modal__body").removeClass("visible");
+		$(".signin-block").removeClass("visible");
+		$(".signup-block").removeClass("visible");
+	});
+	$(".action__deposit").click(function() {
+		$(".deposit-block").toggleClass("visible");
+	});
+	$(".main__head-navigation, .main__head-navigation a").click(function() {
+		$(".main__head-navigation").removeClass("visible");
+		$("body").removeClass("view-navigation");
+		$("body").removeClass("visible");
+	});
+
+	$(".user__profile,.action__auth").click(function() {
+		$(".signin-block").toggleClass("visible");
+	});
+
+	$(".login-modal").click(function() {
+		$(".modal__sign-in").addClass("visible");
+		$(".modal__bonus").removeClass("visible");
+	});
+
+	$(".calc__drop-list li").click(function() {
+		var tag = $(this).parent().parent().attr('input-tag');
+		var short_name = $(this).attr('short-name');
+		$('#' + tag).text(short_name);
+		//calculator();
+	});
+
+	$(".calc__drop-list li").click(function() {
+		$(this).parent().find("li").removeClass("check");
+		$(this).toggleClass("check");
+	});
+
+	$('#invest_ammount').keyup(function() {
+		//calculator();
+	});
+</script>
+
+
+<script>
+	$(".dashboard__menu").click(function() {
+		$('.main__navigation').toggleClass('visible');
+	});
+
+	$("header .navigation__list").click(function() {
+		$('.main__navigation').toggleClass('visible');
+		$("body").toggleClass("view__menu");
+	});
+</script>
+<script>
+	function randomFloatFromInterval(min, max, fractionDigits) {
+		const fractionMultiplier = Math.pow(8, fractionDigits)
+		return Math.round(
+			(Math.random() * (max - min) + min) * fractionMultiplier,
+		) / fractionMultiplier
+	}
+
+	function circumference(r) {
+		return parseFloat(r) * 2.0 * Math.PI;
+	}
+
+
+	let timerId = setTimeout(function tick() {
+
+		var elements = document.getElementsByClassName("mining_anim");
+		var names = '';
+		for (var i = 0; i < elements.length; i++) {
+			var num = Number(elements[i].textContent) + randomFloatFromInterval(0.12, 0.2, 8);
+			elements[i].textContent = num.toFixed(5)
+		}
+		timerId = setTimeout(tick, 500); // (*)
+	}, 500);
+</script>
+<style>
+	.dashboard__menu {
+		z-index: 100;
+	}
+
+	.main__navigation.visible {
+		display: block;
+	}
+</style>
 
 
 
 <script>
 
-    $(".show_pass").click(function(e) {
-        e.preventDefault();
-    });
 
-    
-        $("#Registration").submit(function (e) {
-            
-            e.preventDefault();
-            
-            if($(".termchek").is(':checked')) {
-            
-                
-    
-                var email = $("#reg-email").val();
-                var login = $("#reg-login").val();
-                var password = $("#reg-pass").val();
-                var password_2 = $("#reg-pass-2").val();
-    
-                var widget_id = $(".h-captcha").eq(0).find('iframe').attr('data-hcaptcha-widget-id');
-    
-                $.ajax({
-                    url: '/augh/signup.php',
-                    type: "POST",
-                    data: "email=" + email + "&login=" + login + "&password=" + password + "&password_2=" + password_2 + "&g-recaptcha-response=" + hcaptcha.getResponse(widget_id),
-                    success: function (data) {
-                        if (!data.success) {
-                            $("#reg-error").text(data.message);
-                            createAlertModal("Incorrect registration details!", data.message, '');
-                            console.log(data.success);
-                            hcaptcha.reset(widget_id);
-                            if (data.code == 2) {
-                                hcaptcha.reset(widget_id);
-                            }
-    
-                        } else if (data.success) {
-                            console.log(data.success);
-                            document.location = "/dashboard";
-                        }
-    
-                    }
-                })
-            }
-            else{
-                createAlertModal("Please read the Services Agreement!", "You have not agreed to the Services Agreement and Privacy Policy!", '');
-            }
-       
-    });
-        
-    
-        
-    
-    
+$(window).on("load", function(){
 
-    
+$('.exchange__run__curs').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  autoplay: true,
+  arrows: false,
+  dots: false, 
+   variableWidth: true,
+   centerMode:true,
+     autoplaySpeed: 0,
+  speed: 6000,
+   cssEase:'linear'
+});
+
+ function mS_achievementsSlider() {
+  if (window.innerWidth < 1060) {
+    $('.mS_achievements').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 780,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 560,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
+}
+
+
+mS_achievementsSlider();
+$(".premiumPlans").hide();   
+
+
+AOS.init({
+easing: 'ease-in-out-sine'
+});
+
+});
 
 </script>
+
+
+<script>
+	
+		$(document).ready(function () {
+
+
+
+			var items = $('.beginnerSlider .begS__item');
+			function showNextItem() {      
+				var visibleItem = $('.beginnerSlider .visible');
+				visibleItem.removeClass('visible');
+				var nextItem = visibleItem.next('.begS__item');
+				if (nextItem.length === 0) {
+				nextItem = items.first();
+				}
+				nextItem.addClass('visible');
+			}    
+			setInterval(showNextItem, 3000);
+
+
+
+
+
+
+			var images = ['images/afilRobot.png', 'images/afilRobot2.png'];
+			var currentIndex = 0;
+
+			function changeImage() {
+				// Выбираем элемент с классом afilRoboto и меняем src атрибут на следующее изображение
+				$('.afilRoboto').attr('src', images[currentIndex]);
+
+				// Увеличиваем индекс, чтобы выбрать следующее изображение
+				currentIndex = (currentIndex + 1) % images.length;
+
+				// Запускаем следующее изменение через 3 секунды
+				setTimeout(changeImage, 3000);
+			}
+
+			// Запускаем первую смену изображения
+			changeImage();
+		});
+
+		$(document).ready(function () {
+		    
+		    $('.gotovideo').click(function() {
+		        window.location.href = '/video';
+		    });
+		    
+			// Обработчик события щелчка по элементу списка
+			$('.begin__list li').click(function () {
+				// Убираем класс 'active' у всех элементов списка
+				$('.begin__list li').removeClass('active');
+				// Добавляем класс 'active' только к выбранному элементу
+				$(this).addClass('active');
+
+				// Получаем значение атрибута 'type' выбранного элемента
+				var tabType = $(this).attr('type');
+
+				// Скрываем все блоки в .beginTabGroup
+				$('.beginTabGroup div').hide();
+
+				// Отображаем блок, соответствующий выбранному типу
+				$('.beginTabGroup .' + tabType).show();
+			});
+		});
+		// Массив фоновых изображений
+		var backgrounds = [
+			"url('images/mArobot.png') center top no-repeat",
+			"url('images/mArobot2.png') center top no-repeat"
+		];
+
+		var aboutRobot = $('.aboutRobot');
+		var currentIndex = 0;
+
+		// Функция для смены фона
+		function changeBackground() {
+			aboutRobot.css({
+				'background': backgrounds[currentIndex],
+				'background-size': 'contain'
+			});
+			currentIndex = (currentIndex + 1) % backgrounds.length;
+		}
+
+		// Смена фона каждые 3 секунды (3000 миллисекунд)
+		setInterval(changeBackground, 3000);
+
+		AOS.init({
+			easing: 'ease-in-out-sine'
+		});
+	</script>
 
 	<body>

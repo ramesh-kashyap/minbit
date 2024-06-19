@@ -4,7 +4,7 @@
 <head>
     <title>MINTBIT</title>
 
-    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('')}}main/js/jquery-3.5.1.min.js"></script>
 
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#10131a">
@@ -57,19 +57,16 @@
 
 </head>
 
-
-
-<div style="display: none">
-    <header class="header" id="header">
+<header class="header" id="header">
 	<div class="container">
 	<div class="d-flex justify-content-between align-items-center">
 		<a href="/" class="logo">
-		<img src="./images/logo.svg" alt="">
+		<img src="{{asset('')}}main/images/logo.svg" alt="">
 		</a>
 		<div class="menu">
 		<div class="menu__top">
 			<a href="/" class="logo">
-			<img src="./images/logo.svg" alt="">
+			<img src="{{asset('')}}main/images/logo.svg" alt="">
 			</a>
 			<button class="menu__close">
 			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +99,7 @@
 				<div class="video_bg">
 					<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 				</div>
-				<img src="./images/video_icon.svg" alt="">
+				<img src="{{asset('')}}main/images/video_icon.svg" alt="">
 				Live-video
 				</a>
 			</li>
@@ -188,8 +185,3 @@
 	</div>
 	</div>
 </header>
-
-
-
-
-</div>

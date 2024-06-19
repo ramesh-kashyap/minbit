@@ -27,7 +27,8 @@
             </a>
         </div>
 
-        <form id="Registration" class="">
+        <form id="Registration" class="" method="POST" action="{{route('registers')}}" autocomplete="off" id="frmContactus">
+        {{ csrf_field() }}
 
         <div class="enter__row">
 
@@ -36,12 +37,11 @@
                 <div class="enter__item">
                     <div class="enter__group">
                         <img src="{{asset('')}}main/images/icon_input_user.svg" alt="">
-                        <p class="enter__input_name">Enter your login</p>
+                        <p class="enter__input_name">Enter your Invite Code</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="reg-login" name="login" type="text" class="order__input placeholder__input ">
+                            <input id="reg-login" type="text" class="order__input placeholder__input"  name="sponsor" id="cpassword">
                             <p class="place_span">
-                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
-                                your login...
+                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt="">Sponsor Id
                             </p>
                         </div>
                     </div>
@@ -49,26 +49,25 @@
                 <div class="enter__item">
                     <div class="enter__group">
                         <img src="{{asset('')}}main/images/icon_input_mail.svg" alt="">
-                        <p class="enter__input_name">Enter your email</p>
+                        <p class="enter__input_name">Enter your Name</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="reg-email" name="email" type="text" class="order__input placeholder__input">
+                            <input id="reg-email" name="name" id="cpassword" type="text" class="order__input placeholder__input">
                             <p class="place_span">
-                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
-                                your email...
+                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Name
                             </p>
                         </div>
                     </div>
                 </div>
+               
                 <div class="enter__item">
                     <div class="enter__group">
                         <img src="{{asset('')}}main/images/icon_input_pass.svg" alt="">
-                        <p class="enter__input_name">Enter your pass</p>
+                        <p class="enter__input_name">Enter your Email</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="reg-pass" name="password" type="password" class="order__input placeholder__input order__input_pass">
+                            <input id="reg-pass" name="email" id="cpassword" type="email" class="order__input placeholder__input order__input_pass">
                             <p class="place_span">
                                 <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
-                                your pass...
-                            </p>
+                                your Email
                             <button class="show_pass"></button>
                         </div>
                     </div>
@@ -76,18 +75,42 @@
                 <div class="enter__item">
                     <div class="enter__group">
                         <img src="{{asset('')}}main/images/icon_input_confirmpass.svg" alt="">
-                        <p class="enter__input_name">Confirm your pass</p>
+                        <p class="enter__input_name">Confirm your Phone</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="reg-pass-2" name="password_2" type="password" class="order__input placeholder__input order__input_pass">
+                            <input id="reg-pass-2"  name="phone" id="cpassword" class="order__input placeholder__input order__input_pass">
                             <p class="place_span">
-                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please confirm
-                                your pass...
+                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter your Phone number
                             </p>
                             <button class="show_pass"></button>
                         </div>
                     </div>
                 </div>
-                
+                <div class="row">
+                <div class="enter__item" style="width: 50%;margin: auto;">
+                    <div class="enter__group">
+                        <img src="{{asset('')}}main/images/icon_input_mail.svg" alt="">
+                        <p class="enter__input_name">Enter Password</p>
+                        <div class="enter__input placeholder__group_input">
+                            <input id="reg-email" name="password" id="email" type="password" class="order__input placeholder__input">
+                            <p class="place_span">
+                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Password
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="enter__item" style="width: 50%;margin: auto;">
+                    <div class="enter__group">
+                        <img src="{{asset('')}}main/images/icon_input_mail.svg" alt="">
+                        <p class="enter__input_name">Confirm Password</p>
+                        <div class="enter__input placeholder__group_input">
+                            <input id="reg-email" name="password_confirmation" id="email" type="password" class="order__input placeholder__input">
+                            <p class="place_span">
+                                <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Confirm Password
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
                 <div class="modal__item-input" style="width: 100%;margin: auto;">
                     <div style="width: fit-content; margin: auto;">
                         <label class="containerch">
@@ -107,7 +130,7 @@
                     }
                 </style>
                 
-                <script>
+                <!-- <script>
                     $(".termsandcond").click(function(e){
                         alertHead = "Services Agreement and Privacy Policy";
                         alertText = `USER AGREEMENT
@@ -319,7 +342,7 @@
                         <div class="captcha" style="margin: auto;width: fit-content;">
                             <div class="h-captcha" data-theme="" data-sitekey="2827a667-6929-4a6f-a25b-66a7531f0ebc"></div>
                         </div>
-                    </div>
+                    </div> -->
 
                 
 

@@ -125,7 +125,7 @@
 
 
 					                <div class="modal__button modal__form-bottom">
-					                    <button id="make_deposit" class="submit-btn" type="button" >Withdraw</button>
+					                    <button id="make_deposit" class="submit-btn" type="submit" >Withdraw</button>
 					                </div>
 
 					                <div class="modalDeposit-text">

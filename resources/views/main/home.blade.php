@@ -576,57 +576,43 @@
 		<div class="calculate__wrap">
 			<div class="calculate__top row">
 				<div class="col-lg-4">
-					<div class="top__item lzy_bl" data-image="{{asset('')}}main/images/calc_bg1.png">
+					<div class="top__item" data-image="http://127.0.0.1:8000/main/images/calc_bg1.png" style="background-image: url(&quot;http://127.0.0.1:8000/main/images/calc_bg1.png&quot;);">
 						<p class="top__name">Select currency:</p>
 						<button class="chose__btn open_currency">
-							<img class="selected_icon" src="{{asset('')}}main/images/profit_item_icon1.png" alt="" />
-							<span class="selected_name"> matic </span>
-							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
-								fill="none">
-								<path
-									d="M4.4705 11.9339C5.33917 8.23067 8.23068 5.33916 11.9339 4.4705C14.6083 3.84317 17.3917 3.84317 20.0661 4.4705C23.7693 5.33916 26.6608 8.23068 27.5295 11.9339C28.1568 14.6083 28.1568 17.3917 27.5295 20.0661C26.6608 23.7693 23.7693 26.6608 20.0661 27.5295C17.3917 28.1568 14.6083 28.1568 11.9339 27.5295C8.23068 26.6608 5.33917 23.7693 4.4705 20.0661C3.84317 17.3917 3.84317 14.6083 4.4705 11.9339Z"
-									stroke="#7E7EE2" stroke-width="2" />
-								<path d="M19.3334 14.6667L16.0001 18L12.6667 14.6667" stroke="#7E7EE2" stroke-width="2"
-									stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
+							<img class="selected_icon" src="http://127.0.0.1:8000/main/images/usdt.png" alt="">
+							<span class="selected_name">usdt</span>
+							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+								<path d="M4.4705 11.9339C5.33917 8.23067 8.23068 5.33916 11.9339 4.4705C14.6083 3.84317 17.3917 3.84317 20.0661 4.4705C23.7693 5.33916 26.6608 8.23068 27.5295 11.9339C28.1568 14.6083 28.1568 17.3917 27.5295 20.0661C26.6608 23.7693 23.7693 26.6608 20.0661 27.5295C17.3917 28.1568 14.6083 28.1568 11.9339 27.5295C8.23068 26.6608 5.33917 23.7693 4.4705 20.0661C3.84317 17.3917 3.84317 14.6083 4.4705 11.9339Z" stroke="#7E7EE2" stroke-width="2"></path>
+								<path d="M19.3334 14.6667L16.0001 18L12.6667 14.6667" stroke="#7E7EE2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg> -->
 						</button>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="top__item lzy_bl" data-image="{{asset('')}}main/images/calc_bg2.png">
+					<div class="top__item" data-image="http://127.0.0.1:8000/main/images/calc_bg2.png" style="background-image: url(&quot;http://127.0.0.1:8000/main/images/calc_bg2.png&quot;);">
 						<p class="top__name">Enter the amount:</p>
 						<div class="d-flex align-items-center calc_input__wrap">
-							<svg xmlns="http://www.w3.org/2000/svg" width="34" height="32" viewBox="0 0 34 32"
-								fill="none">
-								<path
-									d="M2.56846 11.0105C3.6335 6.7214 7.03444 3.40512 11.3483 2.44923L12.0669 2.28999C15.3162 1.57 18.6836 1.57 21.9329 2.28999L22.6515 2.44923C26.9654 3.40512 30.3663 6.72141 31.4314 11.0105C32.245 14.2871 32.245 17.7129 31.4314 20.9895C30.3663 25.2786 26.9654 28.5949 22.6515 29.5508L21.9329 29.71C18.6836 30.43 15.3162 30.43 12.0669 29.71L11.3483 29.5508C7.03444 28.5949 3.6335 25.2786 2.56846 20.9895C1.75485 17.7129 1.75485 14.2871 2.56846 11.0105Z"
-									stroke="#7E7EE2" stroke-width="2.375" />
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M17.0004 8.08325C17.6058 8.08325 18.0965 8.54557 18.0965 9.11586V9.96066H18.2179C20.2565 9.96066 21.75 11.6302 21.75 13.4966C21.75 14.0669 21.2592 14.5292 20.6538 14.5292C20.0485 14.5292 19.5577 14.0669 19.5577 13.4966C19.5577 12.5979 18.87 12.0259 18.2179 12.0259H18.0965V15.2767L19.5765 15.7837C20.9214 16.2444 21.75 17.4974 21.75 18.8243C21.75 20.5133 20.3964 22.0391 18.5305 22.0391H18.0965V22.884C18.0965 23.4543 17.6058 23.9166 17.0004 23.9166C16.395 23.9166 15.9042 23.4543 15.9042 22.884V22.0391H15.7821C13.7435 22.0391 12.25 20.3696 12.25 18.5032C12.25 17.9329 12.7408 17.4705 13.3462 17.4705C13.9515 17.4705 14.4423 17.9329 14.4423 18.5032C14.4423 19.4018 15.13 19.9738 15.7821 19.9738H15.9042V16.7233L14.4235 16.216C13.0786 15.7553 12.25 14.5024 12.25 13.1754C12.25 11.4864 13.6036 9.96066 15.4695 9.96066H15.9042V9.11586C15.9042 8.54557 16.395 8.08325 17.0004 8.08325ZM15.9042 12.0259H15.4695C14.99 12.0259 14.4423 12.4541 14.4423 13.1754C14.4423 13.727 14.7834 14.1418 15.1727 14.2751L15.9042 14.5257V12.0259ZM18.0965 17.4742V19.9738H18.5305C19.01 19.9738 19.5577 19.5456 19.5577 18.8243C19.5577 18.2727 19.2166 17.8579 18.8273 17.7246L18.0965 17.4742Z"
-									fill="#7E7EE2" />
+							<svg xmlns="http://www.w3.org/2000/svg" width="34" height="32" viewBox="0 0 34 32" fill="none">
+								<path d="M2.56846 11.0105C3.6335 6.7214 7.03444 3.40512 11.3483 2.44923L12.0669 2.28999C15.3162 1.57 18.6836 1.57 21.9329 2.28999L22.6515 2.44923C26.9654 3.40512 30.3663 6.72141 31.4314 11.0105C32.245 14.2871 32.245 17.7129 31.4314 20.9895C30.3663 25.2786 26.9654 28.5949 22.6515 29.5508L21.9329 29.71C18.6836 30.43 15.3162 30.43 12.0669 29.71L11.3483 29.5508C7.03444 28.5949 3.6335 25.2786 2.56846 20.9895C1.75485 17.7129 1.75485 14.2871 2.56846 11.0105Z" stroke="#7E7EE2" stroke-width="2.375"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0004 8.08325C17.6058 8.08325 18.0965 8.54557 18.0965 9.11586V9.96066H18.2179C20.2565 9.96066 21.75 11.6302 21.75 13.4966C21.75 14.0669 21.2592 14.5292 20.6538 14.5292C20.0485 14.5292 19.5577 14.0669 19.5577 13.4966C19.5577 12.5979 18.87 12.0259 18.2179 12.0259H18.0965V15.2767L19.5765 15.7837C20.9214 16.2444 21.75 17.4974 21.75 18.8243C21.75 20.5133 20.3964 22.0391 18.5305 22.0391H18.0965V22.884C18.0965 23.4543 17.6058 23.9166 17.0004 23.9166C16.395 23.9166 15.9042 23.4543 15.9042 22.884V22.0391H15.7821C13.7435 22.0391 12.25 20.3696 12.25 18.5032C12.25 17.9329 12.7408 17.4705 13.3462 17.4705C13.9515 17.4705 14.4423 17.9329 14.4423 18.5032C14.4423 19.4018 15.13 19.9738 15.7821 19.9738H15.9042V16.7233L14.4235 16.216C13.0786 15.7553 12.25 14.5024 12.25 13.1754C12.25 11.4864 13.6036 9.96066 15.4695 9.96066H15.9042V9.11586C15.9042 8.54557 16.395 8.08325 17.0004 8.08325ZM15.9042 12.0259H15.4695C14.99 12.0259 14.4423 12.4541 14.4423 13.1754C14.4423 13.727 14.7834 14.1418 15.1727 14.2751L15.9042 14.5257V12.0259ZM18.0965 17.4742V19.9738H18.5305C19.01 19.9738 19.5577 19.5456 19.5577 18.8243C19.5577 18.2727 19.2166 17.8579 18.8273 17.7246L18.0965 17.4742Z" fill="#7E7EE2"></path>
 							</svg>
 							<div class="placeholder__group_input">
-								<input type="text" class="calc_input placeholder__input" id="invest_ammount"/>
-								<p class="place_span">Please enter amount...</p>
+								<input type="text" class="calc_input placeholder__input" id="invest_ammount">
+								<p class="place_span fixed_span">Please enter amount...</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="top__item mb-0 lzy_bl" data-image="./images/calc_bg3.png">
+					<div class="top__item mb-0" data-image="./images/calc_bg3.png" style="background-image: url(&quot;./images/calc_bg3.png&quot;);">
 						<p class="top__name">Enter the days:</p>
 						<div class="d-flex align-items-center calc_input__wrap">
-							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32"
-								fill="none">
-								<path
-									d="M2.06919 21.1434L3.22667 20.8781L2.06919 21.1434ZM2.06919 11.8093L3.22667 12.0746L2.06919 11.8093ZM27.9305 11.8093L26.773 12.0746L27.9305 11.8093ZM27.9305 21.1434L26.773 20.8781L27.9305 21.1434ZM19.5601 29.71L19.8373 30.8647L19.5601 29.71ZM10.4396 29.71L10.7168 28.5553L10.4396 29.71ZM10.4396 3.24276L10.7168 4.39745L10.4396 3.24276ZM19.5601 3.24276L19.8373 2.08806V2.08806L19.5601 3.24276ZM9.96496 1.75C9.96496 1.09416 9.4333 0.5625 8.77746 0.5625C8.12163 0.5625 7.58996 1.09416 7.58996 1.75H9.96496ZM7.58996 5.7301C7.58996 6.38593 8.12163 6.9176 8.77746 6.9176C9.4333 6.9176 9.96496 6.38593 9.96496 5.7301H7.58996ZM22.4097 1.75C22.4097 1.09416 21.878 0.5625 21.2222 0.5625C20.5664 0.5625 20.0347 1.09416 20.0347 1.75H22.4097ZM20.0347 5.7301C20.0347 6.38593 20.5664 6.9176 21.2222 6.9176C21.878 6.9176 22.4097 6.38593 22.4097 5.7301H20.0347ZM3.22667 20.8781C2.56311 17.983 2.56311 14.9697 3.22667 12.0746L0.9117 11.544C0.168105 14.7883 0.168105 18.1644 0.9117 21.4087L3.22667 20.8781ZM26.773 12.0746C27.4366 14.9697 27.4366 17.983 26.773 20.8781L29.088 21.4087C29.8316 18.1644 29.8316 14.7883 29.088 11.544L26.773 12.0746ZM19.2829 28.5553C16.4656 29.2316 13.534 29.2316 10.7168 28.5553L10.1624 30.8647C13.3441 31.6285 16.6556 31.6285 19.8373 30.8647L19.2829 28.5553ZM10.7168 4.39745C13.534 3.72113 16.4656 3.72113 19.2829 4.39745L19.8373 2.08806C16.6556 1.32426 13.3441 1.32426 10.1624 2.08806L10.7168 4.39745ZM10.7168 28.5553C7.01362 27.6663 4.10284 24.7009 3.22667 20.8781L0.9117 21.4087C1.98399 26.0871 5.55904 29.7596 10.1624 30.8647L10.7168 28.5553ZM19.8373 30.8647C24.4406 29.7596 28.0157 26.0871 29.088 21.4087L26.773 20.8781C25.8968 24.7009 22.9861 27.6663 19.2829 28.5553L19.8373 30.8647ZM19.2829 4.39745C22.9861 5.28645 25.8968 8.25183 26.773 12.0746L29.088 11.544C28.0157 6.86558 24.4406 3.19316 19.8373 2.08806L19.2829 4.39745ZM10.1624 2.08806C5.55904 3.19316 1.98399 6.86557 0.9117 11.544L3.22667 12.0746C4.10284 8.25182 7.01362 5.28645 10.7168 4.39745L10.1624 2.08806ZM2.55509 11.2957H27.4446V8.9207H2.55509V11.2957ZM7.58996 1.75V5.7301H9.96496V1.75H7.58996ZM20.0347 1.75V5.7301H22.4097V1.75H20.0347Z"
-									fill="#7E7EE2" />
-								<path
-									d="M17.283 19.0461C17.9242 18.5901 18.3232 17.9061 18.3232 16.9798C18.3232 15.0561 16.8412 14.0586 15.0885 14.0586C13.3357 14.0586 11.8395 15.0561 11.8395 16.9798C11.8395 17.9061 12.2527 18.5901 12.8797 19.0461C12.0105 19.5733 11.5117 20.4426 11.5117 21.4543C11.5117 23.2926 12.8655 24.4326 15.0885 24.4326C17.2972 24.4326 18.6652 23.2926 18.6652 21.4543C18.6652 20.4426 18.1665 19.5733 17.283 19.0461ZM15.0885 15.9111C15.8295 15.9111 16.371 16.3386 16.371 17.0796C16.371 17.8063 15.8295 18.2623 15.0885 18.2623C14.3475 18.2623 13.806 17.8063 13.806 17.0796C13.806 16.3386 14.3475 15.9111 15.0885 15.9111ZM15.0885 22.5801C14.148 22.5801 13.464 22.0956 13.464 21.1978C13.464 20.3143 14.148 19.8298 15.0885 19.8298C16.029 19.8298 16.713 20.3143 16.713 21.1978C16.713 22.0956 16.029 22.5801 15.0885 22.5801Z"
-									fill="#7E7EE2" />
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
+								<path d="M2.06919 21.1434L3.22667 20.8781L2.06919 21.1434ZM2.06919 11.8093L3.22667 12.0746L2.06919 11.8093ZM27.9305 11.8093L26.773 12.0746L27.9305 11.8093ZM27.9305 21.1434L26.773 20.8781L27.9305 21.1434ZM19.5601 29.71L19.8373 30.8647L19.5601 29.71ZM10.4396 29.71L10.7168 28.5553L10.4396 29.71ZM10.4396 3.24276L10.7168 4.39745L10.4396 3.24276ZM19.5601 3.24276L19.8373 2.08806V2.08806L19.5601 3.24276ZM9.96496 1.75C9.96496 1.09416 9.4333 0.5625 8.77746 0.5625C8.12163 0.5625 7.58996 1.09416 7.58996 1.75H9.96496ZM7.58996 5.7301C7.58996 6.38593 8.12163 6.9176 8.77746 6.9176C9.4333 6.9176 9.96496 6.38593 9.96496 5.7301H7.58996ZM22.4097 1.75C22.4097 1.09416 21.878 0.5625 21.2222 0.5625C20.5664 0.5625 20.0347 1.09416 20.0347 1.75H22.4097ZM20.0347 5.7301C20.0347 6.38593 20.5664 6.9176 21.2222 6.9176C21.878 6.9176 22.4097 6.38593 22.4097 5.7301H20.0347ZM3.22667 20.8781C2.56311 17.983 2.56311 14.9697 3.22667 12.0746L0.9117 11.544C0.168105 14.7883 0.168105 18.1644 0.9117 21.4087L3.22667 20.8781ZM26.773 12.0746C27.4366 14.9697 27.4366 17.983 26.773 20.8781L29.088 21.4087C29.8316 18.1644 29.8316 14.7883 29.088 11.544L26.773 12.0746ZM19.2829 28.5553C16.4656 29.2316 13.534 29.2316 10.7168 28.5553L10.1624 30.8647C13.3441 31.6285 16.6556 31.6285 19.8373 30.8647L19.2829 28.5553ZM10.7168 4.39745C13.534 3.72113 16.4656 3.72113 19.2829 4.39745L19.8373 2.08806C16.6556 1.32426 13.3441 1.32426 10.1624 2.08806L10.7168 4.39745ZM10.7168 28.5553C7.01362 27.6663 4.10284 24.7009 3.22667 20.8781L0.9117 21.4087C1.98399 26.0871 5.55904 29.7596 10.1624 30.8647L10.7168 28.5553ZM19.8373 30.8647C24.4406 29.7596 28.0157 26.0871 29.088 21.4087L26.773 20.8781C25.8968 24.7009 22.9861 27.6663 19.2829 28.5553L19.8373 30.8647ZM19.2829 4.39745C22.9861 5.28645 25.8968 8.25183 26.773 12.0746L29.088 11.544C28.0157 6.86558 24.4406 3.19316 19.8373 2.08806L19.2829 4.39745ZM10.1624 2.08806C5.55904 3.19316 1.98399 6.86557 0.9117 11.544L3.22667 12.0746C4.10284 8.25182 7.01362 5.28645 10.7168 4.39745L10.1624 2.08806ZM2.55509 11.2957H27.4446V8.9207H2.55509V11.2957ZM7.58996 1.75V5.7301H9.96496V1.75H7.58996ZM20.0347 1.75V5.7301H22.4097V1.75H20.0347Z" fill="#7E7EE2"></path>
+								<path d="M17.283 19.0461C17.9242 18.5901 18.3232 17.9061 18.3232 16.9798C18.3232 15.0561 16.8412 14.0586 15.0885 14.0586C13.3357 14.0586 11.8395 15.0561 11.8395 16.9798C11.8395 17.9061 12.2527 18.5901 12.8797 19.0461C12.0105 19.5733 11.5117 20.4426 11.5117 21.4543C11.5117 23.2926 12.8655 24.4326 15.0885 24.4326C17.2972 24.4326 18.6652 23.2926 18.6652 21.4543C18.6652 20.4426 18.1665 19.5733 17.283 19.0461ZM15.0885 15.9111C15.8295 15.9111 16.371 16.3386 16.371 17.0796C16.371 17.8063 15.8295 18.2623 15.0885 18.2623C14.3475 18.2623 13.806 17.8063 13.806 17.0796C13.806 16.3386 14.3475 15.9111 15.0885 15.9111ZM15.0885 22.5801C14.148 22.5801 13.464 22.0956 13.464 21.1978C13.464 20.3143 14.148 19.8298 15.0885 19.8298C16.029 19.8298 16.713 20.3143 16.713 21.1978C16.713 22.0956 16.029 22.5801 15.0885 22.5801Z" fill="#7E7EE2"></path>
 							</svg>
 							<div class="placeholder__group_input">
-								<input type="text" class="calc_input placeholder__input" id="calc_days_val"/>
+								<input type="text" class="calc_input placeholder__input" id="calc_days_val">
 								<p class="place_span">Please enter days...</p>
 							</div>
 						</div>
@@ -638,17 +624,15 @@
 				<div class="col-lg-4 d-flex mb-3 mb-lg-0">
 					<div class="profit__item">
 						<p class="profit__name">Your profit:</p>
-						<img class="profit__icon selected_icon" src="{{asset('')}}main/images/profit_item_icon1.png" alt=""/>
-						<p class="profit__first text_center fz_24 ff_tt selected_name_full">MATIC</p>
-						<p class="profit__second text_center fz_24 ff_tt" id="retcalc_profit">
-							0
-						</p>
+						<img class="profit__icon selected_icon" src="http://127.0.0.1:8000/main/images/usdt.png" alt="">
+						<p class="profit__first text_center fz_24 ff_tt selected_name_full">TETHER</p>
+						<p class="profit__second text_center fz_24 ff_tt" id="retcalc_profit">0</p>
 					</div>
 				</div>
 				<div class="col-lg-4 d-flex mb-3 mb-lg-0">
 					<div class="profit__item">
 						<p class="profit__name">MH/s profit:</p>
-						<img src="{{asset('')}}main/images/profit_item_icon2.svg" alt="" class="profit__icon" />
+						<img src="http://127.0.0.1:8000/main/images/profit_item_icon2.svg" alt="" class="profit__icon">
 						<p class="profit__first text_center fz_24 ff_tt" id="retcalc_perday">1%</p>
 						<p class="profit__second profit__second_light text_center fz_24 ff_tt">
 							Your <g id="calc_days_amount">1</g>-day profit
@@ -658,7 +642,7 @@
 				<div class="col-lg-4 d-flex mb-3 mb-lg-0">
 					<div class="profit__item">
 						<p class="profit__name">Your level in mining:</p>
-						<img src="{{asset('')}}main/images/profit_item_icon3.png" alt="" class="profit__icon" />
+						<img src="http://127.0.0.1:8000/main/images/profit_item_icon3.png" alt="" class="profit__icon">
 						<p class="profit__first text_center fz_24 ff_tt">Within the <g id="retcalc_level">1</g> lvl</p>
 						<p class="profit__second text_center fz_24 ff_tt">
 							<g id="retcalc_hash">Minimal Deposit $10!</g>
@@ -669,136 +653,119 @@
 			<div class="currency_variant open_currency d-flex flex-column">
 				<button class="currency_close">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-						<path
-							d="M3.35288 8.95043C4.00437 6.17301 6.17301 4.00437 8.95043 3.35288C10.9563 2.88237 13.0437 2.88237 15.0496 3.35288C17.827 4.00437 19.9956 6.17301 20.6471 8.95044C21.1176 10.9563 21.1176 13.0437 20.6471 15.0496C19.9956 17.827 17.827 19.9956 15.0496 20.6471C13.0437 21.1176 10.9563 21.1176 8.95044 20.6471C6.17301 19.9956 4.00437 17.827 3.35288 15.0496C2.88237 13.0437 2.88237 10.9563 3.35288 8.95043Z"
-							stroke="#7E7EE2" stroke-width="1.5" />
-						<path d="M13.768 10.2322L10.2324 13.7677M13.768 13.7677L10.2324 10.2322" stroke="#7E7EE2"
-							stroke-width="1.5" stroke-linecap="round" />
+						<path d="M3.35288 8.95043C4.00437 6.17301 6.17301 4.00437 8.95043 3.35288C10.9563 2.88237 13.0437 2.88237 15.0496 3.35288C17.827 4.00437 19.9956 6.17301 20.6471 8.95044C21.1176 10.9563 21.1176 13.0437 20.6471 15.0496C19.9956 17.827 17.827 19.9956 15.0496 20.6471C13.0437 21.1176 10.9563 21.1176 8.95044 20.6471C6.17301 19.9956 4.00437 17.827 3.35288 15.0496C2.88237 13.0437 2.88237 10.9563 3.35288 8.95043Z" stroke="#7E7EE2" stroke-width="1.5"></path>
+						<path d="M13.768 10.2322L10.2324 13.7677M13.768 13.7677L10.2324 10.2322" stroke="#7E7EE2" stroke-width="1.5" stroke-linecap="round"></path>
 					</svg>
 				</button>
 				<p class="text_center fw_bold ff_tt fz_24 mb_20 currency_variant__title">
 					Currency choice
 				</p>
-				<input type="text" class="currency__search" placeholder="Search  for a coins..." />
+				<input type="text" class="currency__search" placeholder="Search  for a coins...">
 				<div class="line"></div>
-				<div class="currency__scroll" data-scrollbar>
+				<div class="currency__scroll" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;"><div class="scroll-content">
 					<div class="currency__list row">
 
 
 						
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="BTC" type-full="Bitcoin">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="BTC" type-full="Bitcoin">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/btc.png" alt="" /><span class="short__name">BTC</span><span
-										class="full_name">Bitcoin</span>
+									<img src="http://127.0.0.1:8000/main/images/btc.png" alt=""><span class="short__name">BTC</span><span class="full_name">Bitcoin</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="MATIC" type-full="Matic">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="MATIC" type-full="Matic">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/matic.png" alt="" /><span class="short__name">MATIC</span><span
-										class="full_name">Matic</span>
+									<img src="http://127.0.0.1:8000/main/images/matic.png" alt=""><span class="short__name">MATIC</span><span class="full_name">Matic</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="ADA" type-full="Cardano">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="ADA" type-full="Cardano">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/ada.png" alt="" /><span class="short__name">ADA</span><span
-										class="full_name">Cardano</span>
+									<img src="http://127.0.0.1:8000/main/images/ada.png" alt=""><span class="short__name">ADA</span><span class="full_name">Cardano</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="BCH" type-full="BitCash">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="BCH" type-full="BitCash">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/bch.png" alt="" /><span class="short__name">BCH</span><span
-										class="full_name">BitCash</span>
+									<img src="http://127.0.0.1:8000/main/images/bch.png" alt=""><span class="short__name">BCH</span><span class="full_name">BitCash</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="TRX" type-full="Tron">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="TRX" type-full="Tron">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/trx.png" alt="" /><span class="short__name">TRX</span><span
-										class="full_name">Tron</span>
+									<img src="http://127.0.0.1:8000/main/images/trx.png" alt=""><span class="short__name">TRX</span><span class="full_name">Tron</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="DOGE" type-full="Doge">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="DOGE" type-full="Doge">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/doge.png" alt="" /><span class="short__name">DOGE</span><span
-										class="full_name">Doge</span>
+									<img src="http://127.0.0.1:8000/main/images/doge.png" alt=""><span class="short__name">DOGE</span><span class="full_name">Doge</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="LTC" type-full="Litecoin">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="LTC" type-full="Litecoin">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/ltc.png" alt="" /><span class="short__name">LTC</span><span
-										class="full_name">Litecoin</span>
+									<img src="http://127.0.0.1:8000/main/images/ltc.png" alt=""><span class="short__name">LTC</span><span class="full_name">Litecoin</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="BNB" type-full="Binance Coin">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="BNB" type-full="Binance Coin">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/bnb.png" alt="" /><span class="short__name">BNB</span><span
-										class="full_name">Binance Coin</span>
+									<img src="http://127.0.0.1:8000/main/images/bnb.png" alt=""><span class="short__name">BNB</span><span class="full_name">Binance Coin</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="SHIB" type-full="Shiba">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="SHIB" type-full="Shiba">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/shib.png" alt="" /><span class="short__name">SHIB</span><span
-										class="full_name">Shiba</span>
+									<img src="http://127.0.0.1:8000/main/images/shib.png" alt=""><span class="short__name">SHIB</span><span class="full_name">Shiba</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="ETH" type-full="Ethereum">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="ETH" type-full="Ethereum">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/eth.png" alt="" /><span class="short__name">ETH</span><span
-										class="full_name">Ethereum</span>
+									<img src="http://127.0.0.1:8000/main/images/eth.png" alt=""><span class="short__name">ETH</span><span class="full_name">Ethereum</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="ETC" type-full="Ethereum Classic">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="ETC" type-full="Ethereum Classic">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/etc.png" alt="" /><span class="short__name">ETC</span><span
-										class="full_name">Ethereum Classic</span>
+									<img src="http://127.0.0.1:8000/main/images/etc.png" alt=""><span class="short__name">ETC</span><span class="full_name">Ethereum Classic</span>
 								</div>
 							</div>
 
 							
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="XRP" type-full="Ripple">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="XRP" type-full="Ripple">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/xrp.png" alt="" /><span class="short__name">XRP</span><span
-										class="full_name">Ripple</span>
+									<img src="http://127.0.0.1:8000/main/images/xrp.png" alt=""><span class="short__name">XRP</span><span class="full_name">Ripple</span>
 								</div>
 							</div>
 
 							
 							<div class="col-lg-3 col-sm-6 mb_10 csll__item check" type-name="USDT" type-full="Tether">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/usdt.png" alt="" /><span class="short__name">USDT</span><span
-										class="full_name">Tether</span>
+									<img src="http://127.0.0.1:8000/main/images/usdt.png" alt=""><span class="short__name">USDT</span><span class="full_name">Tether</span>
 								</div>
 							</div>
 
 						
-							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="DASH" type-full="Dash">
+							<div class="col-lg-3 col-sm-6 mb_10 csll__item" type-name="DASH" type-full="Dash">
 								<div class="currency__item">
-									<img src="{{asset('')}}main/images/dash.png" alt="" /><span class="short__name">DASH</span><span
-										class="full_name">Dash</span>
+									<img src="http://127.0.0.1:8000/main/images/dash.png" alt=""><span class="short__name">DASH</span><span class="full_name">Dash</span>
 								</div>
 							</div> 
 
 												</div>
-				</div>
+				</div><div class="scrollbar-track scrollbar-track-x" style="display: block;"><div class="scrollbar-thumb scrollbar-thumb-x" style="width: 915.027px; transform: translate3d(0px, 0px, 0px);"></div></div><div class="scrollbar-track scrollbar-track-y" style="display: block;"><div class="scrollbar-thumb scrollbar-thumb-y" style="height: 224.581px; transform: translate3d(0px, 0px, 0px);"></div></div></div>
 			</div>
 		</div>
 	</div>

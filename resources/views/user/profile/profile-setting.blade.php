@@ -1,87 +1,162 @@
-<!-- main -->
-<div class="container-fluid">
-    <div class="main row">
-        <div class="col-12">
-            <div class="dashboard-heading">
-                <h4 class="mb-0">Edit Profile</h4>
-            </div>
+<div class="dashboard_content">
+    <div class="title__row d-flex align-items-center justify-content-between mb_50">
+        <h2>Profile</h2>
 
-            <section class="profile-setting">
-                <div class="row g-4 g-lg-5">
-                    <div class="col-lg-4">
-                        <div class="sidebar-wrapper">
-                            <form method="post" action="/user/updateProfile" enctype="multipart/form-data">
-                                <input type="hidden" name="_token" value="WMHLDRiVajXWstMy5KCxrx8s9sfOXw9ocPafUQsV">
-                                <div class="profile">
-                                    <div class="img">
-                                        <img id="profile" src="assets/uploads/male-avatar-icon-13.jpg"
-                                            alt="preview user image" class="img-fluid" />
-                                      
-                                    </div>
+        <div class="search__block">
+            <input class="currency__search" type="text" placeholder="Search  for a coins...">
+        </div>
+
+        <script>
+            jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
+                return function (elem) {
+                    return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                };
+            });
+
+            $('.currency__search').on('keyup', function () {
+                var searchVal = $(this).val();
+                var filterItems = $('.deposit__item');
+
+                if (searchVal != '') {
+
+                    filterItems.parent().hide();
+                    $('.deposit__name span:Contains("' + searchVal + '")').parent().parent().parent().parent()
+                        .show();
+
+                    if ($(".deposit__item").is(":visible")) {
+                        $(".search__none").hide();
+                    } else {
+                        $(".search__none").show();
+                    }
+
+                } else {
+                    filterItems.parent().show();
+                    $(".search__none").hide();
+                }
+            });
+        </script>
 
 
-                                    <div class="text">
-                                        <h5 class="name">{{Auth::user()->name}}</h5>
-                                        <span>{{Auth::user()->email}}</span>
-                                        <div>
-                                            <button style="display: none" class="btn-custom mt-2 p-2 text-white" type="submit">Submit
-                                                Changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+    </div>
 
-                            <div class="profile-navigator">
-                                <button tab-id="tab1" class="tab  active">
-                                    <i class="fal fa-user"></i> Profile information </button>
-                                    <button tab-id="tab4" class="tab  ">
-                                    <i class="fal fa-user"></i>Bank Detail </button>
-                                <button tab-id="tab2" class="tab ">
-                                    <i class="fal fa-key"></i> Password setting </button>
-                              
-                               
-                            </div>
-                        </div>
-                    </div>
+    <div class="dashboard_head search__none" style="display:none;">
+        <div class="suuport__line">
+            <p>
+                <img src="./images/support_icon1.svg" alt="">
+                Where are no coins or tokens matching your search request!
+            </p>
+        </div>
+    </div>
 
-                    <div class="col-lg-8">
-                        <div id="tab1" class="content  active">
-                            <form action="{{ route('user.update-profile') }}" method="post">
+    <form action="{{ route('user.update-profile') }}" method="post">
                                 
                                 {{ csrf_field() }}
+    <div class="deposit__list row">
+        
 
-                                <div class="row g-4">
-                                    <div class="input-box col-md-6">
-                                        <label for="">Your Upline</label>
-                                        <input type="text" class="form-control" readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}"  />
-                                    </div>
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
 
-                                    <div class="input-box col-md-6">
-                                        <label for="">Your Login</label>
-                                        <input type="text" id="lastname"value="{{ $profile_data ? $profile_data->username : '' }}" readonly disabled class="form-control"
-                                             />
-                                    </div>
 
-                                    <div class="input-box col-md-6">
-                                        <label for="">Name</label>
-                                        <input type="text" id="username" value="{{ $profile_data ? $profile_data->name : '' }}" name="name"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Email Address</label>
-                                        <input type="email" id="email" value="{{ $profile_data ? $profile_data->email : '' }}" readonly disabled
-                                            class="form-control" />
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Phone Number</label>
-                                        <input type="text" id="phone" name="phone" class="form-control"
-                                            value="{{ $profile_data ? $profile_data->phone : '' }}" />
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Country</label>
-                                        <select class="js-example-basic-single form-control form-select"
-                                            name="country" id="language_id" aria-label="Default select example">
-                                            <option selected>
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span>Your Login</span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  id="lastname"value="{{ $profile_data ? $profile_data->username : '' }}" readonly disabled class="form-control" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> Name </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button" id="username" value="{{ $profile_data ? $profile_data->name : '' }}" name="name" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> Email </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input class="btn__generate btc_deposit_button"  type="email" id="email" value="{{ $profile_data ? $profile_data->email : '' }}" readonly disabled >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> Phone </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input id="phone" name="phone" type="text" class="btn__generate btc_deposit_button"  value="{{ $profile_data ? $profile_data->phone : '' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> Country</span>
+                    </div>
+                </div>
+                <div class="deposit__generate" style="overflow:unset">                    
+                    <select type="text" class="btn__generate btc_deposit_button"  name="country" id="language_id"  style="max-width:200px !important;">
+                    <option selected>
                                                 {{ $profile_data ? $profile_data->country : '' }}
                                             </option>
                                             <option value="AFGHANISTAN">
@@ -408,149 +483,209 @@
                                             <option value="NICARAGUA">
                                                 NICARAGUA</option>
                                         </select>
-                                    </div>
+                </select>
+                </div>
+            </div>
+        </div>
 
-                                    <div class="input-box col-md-12">
-                                        <label for="">Registration Date</label>
-                                        <input type="text" id="username" value="{{ date("D, d M Y", strtotime($profile_data->created_at))}}"   readonly disabled 
-                                            class="form-control" />
-                                    </div>
 
-                                    <div class="input-box col-md-12">
-                                        <label for="">USDT - BEP20</label>
-                                        <input type="text"  name="usdtBep20" value="{{ $profile_data ? $profile_data->usdtBep20 : '' }}" 
-                                        placeholder="USDT BEP20 wallet"
-                                            class="form-control" />
-                                    </div>
-                                    <div class="input-box col-12">
-                                        <button class="btn-custom">Update</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div id="tab2" class="content ">
-                            <form method="post" action="{{ route('user.edit-password') }}">
-                                {{ csrf_field() }}
-                                <div class="row g-4">
-                                    <div class="input-box col-md-6">
-                                        <label for="">Current Password</label>
-                                        <input type="password" id="current_password" name="old_password"
-                                            autocomplete="off" class="form-control"
-                                            placeholder="Enter Current Password" />
-                                    </div>
-
-                                    <div class="input-box col-md-6">
-                                        <label for="">New Password</label>
-                                        <input type="password" id="password" name="password" autocomplete="off"
-                                            class="form-control" placeholder="Enter New Password" />
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Confirm Password</label>
-                                        <input type="password" id="password_confirmation"
-                                            name="password_confirmation" autocomplete="off" class="form-control"
-                                            placeholder="Confirm Password" />
-                                    </div>
-                                    <div class="input-box col-12">
-                                        <button class="btn-custom" type="submit">Update
-                                            Password</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div id="tab3" class="content ">
-                            <form method="post" action="{{ route('user.update-wallet') }}">
-                                {{ csrf_field() }}
-                                <div class="row g-4">
-                                    <div class="input-box col-md-12">
-                                        <label for="">USDT - TRC20</label>
-                                        <input type="text" name="usdtTrc20"   value="{{ $profile_data ? $profile_data->usdtTrc20 : '' }}" 
-                                        placeholder="USDT TRC20 " class="form-control" />
-                                    </div>
-
-                                    <div class="input-box col-md-12">
-                                        <label for="">USDT - BEP20</label>
-                                        <input type="text"  name="usdtBep20" value="{{ $profile_data ? $profile_data->usdtBep20 : '' }}" 
-                                        placeholder="USDT BEP20 wallet"
-                                            class="form-control" />
-                                    </div>
-                                   
-                                    <div class="input-box col-12">
-                                        <button class="btn-custom" type="submit">Update
-                                            Wallet</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div id="tab4" class="content ">
-                        <form action="{{ route('user.bank-update') }}" method="POST">
-                            @csrf
-                                <div class="row g-4">
-                                    <div class="input-box col-md-6">
-                                        <label for="">Account Holder </label>
-                                        <input class="form-control" type="text" name="account_holder"  
-                                                <?=(@$bank_value->account_holder)?"readonly":""?> value="{{ @$bank_value->account_holder }}"
-                              placeholder="Enter a/c holder first name">
-                                    </div>
-
-                                    <div class="input-box col-md-6">
-                                        <label for="">Bank Name</label>
-                                        <input class="form-control" type="text" name="bank_name" 
-                                                <?=(@$bank_value->bank_name)?"readonly":""?> value="{{ @$bank_value->bank_name }}"
-                              placeholder="Enter Bank Name">
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Branch Name</label>
-                                        <input class="form-control" type="text" name="branch_name" 
-                                                <?=(@$bank_value->branch_name)?"readonly":""?> value="{{ @$bank_value->branch_name }}"
-                                placeholder="Enter Branch Name">
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">Bank A/c Number </label>
-                                        <input class="form-control" type="text" name="account_number" 
-                                                <?=(@$bank_value->account_no)?"readonly":""?> value="{{ @$bank_value->account_no }}"
-                              placeholder="Enter Account Number" required>
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">IFSC </label>
-                                        <input class="form-control" type="text" name="ifsc_code" 
-                                                <?=(@$bank_value->ifsc_code)?"readonly":""?> value="{{ @$bank_value->ifsc_code }}"
-                              placeholder="Enter IFS Code " required>
-                                    </div>
-                                    <div class="input-box col-md-6">
-                                        <label for="">pancard Number </label>
-                                        <input class="form-control" type="text" name="pancard_no" 
-                                                <?=(@$bank_value->pancard_no)?"readonly":""?> value="{{ @$bank_value->pancard_no }}"
-                              placeholder="Enter Pancard Number " required>
-                                    </div>
-                              <!--      <div class="input-box col-md-6">-->
-                              <!--          <label for="">Aadhar Card</label>-->
-                              <!--          <input class="form-control" type="text" name="aadhar" value="{{ @$bank_value->aadhar }}"-->
-                              <!--placeholder="Enter Aadhar Card " required>-->
-                              <!--      </div>-->
-                                    <div class="input-box col-12">
-                                        <button class="btn-custom" type="submit">SUBMIT
-                                            </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div id="tab4" class="content ">
-                            <div class="alert mb-0">
-                                <i class="fal fa-check-circle text-success"></i>
-                                <span>Your KYC already verified</span>
-                            </div>
-                        </div>
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
                     </div>
                 </div>
-            </section>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
         </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                        <!-- <img src="./images/calc_icons/eth.png" alt=""> -->
+                    </div>
+                    <div class="deposit__name">
+                        <span> ETH </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">
+                    <div class="deposit__address eth_deposit_curr">
+                        <p class="address copy_text">
+                        </p>
+                        <button class="btn__copy button_open_dep" data-currency="ETH" data-wallet="" data-tag=""
+                            data-full="Ethereum">
+                            <img src="./images/icon_copy.svg" alt="">
+                        </button>
+                    </div>
+                    <button class="btn__generate eth_deposit_button" data-currency="ETH" data-full="Ethereum">
+                        <img src="./images/icon_generate.svg" alt="">
+                        Generate address
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
+            <div class="deposit__item">
+                <div class="deposit__info d-flex align-items-end mb_10">
+                    <div class="icon ">
+                    </div>
+                    <div class="deposit__name">
+                        <span> BTC </span>
+                    </div>
+                </div>
+                <div class="deposit__generate">                    
+                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
+                     
+                </div>
+            </div>
+        </div>
+
+</div>
+</form>
     </div>
-</div>
 
 
 </div>
+</div>
+
 </div>
 </div>

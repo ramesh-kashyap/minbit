@@ -1,4 +1,3 @@
-
 <footer class="footer">
 	<div class="container">
 		<div class="footer__row d-flex align-items-center flex-wrap">
@@ -10,9 +9,17 @@
 
 			<div class="line"></div>
 			<ul class="footer__menu">
-				
+				<li>
+					<a href="/video">
+						<div class="video_bg">
+							<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+						</div>
+						<img src="{{asset('')}}main/images/video_icon.svg" alt="">
+						Live-video
+					</a>
+				</li>
 				<li class="">
-					<a href="/about-us"> About-us </a>
+					<a href="/news"> News </a>
 				</li>
 				<li class="">
 					<a href="/faq"> FaQ </a>
@@ -111,12 +118,12 @@
   top: 1px;
   width: 100%;
   height: 100%;
-  background: url('../main/images/telegram.svg') center/20px no-repeat;
+  background: url('main/images/telegram.svg') center/20px no-repeat;
 }
 
 .social-right a:nth-child(2) i::before
 {
-  background: url('../main/images/group.svg') center/22px no-repeat;
+  background: url('main/images/group.svg') center/22px no-repeat;
   left: 0px;
   top: 0px;
 }

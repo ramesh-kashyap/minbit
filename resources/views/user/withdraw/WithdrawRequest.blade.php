@@ -161,42 +161,7 @@
 								<p class="coins__item">Status:</p>
 							</div>
 						</div>
-                        <?php if(is_array($withdraw_report) || is_object($withdraw_report)){ ?>
-
-<?php date_default_timezone_set('UTC');
-$cnt = $withdraw_report->perPage() * ($withdraw_report->currentPage() - 1); ?>
-@foreach ($withdraw_report as $value)
-
-                        <div class="coins__row coins__row_main" data-prc="nan">
-                            <p class="coins__item coins__item_first">
-                                <span>
-                                    <img src="./images/dashboard_icons/dash.png" class="icon" alt="">
-                                    <span class="content">
-                                        <span> -{{ $value->amount }}
-                                        {{ generalDetail()->cur_text }}</span>
-                                    </span>
-                                </span>
-                            </p>
-                            <p class="coins__item fw_medium">
-                                <span>-{{ $value->amount*10/100 }}
-                                {{ generalDetail()->cur_text }}</span>
-                            </p>
-                            <p class="coins__item fw_bold">
-                                <span>-{{ $value->amount- $value->amount*10/100 }}
-                                {{ generalDetail()->cur_text }}</span>
-                            </p>
-                            <p class="coins__item coins__item_income">
-                                <span class="portfolio_visible" style=""> {{ $value->txn_id }} .<span> </span></span>
-                            </p>
-                            <p class="coins__item coins__item_income">
-                                <span class="portfolio_visible" style=""> {{$value->payment_mode}}<span></span></span>
-                            </p>
-                        </div>
-                        @endforeach
-
-                      <?php }?>
-
-                      {{ $withdraw_report->withQueryString()->links() }}
+                     
 					</div>
 				</div>
 			</div>

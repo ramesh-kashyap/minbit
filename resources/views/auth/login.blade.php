@@ -51,10 +51,10 @@
                         <img src="{{asset('')}}main/images/icon_input_mail.svg" alt="">
                         <p class="enter__input_name">Enter your email or login</p>
                         <div class="enter__input placeholder__group_input">
-                            <input id="login-email"name="username" id="uname" type="text" class="order__input placeholder__input">
+                            <input id="login-email"  name="username" id="uname" type="text" class="order__input placeholder__input">
                             <p class="place_span">
                                 <img src="{{asset('')}}main/images/icon_placeholder.svg" alt=""> Please enter
-                                your email...
+                                your username
                             </p>
                         </div>
                     </div>
@@ -79,9 +79,9 @@
                     <script src="https://www.hCaptcha.com/1/api.js" async="" defer=""></script>
 
                     <div class="modal__item-input" style="width: 100%;margin: auto;">
-                        <div class="captcha" style="margin: auto;width: fit-content;">
+                        <!-- <div class="captcha" style="margin: auto;width: fit-content;">
                             <div class="h-captcha" data-theme="" data-sitekey="2827a667-6929-4a6f-a25b-66a7531f0ebc"></div>
-                        </div>
+                        </div> -->
                     </div>
 
                 
@@ -119,28 +119,28 @@
 
             var widget_id = $(".h-captcha").eq(0).find('iframe').attr('data-hcaptcha-widget-id');
 
-            $.ajax({
-                url: '/augh/login.php',
-                type: "POST",
-                data: "email=" + email + "&password=" + password + "&g-recaptcha-response=" + hcaptcha.getResponse(widget_id),
-                success: function (data) {
-                    if (!data.success) {
-                        $("#login-error").text(data.message);
-                        createAlertModal("Incorrect login details!", data.message, '');
-                        console.log(data.success);
-                        hcaptcha.reset(widget_id);
-                        if (data.code == 2) {
-                            hcaptcha.reset(widget_id);
-                        }
+        //     $.ajax({
+        //         url: '/augh/login.php',
+        //         type: "POST",
+        //         data: "email=" + email + "&password=" + password + "&g-recaptcha-response=" + hcaptcha.getResponse(widget_id),
+        //         success: function (data) {
+        //             if (!data.success) {
+        //                 $("#login-error").text(data.message);
+        //                 createAlertModal("Incorrect login details!", data.message, '');
+        //                 console.log(data.success);
+        //                 hcaptcha.reset(widget_id);
+        //                 if (data.code == 2) {
+        //                     hcaptcha.reset(widget_id);
+        //                 }
 
-                    } else if (data.success) {
-                        console.log(data.success);
-                        document.location = "/dashboard";
-                    }
+        //             } else if (data.success) {
+        //                 console.log(data.success);
+        //                 document.location = "/dashboard";
+        //             }
 
-                }
-            })
-        });
+        //         }
+        //     })
+        // });
 
     
 

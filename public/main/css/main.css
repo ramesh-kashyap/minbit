@@ -259,7 +259,7 @@ button.btn.btn_dark:hover {
   display: block;
   width: 100%;
   height: 2px;
-  background: url(../images/line.svg) repeat-x;
+  background: url(../main/images/line.svg) repeat-x;
   position: absolute;
   left: 0;
   top: 100%;

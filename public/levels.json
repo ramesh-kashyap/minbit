@@ -1,0 +1,257 @@
+{
+    "level_50": {
+        "perday": 2,
+        "level": 50,
+        "nextlevel": 294117.65
+    },
+    "level_49": {
+        "perday": 1.98,
+        "level": 49,
+        "nextlevel": 247190.59
+    },
+    "level_48": {
+        "perday": 1.96,
+        "level": 48,
+        "nextlevel": 207746.14
+    },
+    "level_47": {
+        "perday": 1.94,
+        "level": 47,
+        "nextlevel": 174543.79
+    },
+    "level_46": {
+        "perday": 1.92,
+        "level": 46,
+        "nextlevel": 146744.77
+    },
+    "level_45": {
+        "perday": 1.9,
+        "level": 45,
+        "nextlevel": 123324.18
+    },
+    "level_44": {
+        "perday": 1.88,
+        "level": 44,
+        "nextlevel": 103659.29
+    },
+    "level_43": {
+        "perday": 1.86,
+        "level": 43,
+        "nextlevel": 87115.76
+    },
+    "level_42": {
+        "perday": 1.84,
+        "level": 42,
+        "nextlevel": 73156.29
+    },
+    "level_41": {
+        "perday": 1.82,
+        "level": 41,
+        "nextlevel": 61535.09
+    },
+    "level_40": {
+        "perday": 1.8,
+        "level": 40,
+        "nextlevel": 51716.53
+    },
+    "level_39": {
+        "perday": 1.78,
+        "level": 39,
+        "nextlevel": 43406.82
+    },
+    "level_38": {
+        "perday": 1.76,
+        "level": 38,
+        "nextlevel": 36530.71
+    },
+    "level_37": {
+        "perday": 1.73,
+        "level": 37,
+        "nextlevel": 30701.56
+    },
+    "level_36": {
+        "perday": 1.71,
+        "level": 36,
+        "nextlevel": 25803.12
+    },
+    "level_35": {
+        "perday": 1.69,
+        "level": 35,
+        "nextlevel": 21721.47
+    },
+    "level_34": {
+        "perday": 1.67,
+        "level": 34,
+        "nextlevel": 18226.14
+    },
+    "level_33": {
+        "perday": 1.65,
+        "level": 33,
+        "nextlevel": 15318.12
+    },
+    "level_32": {
+        "perday": 1.63,
+        "level": 32,
+        "nextlevel": 12874.06
+    },
+    "level_31": {
+        "perday": 1.61,
+        "level": 31,
+        "nextlevel": 10820
+    },
+    "level_30": {
+        "perday": 1.59,
+        "level": 30,
+        "nextlevel": 9109
+    },
+    "level_29": {
+        "perday": 1.57,
+        "level": 29,
+        "nextlevel": 7643.18
+    },
+    "level_28": {
+        "perday": 1.55,
+        "level": 28,
+        "nextlevel": 6428.47
+    },
+    "level_27": {
+        "perday": 1.53,
+        "level": 27,
+        "nextlevel": 5404.94
+    },
+    "level_26": {
+        "perday": 1.51,
+        "level": 26,
+        "nextlevel": 4543
+    },
+    "level_25": {
+        "perday": 1.49,
+        "level": 25,
+        "nextlevel": 3813.24
+    },
+    "level_24": {
+        "perday": 1.47,
+        "level": 24,
+        "nextlevel": 3204.24
+    },
+    "level_23": {
+        "perday": 1.45,
+        "level": 23,
+        "nextlevel": 2693.47
+    },
+    "level_22": {
+        "perday": 1.43,
+        "level": 22,
+        "nextlevel": 2263.12
+    },
+    "level_21": {
+        "perday": 1.41,
+        "level": 21,
+        "nextlevel": 1902.53
+    },
+    "level_20": {
+        "perday": 1.39,
+        "level": 20,
+        "nextlevel": 1604.29
+    },
+    "level_19": {
+        "perday": 1.37,
+        "level": 19,
+        "nextlevel": 1344.47
+    },
+    "level_18": {
+        "perday": 1.35,
+        "level": 18,
+        "nextlevel": 1130.06
+    },
+    "level_17": {
+        "perday": 1.33,
+        "level": 17,
+        "nextlevel": 949.82
+    },
+    "level_16": {
+        "perday": 1.31,
+        "level": 16,
+        "nextlevel": 797.18
+    },
+    "level_15": {
+        "perday": 1.29,
+        "level": 15,
+        "nextlevel": 670.53
+    },
+    "level_14": {
+        "perday": 1.26,
+        "level": 14,
+        "nextlevel": 564.71
+    },
+    "level_13": {
+        "perday": 1.24,
+        "level": 13,
+        "nextlevel": 474.18
+    },
+    "level_12": {
+        "perday": 1.22,
+        "level": 12,
+        "nextlevel": 398.06
+    },
+    "level_11": {
+        "perday": 1.2,
+        "level": 11,
+        "nextlevel": 334.53
+    },
+    "level_10": {
+        "perday": 1.18,
+        "level": 10,
+        "nextlevel": 281.18
+    },
+    "level_9": {
+        "perday": 1.16,
+        "level": 9,
+        "nextlevel": 236.29
+    },
+    "level_8": {
+        "perday": 1.14,
+        "level": 8,
+        "nextlevel": 198.59
+    },
+    "level_7": {
+        "perday": 1.12,
+        "level": 7,
+        "nextlevel": 167
+    },
+    "level_6": {
+        "perday": 1.1,
+        "level": 6,
+        "nextlevel": 140.29
+    },
+    "level_5": {
+        "perday": 1.08,
+        "level": 5,
+        "nextlevel": 118.12
+    },
+    "level_4": {
+        "perday": 1.06,
+        "level": 4,
+        "nextlevel": 99.06
+    },
+    "level_3": {
+        "perday": 1.04,
+        "level": 3,
+        "nextlevel": 83.29
+    },
+    "level_2": {
+        "perday": 1.02,
+        "level": 2,
+        "nextlevel": 70
+    },
+    "level_1": {
+        "perday": 1,
+        "level": 1,
+        "nextlevel": 58.82
+    },
+    "default": {
+        "perday": 1,
+        "level": 0,
+        "nextlevel": 0
+    }
+}

@@ -673,7 +673,7 @@
 			</p>
 			<p class="coins__item coins__item_income">
 				<span class="coins__item_name">All-time income: </span>
-				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
+				<span class="portfolio_visible" style=""> $0<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
 		</div></div>

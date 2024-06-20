@@ -1,5 +1,7 @@
-@include('layouts.mainsite.header')
 
+
+
+@include('layouts.mainsite.header')
 
 
 
@@ -272,7 +274,7 @@
 					</div>
 					<img src="{{asset('')}}main/images/target_item_bg.png" class="benefits__bg" alt="" />
 				</div>
-				<!--div class="benefits__item benefits__item_5 mb_30" style="transform: translateX(90px);">
+				div class="benefits__item benefits__item_5 mb_30" style="transform: translateX(90px);">
 					<div class="d-flex align-items-xl-center">
 						<p class="benefits__number">05</p>
 						<div class="benefits__content">
@@ -286,7 +288,7 @@
 						</div>
 					</div>
 					<img src="{{asset('')}}main/images/target_item_bg.png" class="benefits__bg" alt="" />
-				</div-->
+				</div
 				<div class="benefits__item benefits__item_5 mb_30 ms-lg-auto" style="transform: translateX(30px);">
 					<div class="d-flex align-items-xl-center">
 						<p class="benefits__number">05</p>
@@ -787,13 +789,13 @@
 								</div>
 							</div>
 
-							
+						
 							<div class="col-lg-3 col-sm-6 mb_10 csll__item " type-name="DASH" type-full="Dash">
 								<div class="currency__item">
 									<img src="{{asset('')}}main/images/dash.png" alt="" /><span class="short__name">DASH</span><span
 										class="full_name">Dash</span>
 								</div>
-							</div>
+							</div> 
 
 												</div>
 				</div>
@@ -1005,7 +1007,7 @@
 				<div class="exrc__bottom-data climb"><i></i> (+1.07%)</div>
 			</div>
 		</div>
-	</li>
+	</li> 
 
 
 
@@ -1232,6 +1234,5 @@
   			$('.modal__sign-up').addClass('visible');
 		});
 	</script>
-
 
 @include('layouts.mainsite.footer')

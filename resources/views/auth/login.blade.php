@@ -111,38 +111,6 @@
     });
 
     
-        $("#Login").submit(function (e) {
-            e.preventDefault();
-
-            var email = $("#login-email").val();
-            var password = $("#login-pass").val();
-
-            var widget_id = $(".h-captcha").eq(0).find('iframe').attr('data-hcaptcha-widget-id');
-
-        //     $.ajax({
-        //         url: '/augh/login.php',
-        //         type: "POST",
-        //         data: "email=" + email + "&password=" + password + "&g-recaptcha-response=" + hcaptcha.getResponse(widget_id),
-        //         success: function (data) {
-        //             if (!data.success) {
-        //                 $("#login-error").text(data.message);
-        //                 createAlertModal("Incorrect login details!", data.message, '');
-        //                 console.log(data.success);
-        //                 hcaptcha.reset(widget_id);
-        //                 if (data.code == 2) {
-        //                     hcaptcha.reset(widget_id);
-        //                 }
-
-        //             } else if (data.success) {
-        //                 console.log(data.success);
-        //                 document.location = "/dashboard";
-        //             }
-
-        //         }
-        //     })
-        // });
-
-    
 
 </script>
 

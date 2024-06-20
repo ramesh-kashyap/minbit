@@ -1,4 +1,9 @@
+
+
+
 @include('layouts.mainsite.header')
+
+
 
 <link rel="stylesheet" href="{{asset('')}}main/css/additive.css" />
 
@@ -180,6 +185,4 @@
   			$('.modal__sign-up').addClass('visible');
 		});
 	</script>
-
-
 @include('layouts.mainsite.footer')

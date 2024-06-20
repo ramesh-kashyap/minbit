@@ -91,7 +91,7 @@
 			<li class="affiliate_page">
 				<a href="/partners" class=""> Affiliate Program </a>
 			</li>
-			<li class="calculator_page">
+			<!-- <li class="calculator_page">
 				<a href="#calculator" class="scroll_to"> Calculator </a>
 			</li>
 			<li class="video_page">
@@ -105,7 +105,7 @@
 			</li>
 			<li class="news_page">
 				<a href="news"> News </a>
-			</li>
+			</li> -->
 			<li class="faq_page">
 				<a href="/faq"> FaQ </a>
 			</li>

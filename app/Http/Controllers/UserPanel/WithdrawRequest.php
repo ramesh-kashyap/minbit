@@ -42,85 +42,115 @@ class WithdrawRequest extends Controller
 
     public function WithdrawRequest(Request $request)
     {
-        Log::info('WithdrawRequest method called');
-    
-        try {
-            $validation = Validator::make($request->all(), [
-                'amount' => 'required|numeric|min:5',
-                'PSys' => 'required',
-                'transaction_password' => 'required',
-            ]);
-    
-            if ($validation->fails()) {
-                Log::info('Validation failed: ' . $validation->getMessageBag()->first());
-                return Redirect::back()->withErrors($validation->getMessageBag()->first())->withInput();
-            }
-    
-            $user = Auth::user();
-            Log::info('User authenticated: ' . $user->id);
-    
-            $password = $request->transaction_password;
-            $balance = $user->available_balance();
-    
-            $bank = Bank::where('user_id', $user->id)->first();
-            Log::info('Bank details retrieved: ' . ($bank ? 'Yes' : 'No'));
-    
-            if ($request->PSys == "USDT") {
-                $account = $user->usdtBep20;
-            } else {
-                $account = ($bank) ? $bank->account_no : "";
-            }
-    
-            if ($balance >= $request->amount) {
-                $todayWithdraw = Withdraw::where('user_id', $user->id)
-                    ->where('status', '!=', 'Failed')
-                    ->where('wdate', date('Y-m-d'))
-                    ->first();
-    
-                if ($todayWithdraw) {
-                    return Redirect::back()->withErrors(['Any Withdraw limit per Id once a day!']);
-                }
-    
-                $userDetail = Withdraw::where('user_id', $user->id)
-                    ->where('status', 'Pending')
-                    ->first();
-    
-                if ($userDetail) {
-                    return Redirect::back()->withErrors(['Withdraw Request Already Exist!']);
-                } else {
-                    if (!empty($account)) {
-                        if (Hash::check($password, $user->tpassword)) {
-                            $data = [
-                                'txn_id' => md5(time() . rand()),
-                                'user_id' => $user->id,
-                                'user_id_fk' => $user->username,
-                                'amount' => $request->amount,
-                                'account' => $account,
-                                'payment_mode' => $request->PSys,
-                                'status' => 'Pending',
-                                'walletType' => 1,
-                                'wdate' => Date("Y-m-d"),
-                            ];
-    
-                            $payment = Withdraw::create($data);
-                            Log::info('Withdraw request created: ' . $payment->id);
-    
-                            $notify[] = ['success', 'Withdraw Request Submitted successfully'];
-                            return redirect()->back()->withNotify($notify);
-                        } else {
-                            return Redirect::back()->withErrors(['Invalid Transaction Pin']);
-                        }
-                    } else {
-                        return Redirect::back()->withErrors(['Please Update Your Usdt and Bank Details!']);
-                    }
-                }
-            } else {
-                return Redirect::back()->withErrors(['Insufficient balance in Your account']);
-            }
-        } catch (\Exception $e) {
-            Log::error('Exception: ' . $e->getMessage());
-            return redirect()->route('user.WithdrawRequest')->withErrors(['error' => $e->getMessage()])->withInput();
+
+        try{
+
+             $validation =  Validator::make($request->all(), [
+            'amount' => 'required|numeric|min:5',
+            'PSys' => 'required',    
+             'transaction_password' => 'required',               
+
+
+        ]);
+
+        if($validation->fails()) {
+            Log::info($validation->getMessageBag()->first());
+
+            return Redirect::back()->withErrors($validation->getMessageBag()->first())->withInput();
         }
+
+        $user=Auth::user();
+        $password= $request->transaction_password;
+        $balance=Auth::user()->available_balance();
+        
+        
+        $bank = Bank::where('user_id',$user->id)->first();
+        
+        if ($request->PSys=="USDT") 
+        {
+          $account =  $user->usdtBep20;
+        }
+        else
+        {
+          $account =($bank)?$bank->account_no:"";
+        }
+       
+        if ($balance>=$request->amount)
+        {
+         $todayWitdrw=Withdraw::where('user_id',$user->id)->where('status','!=','Failed')->where('wdate',date('Y-m-d'))->first();
+         
+         if($todayWitdrw)
+         {
+          return Redirect::back()->withErrors(array('Any Withdraw limit per Id once a day !'));    
+         }
+         
+         
+         
+         $user_detail=Withdraw::where('user_id',$user->id)->where('status','Pending')->first();
+
+         if(!empty($user_detail))
+         {
+           return Redirect::back()->withErrors(array('Withdraw Request Already Exist !'));
+         }
+         else
+         {
+            
+         
+          if(!empty($account))
+              {
+              
+              if (Hash::check($password, $user->tpassword))
+               {     
+                 $data = [
+                        'txn_id' =>md5(time() . rand()),     
+                        'user_id' => $user->id,
+                        'user_id_fk' => $user->username,
+                        'amount' => $request->amount,
+                        'account' => $account,
+                        'payment_mode' =>$request->PSys,
+                        'status' => 'Pending',
+                        'walletType' => 1,
+                        'wdate' => Date("Y-m-d"),
+                    ];
+                   $payment =  Withdraw::Create($data);
+                   
+                    $notify[] = ['success','Withdraw Request Submited successfully'];
+        
+                return redirect()->back()->withNotify($notify);
+                   
+               }
+                else
+                {
+                return Redirect::back()->withErrors(array('Invalid Transaction Pin'));
+                }     
+                
+              }
+              else
+                {
+                return Redirect::back()->withErrors(array('Please Update Your Usdt and Bank Details!'));
+                }  
+
+
+         }
+
+        }
+        else
+        {
+     return Redirect::back()->withErrors(array('Insufficient balance in Your account'));
+        }
+
+    }
+    catch(\Exception $e){
+     Log::info('error here');
+     Log::info($e->getMessage());
+     print_r($e->getMessage());
+     die("hi");
+     return  redirect()->route('user.WithdrawRequest')->withErrors('error', $e->getMessage())->withInput();
+       }
+
+
+
+
     }
     
 

@@ -867,10 +867,10 @@ body.enter_body {
 
 .search__block {
   width: 100%;
-  max-width: 300px;
+  max-width: 410px;
 }
 .search__block input {
-  background: #dfdfff url(../images/icon_search.svg) no-repeat 14px center/18px;
+  background: #dfdfff  no-repeat 14px center/18px;
   color: #7e7ee2;
   font-size: 12px;
   padding-left: 36px;

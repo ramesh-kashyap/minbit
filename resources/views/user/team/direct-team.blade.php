@@ -1,8 +1,4 @@
 
-				<script>
-					$('#affilate_page').addClass("current");
-					$('#affilate_text').addClass("current");
-				</script>
 
 				
 				<div class="dashboard_head dashboard_head_deposit">
@@ -44,17 +40,7 @@
 						<h2>Referral levels</h2>
 					</div>
 					<div class="levels row mb_40">					
-                        @for ($l=1;$l<=15;$l++)
-						<div class="col-2 col-lg-2 mb_20">
-							<div class="levels__item">
-								<a class="levels__name" <?php echo  (Session::get('selected_level')==$l)?"active":""?> href="{{route('user.referral-team') }}?selected_level={{$l}}">Level </a>
-								<p class="levels__percent">{{$l}}<span></span></p>
-								<p class="levels__describe d-flex align-items-center">
-									<img src="/images/icon_levels_user.svg" alt="">
-								</p>
-							</div>
-						</div>
-                        @endfor
+                        
 						
 						<div class="col-12 col-lg-6 mb_20">
 							<div class="levels__item levels__item_statistick d-flex flex-column">

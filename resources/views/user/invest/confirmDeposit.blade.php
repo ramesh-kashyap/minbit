@@ -13,7 +13,7 @@
             <div class="table-parent table-responsive mt-4">
                 <div class="table-search-bar">
                     <div>
-                        <form action="{{ route('user.fundActivation') }}" method="post"  enctype="multipart/form-data">
+                        <form action="{{ route('user.fundActivation') }}" method="POST" >
                           {{ csrf_field() }}
                             <div class="row g-3 align-items-end">
 

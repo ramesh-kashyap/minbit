@@ -30,23 +30,23 @@
 
 					                <br>
 
-					                <div class="modal__item-input">
+					                <div class="search__block_input">
 					                    <div class="modal__input-title">Minimal payment amount:</div>
-					                    <div class="modal__deposit-cover-row">
-					                        <input type="text" name="amount" value="" placeholder="Enter Amount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" >
+					                    <div class="search__block">
+					                        <input type="text" class="currency__search" name="amount" value="" placeholder="Enter Amount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
-                                    <div class="modal__item-input">
+                                    <div class="search__block_input">
 					                    <div class="modal__input-title">Transaction Password</div>
-					                    <div class="modal__deposit-cover-row">
-					                        <input type="password" id="transaction_password"  name="transaction_password" value="" placeholder="Transaction Pin" >
+					                    <div class="search__block">
+					                        <input type="password" class="currency__search" id="transaction_password"  name="transaction_password" value="" placeholder="Transaction Pin" >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
-					                <div id="dep_address" class="modal__item-input" style="">
+					                <div id="dep_address" class="search__block_input" style="">
 					                    <div class="modal__input-title">Payment Type:</div>
-					                    <div class="modal__deposit-cover-row">                                        
+					                    <div class="search__block">                                        
 					                        <select id="deposit_address"  name="PSys"  id="wallet_type">
                                             <option data-icon="INR" value="INR">INR</option>
                                             <option data-icon="USDT" value="USDT"> USDT</option>
@@ -54,7 +54,7 @@
 					                        <!-- <span class="modal__copy-btn copy__payment"></span> -->
 					                    </div>
 					                </div>
-					                <div id="dep_tag" class="modal__item-input" style="display: none;">
+									<div id="dep_tag" class="modal__item-input" style="display: none;">
 					                    <div class="modal__input-title">Payment tag (memo):</div>
 					                    <div class="modal__deposit-cover-row">
 					                        <!-- <input id="deposit_tag" name="tag" type="text" value="" placeholder="" disabled=""> -->

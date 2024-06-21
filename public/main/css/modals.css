@@ -280,14 +280,14 @@ select{
 
  .modal__deposit .modal__button button {
  	background: none;
- 	color: #09F26F;
- 	border: 1px solid #09F26F;
+ 	color: #7d34ee;
+ 	border: 1px solid #7d34ee;
  }
 
  .modal__deposit .modal__button button:hover {
- 	background: #09F26F;
- 	border: 1px solid #09F26F;
- 	color: #000000;
+ 	background: #7d34ee;
+ 	border: 1px solid #7d34ee;
+ 	color: #fff;
  }
 
  .modal__deposit .modal__button button svg {

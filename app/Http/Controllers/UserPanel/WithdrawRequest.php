@@ -46,7 +46,7 @@ class WithdrawRequest extends Controller
         try{
 
              $validation =  Validator::make($request->all(), [
-            'amount' => 'required|numeric|min:50',
+            'amount' => 'required|numeric|min:5',
             'PSys' => 'required',    
              'transaction_password' => 'required',               
 

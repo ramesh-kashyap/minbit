@@ -1,5 +1,4 @@
-
-				<script>
+<script>
 					$('#dashboard_page').addClass("current");
 					$('#dashboard_text').addClass("current");
 				</script>
@@ -79,7 +78,7 @@
 									Transactions
 								</button>
 							</div>
-							<div class="select__wrap coins_select__wrap">
+							<div class="select_wrap coins_select_wrap">
 								<button class="select__check">
 									<div class="select__icons" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;"><div class="scroll-content">
 										<div class="scroll-content">
@@ -148,14 +147,14 @@
 							</div>
 						</div>
 
-						<div class="coins__list coins__list_dashboard active coins"><div class="coins__row coins__row_title">
+						<div class="coins_list coinslist_dashboard active coins"><div class="coinsrow coins_row_title">
 								<p class="coins__item">Coin:</p>
 								<p class="coins__item">Start date:</p>
-								<p class="coins__item coins__item_color">Portfolio %</p>
+								<p class="coins_item coins_item_color">Portfolio %</p>
 								<p class="coins__item">On account:</p>
 								<p class="coins__item">All-time income:</p>
-							</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+							</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/dash.png" class="icon" alt="">
@@ -173,18 +172,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/xmr.png" class="icon" alt="">
@@ -202,18 +201,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/sol.png" class="icon" alt="">
@@ -231,18 +230,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/zec.png" class="icon" alt="">
@@ -260,18 +259,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/usdt.png" class="icon" alt="">
@@ -289,18 +288,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/dot.png" class="icon" alt="">
@@ -318,18 +317,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/xrp.png" class="icon" alt="">
@@ -347,18 +346,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/etc.png" class="icon" alt="">
@@ -376,18 +375,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/eth.png" class="icon" alt="">
@@ -405,18 +404,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/link.png" class="icon" alt="">
@@ -434,18 +433,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/shib.png" class="icon" alt="">
@@ -463,18 +462,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/ltc.png" class="icon" alt="">
@@ -492,18 +491,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/doge.png" class="icon" alt="">
@@ -521,18 +520,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/trx.png" class="icon" alt="">
@@ -550,18 +549,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/bch.png" class="icon" alt="">
@@ -579,18 +578,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/ada.png" class="icon" alt="">
@@ -608,18 +607,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/matic.png" class="icon" alt="">
@@ -637,18 +636,18 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-		</div><div class="coins__row coins__row_main" data-prc="nan">
-			<p class="coins__item coins__item_first">
+		</div><div class="coins_row coins_row_main" data-prc="nan">
+			<p class="coins_item coins_item_first">
 				<span class="coins__item_name">Coin: </span>
 				<span>
 					<img src="{{asset('')}}main/images/dashboard_icons/btc.png" class="icon" alt="">
@@ -666,12 +665,12 @@
 				<span class="coins__item_name">Portfolio %: </span>
 				<span>0%</span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">On account: </span>
 				<span class="portfolio_visible" style=""> $0.<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
 			</p>
-			<p class="coins__item coins__item_income">
+			<p class="coins_item coins_item_income">
 				<span class="coins__item_name">All-time income: </span>
 				<span class="portfolio_visible" style=""> $0<span>00 </span></span>
 				<span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
@@ -699,9 +698,9 @@
 
 
 						<div class="coins__list transactions" id="depsoits_history">
-							<div class="coins__row coins__row_title">
+							<div class="coins_row coins_row_title">
 								<p class="coins__item">Coin:</p>
-								<p class="coins__item coins__item_color">Type:</p>
+								<p class="coins_item coins_item_color">Type:</p>
 								<p class="coins__item">Amount:</p>
 								<p class="coins__item">Date:</p>
 								<p class="coins__item">Status:</p>
@@ -735,6 +734,3 @@
 			window.location.href = '/bonus';
 		});
 	</script>
-
-
-

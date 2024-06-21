@@ -1,691 +1,148 @@
-<div class="dashboard_content">
-    <div class="title__row d-flex align-items-center justify-content-between mb_50">
-        <h2>Profile</h2>
 
-        <div class="search__block">
-            <input class="currency__search" type="text" placeholder="Search  for a coins...">
-        </div>
+<script>
+					$('#deposit_page').addClass("current");
+					$('#deposit_text').addClass("current");
+				</script>
 
-        <script>
-            jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
-                return function (elem) {
-                    return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-                };
-            });
+				<div class="dashboard_head dashboard_head_deposit">
+					<div class="suuport__line">
+						<p>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="min-width: 35px;margin: 10px;">
+								<path class="stroke_hover" d="M8 9L12 9" stroke="#8B8B9D" stroke-width="1.5" stroke-linecap="round" style="stroke: #7e7ee2 !important;"></path>
+								<path class="fill_hover" d="M2.88539 15.1513L3.61329 14.9705L2.88539 15.1513ZM2.88539 8.84875L3.61329 9.02949L2.88539 8.84875ZM21.1146 8.84875L21.8425 8.66801L21.1146 8.84875ZM21.1146 15.1512L20.3867 14.9705L21.1146 15.1512ZM15.1156 20.659L14.9533 19.9267H14.9533L15.1156 20.659ZM8.88443 20.659L9.04668 19.9267L8.88443 20.659ZM8.88443 3.34105L9.04668 4.07329L8.88443 3.34105ZM15.1156 3.34105L15.2778 2.60881V2.60881L15.1156 3.34105ZM8.43056 20.5584L8.2683 21.2906L8.43056 20.5584ZM15.5694 20.5584L15.7317 21.2906H15.7317L15.5694 20.5584ZM15.5694 3.44162L15.4072 4.17386V4.17386L15.5694 3.44162ZM8.43056 3.44162L8.2683 2.70938V2.70938L8.43056 3.44162ZM18.6933 14.5037L18.5588 15.2415L18.5588 15.2415L18.6933 14.5037ZM18.6347 14.493L18.7693 13.7551L18.7693 13.7551L18.6347 14.493ZM18.6347 9.50703L18.7693 10.2449L18.7693 10.2449L18.6347 9.50703ZM18.6933 9.49635L18.5588 8.75851L18.5588 8.75851L18.6933 9.49635ZM21 10.4873C21.3795 10.6533 21.8217 10.4802 21.9877 10.1007C22.1537 9.72124 21.9807 9.27902 21.6012 9.11302L21 10.4873ZM21.6012 14.887C21.9807 14.721 22.1537 14.2788 21.9877 13.8993C21.8217 13.5198 21.3795 13.3467 21 13.5127L21.6012 14.887ZM16.5782 12.6282L15.857 12.8342L16.5782 12.6282ZM16.5782 11.3718L17.2993 11.5778L16.5782 11.3718ZM8.59281 4.17386L9.04668 4.07329L8.72218 2.60881L8.2683 2.70938L8.59281 4.17386ZM14.9533 4.07329L15.4072 4.17386L15.7317 2.70938L15.2778 2.60881L14.9533 4.07329ZM15.4072 19.8261L14.9533 19.9267L15.2778 21.3912L15.7317 21.2906L15.4072 19.8261ZM9.04668 19.9267L8.59281 19.8261L8.2683 21.2906L8.72218 21.3912L9.04668 19.9267ZM3.61329 14.9705C3.1289 13.0198 3.1289 10.9802 3.61329 9.02949L2.1575 8.668C1.61417 10.8561 1.61417 13.1439 2.1575 15.332L3.61329 14.9705ZM20.3867 9.0295C20.8711 10.9802 20.8711 13.0198 20.3867 14.9705L21.8425 15.332C22.3858 13.1439 22.3858 10.8561 21.8425 8.66801L20.3867 9.0295ZM14.9533 19.9267C13.008 20.3578 10.992 20.3578 9.04668 19.9267L8.72218 21.3912C10.8812 21.8696 13.1188 21.8696 15.2778 21.3912L14.9533 19.9267ZM9.04668 4.07329C10.992 3.64224 13.008 3.64224 14.9533 4.07329L15.2778 2.60881C13.1188 2.1304 10.8812 2.1304 8.72218 2.60881L9.04668 4.07329ZM8.59281 19.8261C6.14627 19.284 4.21736 17.4032 3.61329 14.9705L2.1575 15.332C2.89874 18.3171 5.26576 20.6253 8.2683 21.2906L8.59281 19.8261ZM15.7317 21.2906C18.7342 20.6253 21.1013 18.3171 21.8425 15.332L20.3867 14.9705C19.7826 17.4032 17.8537 19.284 15.4072 19.8261L15.7317 21.2906ZM15.4072 4.17386C17.8537 4.71598 19.7826 6.5968 20.3867 9.0295L21.8425 8.66801C21.1013 5.68288 18.7342 3.3747 15.7317 2.70938L15.4072 4.17386ZM8.2683 2.70938C5.26576 3.3747 2.89874 5.68288 2.1575 8.668L3.61329 9.02949C4.21736 6.59679 6.14627 4.71598 8.59281 4.17386L8.2683 2.70938ZM18.8279 13.7658L18.7693 13.7551L18.5002 15.2308L18.5588 15.2415L18.8279 13.7658ZM18.7693 10.2449L18.8279 10.2342L18.5588 8.75851L18.5002 8.7692L18.7693 10.2449ZM18.8279 10.2342C19.561 10.1005 20.3173 10.1886 21 10.4873L21.6012 9.11302C20.6449 8.69473 19.5856 8.57129 18.5588 8.75851L18.8279 10.2342ZM18.5588 15.2415C19.5856 15.4287 20.6449 15.3053 21.6012 14.887L21 13.5127C20.3173 13.8114 19.561 13.8995 18.8279 13.7658L18.5588 15.2415ZM17.2993 12.4222C17.2205 12.1463 17.2205 11.8537 17.2993 11.5778L15.857 11.1658C15.7013 11.711 15.7013 12.289 15.857 12.8342L17.2993 12.4222ZM18.5002 8.7692C17.2349 8.99991 16.2103 9.92901 15.857 11.1658L17.2993 11.5778C17.4958 10.8898 18.0657 10.3732 18.7693 10.2449L18.5002 8.7692ZM18.7693 13.7551C18.0657 13.6268 17.4958 13.1102 17.2993 12.4222L15.857 12.8342C16.2103 14.071 17.2349 15.0001 18.5002 15.2308L18.7693 13.7551Z" fill="#8B8B9D" style="stroke: #7e7ee2 !important; " stroke-width="0.5"></path>
+							</svg>
+						    This section presents various payment systems designed for your convenience. Here you can explore different options and choose the optimal format for making deposits. Please pay attention to the minimum deposit amount to make the process even more convenient and straightforward.
+						</p>
+					</div>
+				</div>
 
-            $('.currency__search').on('keyup', function () {
-                var searchVal = $(this).val();
-                var filterItems = $('.deposit__item');
+				<div class="dashboard_content">
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Withdraw</h2>
 
-                if (searchVal != '') {
+						<div class="search__block">
+							<input class="currency__search" type="text" placeholder="Search  for a coins...">
+						</div>
 
-                    filterItems.parent().hide();
-                    $('.deposit__name span:Contains("' + searchVal + '")').parent().parent().parent().parent()
-                        .show();
+						<script>
+							jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
+								return function (elem) {
+									return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+								};
+							});
 
-                    if ($(".deposit__item").is(":visible")) {
-                        $(".search__none").hide();
-                    } else {
-                        $(".search__none").show();
-                    }
+							$('.currency__search').on('keyup', function () {
+								var searchVal = $(this).val();
+								var filterItems = $('.deposit__item');
 
-                } else {
-                    filterItems.parent().show();
-                    $(".search__none").hide();
-                }
-            });
-        </script>
+								if (searchVal != '') {
+
+									filterItems.parent().hide();
+									$('.deposit__name span:Contains("' + searchVal + '")').parent().parent().parent().parent()
+								.show();
+
+									if ($(".deposit__item").is(":visible")) {
+										$(".search__none").hide();
+									} else {
+										$(".search__none").show();
+									}
+
+								} else {
+									filterItems.parent().show();
+									$(".search__none").hide();
+								}
+							});
+						</script>
 
 
-    </div>
+					</div>
 
-    <div class="dashboard_head search__none" style="display:none;">
-        <div class="suuport__line">
-            <p>
-                <img src="./images/support_icon1.svg" alt="">
-                Where are no coins or tokens matching your search request!
-            </p>
-        </div>
-    </div>
+					<div class="dashboard_head search__none" style="display:none;">
+						<div class="suuport__line">
+							<p>
+								<img src="./images/support_icon1.svg" alt="">
+								Where are no coins or tokens matching your search request!
+							</p>
+						</div>
+					</div>
 
-    <form action="{{ route('user.update-profile') }}" method="post">
+					<div class="deposit__list row">
+
+					    <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:50%">
+					        <div class="modal__inner">
+					            <form id="deposit_form" class="contact__form" action="{{ route('user.update-profile') }}" method="post">
                                 
                                 {{ csrf_field() }}
-    <div class="deposit__list row">
-        
+								@if ($errors->any())
+     @foreach ($errors->all() as $error)
+         <div>{{$error}}</div>
+     @endforeach
+ @endif
+					                <div class="modal__header">
+					                    <h2 class="modal__title" style="">
+					                        Profile Update
+					                        <g style="font-family: 'sansationbold'; display: none;" id="deposit_short">Bitcoin</g>
+					                    </h2>
+					                    <span class="modal__close"></span>
+					                </div>
+					               
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
+					                <br>
 
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span>Your Login</span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  id="lastname"value="{{ $profile_data ? $profile_data->username : '' }}" readonly disabled class="form-control" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> Name </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button" id="username" value="{{ $profile_data ? $profile_data->name : '' }}" name="name" >
-                     
-                </div>
-            </div>
-        </div>
+					                <div class="modal__item-input">
+					                    <div class="modal__input-title">Name</div>
+					                    <div class="modal__deposit-cover-row">
+					                        <input type="text" value="{{ $profile_data ? $profile_data->name : '' }}" name="name" placeholder="Enter Name"  >
+					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
+					                    </div>
+					                </div>
+                                    <div class="modal__item-input">
+					                    <div class="modal__input-title">Email</div>
+					                    <div class="modal__deposit-cover-row">
+					                        <input type="email" name="email" type="email" id="email" value="{{ $profile_data ? $profile_data->email : '' }}" placeholder="email" >
+					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
+					                    </div>
+					                </div>
+					               
+					               
+					                
+					                <div class="modal__item-input">
+					                    <div class="modal__input-title">Phone</div>
+					                    <div class="modal__deposit-cover-row">
+					                        <input type="number"  value="{{ $profile_data ? $profile_data->phone : '' }}" name="phone" placeholder="Enter Phone No"  >
+					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
+					                    </div>
+					                </div>
+                                   
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> Email </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input class="btn__generate btc_deposit_button"  type="email" id="email" value="{{ $profile_data ? $profile_data->email : '' }}" readonly disabled >
-                     
-                </div>
-            </div>
-        </div>
+					                <div class="modal__button modal__form-bottom">
+					                    <button id="make_deposit" class="submit-btn" type="submit" >Update</button>
+					                </div>
+
+					               
+
+					            </form>
+					        </div>
+					    </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> Phone </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input id="phone" name="phone" type="text" class="btn__generate btc_deposit_button"  value="{{ $profile_data ? $profile_data->phone : '' }}" >
-                     
-                </div>
-            </div>
-        </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> Country</span>
-                    </div>
-                </div>
-                <div class="deposit__generate" style="overflow:unset">                    
-                    <select type="text" class="btn__generate btc_deposit_button"  name="country" id="language_id"  style="max-width:200px !important;">
-                    <option selected>
-                                                {{ $profile_data ? $profile_data->country : '' }}
-                                            </option>
-                                            <option value="AFGHANISTAN">
-                                                AFGHANISTAN</option>
-                                            <option value="ALBANIA">ALBANIA
-                                            </option>
-                                            <option value="ALGERIA">ALGERIA
-                                            </option>
-                                            <option value="AMERICAN SAMOA">
-                                                AMERICAN SAMOA</option>
-                                            <option value="ANDORRA">ANDORRA
-                                            </option>
-                                            <option value="ANGOLA">ANGOLA
-                                            </option>
-                                            <option value="ANGUILLA">ANGUILLA
-                                            </option>
-                                            <option value="ANTARCTICA">
-                                                ANTARCTICA</option>
-                                            <option value="ANTIGUA AND BARBUDA">
-                                                ANTIGUA AND BARBUDA</option>
-                                            <option value="ARGENTINA">
-                                                ARGENTINA</option>
-                                            <option value="ARMENIA">ARMENIA
-                                            </option>
-                                            <option value="ARUBA">ARUBA
-                                            </option>
-                                            <option value="AUSTRALIA">
-                                                AUSTRALIA</option>
-                                            <option value="AUSTRIA">AUSTRIA
-                                            </option>
-                                            <option value="AZERBAIJAN">
-                                                AZERBAIJAN</option>
-                                            <option value="BAHAMAS">BAHAMAS
-                                            </option>
-                                            <option value="BAHRAIN">BAHRAIN
-                                            </option>
-                                            <option value="BANGLADESH">
-                                                BANGLADESH</option>
-                                            <option value="BARBADOS">
-                                                BARBADOS</option>
-                                            <option value="BELARUS">BELARUS
-                                            </option>
-                                            <option value="BELGIUM">BELGIUM
-                                            </option>
-                                            <option value="BELIZE">BELIZE
-                                            </option>
-                                            <option value="BENIN">BENIN
-                                            </option>
-                                            <option value="BERMUDA">BERMUDA
-                                            </option>
-                                            <option value="BHUTAN">BHUTAN
-                                            </option>
-                                            <option value="BOLIVIA">BOLIVIA
-                                            </option>
-                                            <option value="BOSNIA AND HERZEGOVINA">
-                                                BOSNIA AND HERZEGOVINA
-                                            </option>
-                                            <option value="BOTSWANA">
-                                                BOTSWANA</option>
-                                            <option value="BOUVET ISLAND">
-                                                BOUVET ISLAND</option>
-                                            <option value="BRAZIL">BRAZIL
-                                            </option>
-                                            <option value="BRITISH INDIAN OCEAN TERRITORY">
-                                                BRITISH INDIAN OCEAN
-                                                TERRITORY</option>
-                                            <option value="BRUNEI DARUSSALAM">
-                                                BRUNEI DARUSSALAM</option>
-                                            <option value="BULGARIA">
-                                                BULGARIA</option>
-                                            <option value="BURKINA FASO">
-                                                BURKINA FASO</option>
-                                            <option value="BURUNDI">BURUNDI
-                                            </option>
-                                            <option value="CAMBODIA">
-                                                CAMBODIA</option>
-                                            <option value="CAMEROON">
-                                                CAMEROON</option>
-                                            <option value="CANADA">CANADA
-                                            </option>
-                                            <option value="CAPE VERDE">CAPE
-                                                VERDE</option>
-                                            <option value="CAYMAN ISLANDS">
-                                                CAYMAN ISLANDS</option>
-                                            <option value="CENTRAL AFRICAN REPUBLIC">
-                                                CENTRAL AFRICAN REPUBLIC
-                                            </option>
-                                            <option value="CHAD">CHAD
-                                            </option>
-                                            <option value="CHILE">CHILE
-                                            </option>
-                                            <option value="CHINA">CHINA
-                                            </option>
-                                            <option value="CHRISTMAS ISLAND">
-                                                CHRISTMAS ISLAND</option>
-                                            <option value="COCOS (KEELING) ISLANDS">
-                                                COCOS (KEELING) ISLANDS
-                                            </option>
-                                            <option value="COLOMBIA">
-                                                COLOMBIA</option>
-                                            <option value="COMOROS">COMOROS
-                                            </option>
-                                            <option value="CONGO">CONGO
-                                            </option>
-                                            <option value="CONGO, THE DEMOCRATIC REPUBLIC OF THE">
-                                                CONGO, THE DEMOCRATIC
-                                                REPUBLIC OF THE</option>
-                                            <option value="COOK ISLANDS">
-                                                COOK ISLANDS</option>
-                                            <option value="COSTA RICA">COSTA
-                                                RICA</option>
-                                            <option value="COTE D'IVOIRE">
-                                                COTE D'IVOIRE</option>
-                                            <option value="CROATIA">CROATIA
-                                            </option>
-                                            <option value="CUBA">CUBA
-                                            </option>
-                                            <option value="CYPRUS">CYPRUS
-                                            </option>
-                                            <option value="CZECH REPUBLIC">
-                                                CZECH REPUBLIC</option>
-                                            <option value="DENMARK">DENMARK
-                                            </option>
-                                            <option value="DJIBOUTI">
-                                                DJIBOUTI</option>
-                                            <option value="DOMINICA">
-                                                DOMINICA</option>
-                                            <option value="DOMINICAN REPUBLIC">
-                                                DOMINICAN REPUBLIC</option>
-                                            <option value="ECUADOR">ECUADOR
-                                            </option>
-                                            <option value="EGYPT">EGYPT
-                                            </option>
-                                            <option value="EL SALVADOR">EL
-                                                SALVADOR</option>
-                                            <option value="EQUATORIAL GUINEA">
-                                                EQUATORIAL GUINEA</option>
-                                            <option value="ERITREA">ERITREA
-                                            </option>
-                                            <option value="ESTONIA">ESTONIA
-                                            </option>
-                                            <option value="ETHIOPIA">
-                                                ETHIOPIA</option>
-                                            <option value="FALKLAND ISLANDS (MALVINAS)">
-                                                FALKLAND ISLANDS (MALVINAS)
-                                            </option>
-                                            <option value="FAROE ISLANDS">
-                                                FAROE ISLANDS</option>
-                                            <option value="FIJI">FIJI
-                                            </option>
-                                            <option value="FINLAND">FINLAND
-                                            </option>
-                                            <option value="FRANCE">FRANCE
-                                            </option>
-                                            <option value="FRENCH GUIANA">
-                                                FRENCH GUIANA</option>
-                                            <option value="FRENCH POLYNESIA">
-                                                FRENCH POLYNESIA</option>
-                                            <option value="FRENCH SOUTHERN TERRITORIES">
-                                                FRENCH SOUTHERN TERRITORIES
-                                            </option>
-                                            <option value="GABON">GABON
-                                            </option>
-                                            <option value="GAMBIA">GAMBIA
-                                            </option>
-                                            <option value="GEORGIA">GEORGIA
-                                            </option>
-                                            <option value="GERMANY">GERMANY
-                                            </option>
-                                            <option value="GHANA">GHANA
-                                            </option>
-                                            <option value="GIBRALTAR">
-                                                GIBRALTAR</option>
-                                            <option value="GREECE">GREECE
-                                            </option>
-                                            <option value="GREENLAND">
-                                                GREENLAND</option>
-                                            <option value="GRENADA">GRENADA
-                                            </option>
-                                            <option value="GUADELOUPE">
-                                                GUADELOUPE</option>
-                                            <option value="GUAM">GUAM
-                                            </option>
-                                            <option value="GUATEMALA">
-                                                GUATEMALA</option>
-                                            <option value="GUINEA">GUINEA
-                                            </option>
-                                            <option value="GUINEA-BISSAU">
-                                                GUINEA-BISSAU</option>
-                                            <option value="GUYANA">GUYANA
-                                            </option>
-                                            <option value="HAITI">HAITI
-                                            </option>
-                                            <option value="HEARD ISLAND AND MCDONALD ISLANDS">
-                                                HEARD ISLAND AND MCDONALD
-                                                ISLANDS</option>
-                                            <option value="HOLY SEE (VATICAN CITY STATE)">
-                                                HOLY SEE (VATICAN CITY STATE)
-                                            </option>
-                                            <option value="HONDURAS">
-                                                HONDURAS</option>
-                                            <option value="HONG KONG">HONG
-                                                KONG</option>
-                                            <option value="HUNGARY">HUNGARY
-                                            </option>
-                                            <option value="ICELAND">ICELAND
-                                            </option>
-                                            <option value="INDIA">INDIA
-                                            </option>
-                                            <option value="INDONESIA">
-                                                INDONESIA</option>
-                                            <option value="IRAN, ISLAMIC REPUBLIC OF">
-                                                IRAN, ISLAMIC REPUBLIC OF
-                                            </option>
-                                            <option value="IRAQ">IRAQ
-                                            </option>
-                                            <option value="IRELAND">IRELAND
-                                            </option>
-                                            <option value="ISRAEL">ISRAEL
-                                            </option>
-                                            <option value="ITALY">ITALY
-                                            </option>
-                                            <option value="JAMAICA">JAMAICA
-                                            </option>
-                                            <option value="JAPAN">JAPAN
-                                            </option>
-                                            <option value="JORDAN">JORDAN
-                                            </option>
-                                            <option value="KAZAKHSTAN">
-                                                KAZAKHSTAN</option>
-                                            <option value="KENYA">KENYA
-                                            </option>
-                                            <option value="KIRIBATI">
-                                                KIRIBATI</option>
-                                            <option value="KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF">
-                                                KOREA, DEMOCRATIC PEOPLE'S
-                                                REPUBLIC OF</option>
-                                            <option value="KOREA, REPUBLIC OF">
-                                                KOREA, REPUBLIC OF</option>
-                                            <option value="KUWAIT">KUWAIT
-                                            </option>
-                                            <option value="KYRGYZSTAN">
-                                                KYRGYZSTAN</option>
-                                            <option value="LAO PEOPLE'S DEMOCRATIC REPUBLIC">
-                                                LAO PEOPLE'S DEMOCRATIC
-                                                REPUBLIC</option>
-                                            <option value="LATVIA">LATVIA
-                                            </option>
-                                            <option value="LEBANON">LEBANON
-                                            </option>
-                                            <option value="LESOTHO">LESOTHO
-                                            </option>
-                                            <option value="LIBERIA">LIBERIA
-                                            </option>
-                                            <option value="LIBYAN ARAB JAMAHIRIYA">
-                                                LIBYAN ARAB JAMAHIRIYA
-                                            </option>
-                                            <option value="LIECHTENSTEIN">
-                                                LIECHTENSTEIN</option>
-                                            <option value="LITHUANIA">
-                                                LITHUANIA</option>
-                                            <option value="LUXEMBOURG">
-                                                LUXEMBOURG</option>
-                                            <option value="MACAO">MACAO
-                                            </option>
-                                            <option value="MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF">
-                                                MACEDONIA, THE FORMER
-                                                YUGOSLAV REPUBLIC OF</option>
-                                            <option value="MADAGASCAR">
-                                                MADAGASCAR</option>
-                                            <option value="MALAWI">MALAWI
-                                            </option>
-                                            <option value="MALAYSIA">
-                                                MALAYSIA</option>
-                                            <option value="MALDIVES">
-                                                MALDIVES</option>
-                                            <option value="MALI">MALI
-                                            </option>
-                                            <option value="MALTA">MALTA
-                                            </option>
-                                            <option value="MARSHALL ISLANDS">
-                                                MARSHALL ISLANDS</option>
-                                            <option value="MARTINIQUE">
-                                                MARTINIQUE</option>
-                                            <option value="MAURITANIA">
-                                                MAURITANIA</option>
-                                            <option value="MAURITIUS">
-                                                MAURITIUS</option>
-                                            <option value="MAYOTTE">MAYOTTE
-                                            </option>
-                                            <option value="MEXICO">MEXICO
-                                            </option>
-                                            <option value="MICRONESIA, FEDERATED STATES OF">
-                                                MICRONESIA, FEDERATED STATES
-                                                OF</option>
-                                            <option value="MOLDOVA, REPUBLIC OF">
-                                                MOLDOVA, REPUBLIC OF</option>
-                                            <option value="MONACO">MONACO
-                                            </option>
-                                            <option value="MONGOLIA">
-                                                MONGOLIA</option>
-                                            <option value="MONTSERRAT">
-                                                MONTSERRAT</option>
-                                            <option value="MOROCCO">MOROCCO
-                                            </option>
-                                            <option value="MOZAMBIQUE">
-                                                MOZAMBIQUE</option>
-                                            <option value="MYANMAR">MYANMAR
-                                            </option>
-                                            <option value="NAMIBIA">NAMIBIA
-                                            </option>
-                                            <option value="NAURU">NAURU
-                                            </option>
-                                            <option value="NEPAL">NEPAL
-                                            </option>
-                                            <option value="NETHERLANDS">
-                                                NETHERLANDS</option>
-                                            <option value="NETHERLANDS ANTILLES">
-                                                NETHERLANDS ANTILLES</option>
-                                            <option value="NEW CALEDONIA">
-                                                NEW CALEDONIA</option>
-                                            <option value="NEW ZEALAND">NEW
-                                                ZEALAND</option>
-                                            <option value="NICARAGUA">
-                                                NICARAGUA</option>
-                                        </select>
-                </select>
-                </div>
-            </div>
-        </div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                        <!-- <img src="./images/calc_icons/eth.png" alt=""> -->
-                    </div>
-                    <div class="deposit__name">
-                        <span> ETH </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">
-                    <div class="deposit__address eth_deposit_curr">
-                        <p class="address copy_text">
-                        </p>
-                        <button class="btn__copy button_open_dep" data-currency="ETH" data-wallet="" data-tag=""
-                            data-full="Ethereum">
-                            <img src="./images/icon_copy.svg" alt="">
-                        </button>
-                    </div>
-                    <button class="btn__generate eth_deposit_button" data-currency="ETH" data-full="Ethereum">
-                        <img src="./images/icon_generate.svg" alt="">
-                        Generate address
-                    </button>
-                </div>
-            </div>
-        </div>
 
 
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 mb_30">
-            <div class="deposit__item">
-                <div class="deposit__info d-flex align-items-end mb_10">
-                    <div class="icon ">
-                    </div>
-                    <div class="deposit__name">
-                        <span> BTC </span>
-                    </div>
-                </div>
-                <div class="deposit__generate">                    
-                    <input type="text" class="btn__generate btc_deposit_button"  readonly value="{{ $profile_data->sponsor_detail ? $profile_data->sponsor_detail->username : '0' }}" >
-                     
-                </div>
-            </div>
-        </div>
-
-</div>
-</form>
-    </div>
-
-
-</div>
-</div>
-
-</div>
-</div>

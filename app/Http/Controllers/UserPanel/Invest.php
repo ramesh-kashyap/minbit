@@ -57,7 +57,7 @@ public function cancel_payment($id)
     {
    try{
      $validation =  Validator::make($request->all(), [
-        'Sum' => 'required|numeric|min:30',
+        'Sum' => 'required|numeric|min:3',
         'PSys' => 'required',
      ]);
 
@@ -89,10 +89,10 @@ public function cancel_payment($id)
 
    
        
-    if ($amount<$min_amount || $amount>$max_amount) 
-    {
-      return Redirect::back()->withErrors(array('minimum deposit is $ '.$min_amount.' and maximum is $ '.$max_amount));
-    }
+    // if ($amount<$min_amount || $amount>$max_amount) 
+    // {
+    //   return Redirect::back()->withErrors(array('minimum deposit is $ '.$min_amount.' and maximum is $ '.$max_amount));
+    // }
     $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
     $last_package=($invest_check)?$invest_check->amount:0;
         $plan ='BEGINNER';

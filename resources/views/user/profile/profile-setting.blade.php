@@ -126,14 +126,14 @@
 					                <div class="search__block_input">
 					                    <div class="modal__input-title">Old Password</div>
 					                    <div class="search__block">
-					                        <input type="password"  class="currency__search1" value="" name="old_password" placeholder="Enter Old Password"  >
+					                        <input type="password"  class="currency__search" value="" name="old_password" placeholder="Enter Old Password"  >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
                                     <div class="search__block_input">
 					                    <div class="modal__input-title">New Password</div>
 					                    <div class="search__block">
-					                        <input type="password" class="currency__search1" name="password" type="password" id="password" value="" placeholder="Enter New Password" >
+					                        <input type="password" class="currency__search" name="password" type="password" id="password" value="" placeholder="Enter New Password" >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
@@ -143,7 +143,7 @@
 					                <div class="search__block_input" >
 					                    <div class="modal__input-title">Confirm new password</div>
 					                    <div class="search__block">
-					                        <input type="password" class="currency__search1" value="" name="password_confirmation" placeholder="Enter confirm_Password">
+					                        <input type="password" class="currency__search" value="" name="password_confirmation" placeholder="Enter confirm_Password">
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>

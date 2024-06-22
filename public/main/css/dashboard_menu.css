@@ -36,6 +36,12 @@ body.enter_body {
   }
 }
 
+@media (max-width: 768px) {
+  .submit-btn {
+      width: 200px;
+  }
+}
+
 .dashboard .dashboard__sidebar .sidebar__top {
   padding: 24px 27px 30px;
   -webkit-box-align: center;

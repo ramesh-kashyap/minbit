@@ -69,69 +69,6 @@
         </div>
     </div>
     
-             <div class="dashboard_content">
-					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
-						<h2>Referral levels</h2>
-					</div> -->
-					
-					
-										
-					<div class="title__row d-flex align-items-center justify-content-between mb_50">
-						<h2>Referral Team</h2>
-					</div>
-					
-					
-					
-					<div class="list__hisory">
-						
-						<div class="coins__list coins__list_affilate active list">
-							<div class="coins__row coins__row_title">
-								<p class="coins__item">S no:</p>
-								<p class="coins__item">User Id:</p>
-								<p class="coins__item coins__item_color">
-									Amount
-								</p>
-								<p class="coins__item">date:</p>
-								<p class="coins__item coins__item_color">Status:</p>
-							</div>
-                            <!-- rfr-->
-                            <?php if(is_array($withdraw_report) || is_object($withdraw_report)){ ?>
-
-                            <?php
-                                 date_default_timezone_set('UTC');
-                                 $cnt = $withdraw_report->perPage() * ($withdraw_report->currentPage() - 1); ?>
-                            @foreach($withdraw_report as $key=>$value)
-                                <div class="coins__row coins__row_main" data-prc="nan">
-
-                                    <p class="coins__item fw_medium">
-                                        <span>{{ $key+1 }}</span>
-                                    </p>
-                                      <p class="coins__item fw_medium">
-                                        <span>{{ $value->user_id }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{currency()}} {{ $value->withdraw->sum('amount') }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{$value->payment_mode}}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->wdate }}</span>
-                                    </p>
-                                 
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->status }}</span>
-                                    </p>
-                                </div>
-                            @endforeach
-
-                            <?php }?>
-                            {{ $withdraw_report->withQueryString()->links() }}
-						</div>
-
-					</div>
-				</div>
-</div>
 
 
 <script>

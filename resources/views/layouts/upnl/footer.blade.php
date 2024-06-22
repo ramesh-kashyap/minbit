@@ -454,7 +454,7 @@ if(typeof $("#your-element-selector").html() != "undefined"){
 	</script>
 
 
-<footer class="footer">
+<!-- <footer class="footer">
 	<div class="container">
 		<div class="footer__row d-flex align-items-center flex-wrap">
 			<div class="col-xl-auto col-12 d-flex justify-content-center">
@@ -533,7 +533,7 @@ if(typeof $("#your-element-selector").html() != "undefined"){
 			<p class="copyright">© 2023 MintBit</p>
 		</div>
 	</div>
-</footer>
+</footer> -->
 
 		
 </body></html>

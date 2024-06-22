@@ -4,7 +4,7 @@
 
 					<div class="deposit__list row">
 
-					    <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:49%;">
+					    <div class="modal__body modal__deposit address col-xl-6" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
 					        <div class="modal__inner">
 					            <form id="deposit_form" class="contact__form" action="{{ route('user.update-profile') }}" method="post">
                                 
@@ -102,7 +102,7 @@
 					            </form>
 					        </div>
 					    </div>
-                        <div class="modal__body modal__deposit address" style="visibility: visible;height:510px; display: flex; width:49% ;margin-left:10px">
+                        <div class="modal__body modal__deposit address col-xl-6" style="visibility: visible;height:510px; display: flex; width:100% ;max-width: 500px;">
 					        <div class="modal__inner">
 							<form id="deposit_form" class="contact__form" action="{{ route('user.edit-password') }}" method="post">
                                 

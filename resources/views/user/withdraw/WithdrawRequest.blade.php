@@ -4,15 +4,11 @@
             <div class="modal__inner">
                 <form id="deposit_form" class="contact__form" action="{{ route('user.Withdraw-Request') }}" method="POST">
                     {{ csrf_field() }}
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    @if (session('success'))
+    <script>
+        alert('{{ session('success') }}');
+    </script>
+@endif
 
                     <div class="modal__header">
                         <h2 class="modal__title" style="">
@@ -57,7 +53,7 @@
                     </div>
 
                     <div class="modal__button modal__form-bottom">
-                        <button id="make_deposit" class="submit-btn" type="button" onclick="validateForm()">Withdraw</button>
+                        <button id="make_deposit" class="submit-btn" type="submit" onclick="validateForm()">Withdraw</button>
                     </div>
                 </form>
             </div>

@@ -37,6 +37,8 @@ Route::get('/managePayout', [App\Http\Controllers\Cron::class, 'managePayout'])-
 Route::get('/releasefund', [App\Http\Controllers\Cron::class, 'releasefund'])->name('releasefund');
 Route::any('/dynamicupicallback', [App\Http\Controllers\Cron::class, 'dynamicupicallback'])->name('dynamicupicallback');
 
+// routes/web.php
+Route::post('logout', [App\Http\Controllers\Login::class, 'logout'])->name('logout');
 
 Route::post('login', [App\Http\Controllers\Login::class, 'login'])->name('login');
 Route::get('forgot-password', [App\Http\Controllers\Login::class, 'forgot_password'])->name('forgot-password');

@@ -1,6 +1,6 @@
 
 
-				<div class="referal">
+				<!-- <div class="referal">
 					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
 						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
 							Your referral link
@@ -20,21 +20,15 @@
 						    							
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="dashboard_content">
-					
-					
-					
-										
-					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+				<div class="dashboard_content">			
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
 						<h2>Referral contest</h2>
-					</div>
-					
-					
-					
+					</div> -->
+			
 					<div class="list__hisory">
-						<div class="d-flex mb_40">
+						<!-- <div class="d-flex mb_40">
 							<div class="list__btns">
 								<button class="list__btn check" data-list="list">
 								    Deposit list
@@ -43,15 +37,15 @@
 									Referral list
 								</button>
 							</div>
-						</div>
+						</div> -->
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
+								<p class="coins__item">S.No</p>
 								<p class="coins__item">User Id:</p>
-								<p class="coins__item">User Id Fk:</p>
 								<p class="coins__item coins__item_color">
-									Incomes
+								Amount:
 								</p>
-								<p class="coins__item">Amount:</p>
+								<p class="coins__item">Created At</p>
 								<p class="coins__item coins__item_color">Remark:</p>
 							</div>
                             <!-- rfr-->
@@ -67,7 +61,7 @@
                                         <span>{{ $value->user_id }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->user_id_fk }}</span>
+                                        <span>{{ $value->user_id }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
                                         <span>{{ $value->comm }}</span>

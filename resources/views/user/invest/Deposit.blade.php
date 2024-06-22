@@ -23,7 +23,7 @@
 <div class="dashboard_content">
     <div class="alert" id="error-alert"></div>
     <div class="deposit__list row">
-        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:50%">
+        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
                 <form class="contact__form" action="{{ route('user.fundActivation') }}" method="POST" id="invest-form">
                       @csrf

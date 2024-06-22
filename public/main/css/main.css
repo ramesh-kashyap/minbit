@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   color: #000d1d;
-  padding-bottom: 88px;
+  /* padding-bottom: 88px; */
   line-height: 1.2em;
 }
 

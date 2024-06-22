@@ -25,7 +25,7 @@
     <div class="deposit__list row">
         <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
-                <form class="contact__form" action="{{ route('user.fundActivation') }}" method="POST" id="invest-form">
+                <form class="contact__form" action="{{ route('user.confirm') }}" method="POST" id="invest-form">
                       @csrf
                 <div class="modal__header">
                         <h2 class="modal__title">
@@ -38,31 +38,20 @@
                     <input type="hidden" name="maximum_amount" id="maximum_amount">
                     <input type="hidden" name="plan" id="plan-name"> -->
                     <br>
-                    <div id="dep_address" class="search__block_input">
-                        <div class="modal__input-title">Payment address:</div>
-                        <div class="search__block">
-                            <select id="deposit_address" name="paymentMode" class="custom-select">
-                                <option value="INR">INR</option>
-                                <option value="USDT">USDT</option>
-                            </select>
-                        </div>
-                    </div>
+                    
                     <div class="search__block_input">
                         <div class="modal__input-title">Amount:</div>
                         <div class="search__block">
-                            <input type="text" class="currency__search" name="amount" id="amount">
+                            <input type="text" class="currency__search" name="Sum" id="amount">
                         </div>
                     </div>
-                    <div class="search__block_input">
-                        <div class="modal__input-title">Member Id:</div>
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Payment address:</div>
                         <div class="search__block">
-                            <input type="text" class="currency__search" name="user_id">
-                        </div>
-                    </div>
-                    <div class="search__block_input">
-                        <div class="modal__input-title">T-Password:</div>
-                        <div class="search__block">
-                            <input type="text" class="currency__search" name="transaction_id">
+                            <select id="deposit_address" name="PSys" class="custom-select">
+                                <option value="INR">INR</option>
+                                <option value="USDT">USDT</option>
+                            </select>
                         </div>
                     </div>
                     <!-- <div class="modal__item-input" style="visibility:hidden; height:0px;">

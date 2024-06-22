@@ -68,6 +68,22 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+        
+       
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .search__block .currency__search {
+                width: 260px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .modal__button  .submit-btn {
+                width: 260px;
+           }
+        }
+    
 
     </style>
 

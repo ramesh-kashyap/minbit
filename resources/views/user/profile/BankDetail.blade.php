@@ -79,14 +79,14 @@
 					                <div class="modal__item-input">
 					                    <div class="modal__input-title">Name</div>
 					                    <div class="modal__deposit-cover-row">
-					                        <input type="text"  name="name" placeholder="Enter Name"  >
+					                        <input type="text" id="deposit_address" class="currency__search" name="name" placeholder="Enter Name"  >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
                                     <div class="modal__item-input">
 					                    <div class="modal__input-title">Email</div>
 					                    <div class="modal__deposit-cover-row">
-					                        <input type="email" name="email" type="email" id="email"  placeholder="email" >
+					                        <input type="email" name="email" class="currency__search"  placeholder="email" >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>
@@ -96,7 +96,7 @@
 					                <div class="modal__item-input">
 					                    <div class="modal__input-title">Phone</div>
 					                    <div class="modal__deposit-cover-row">
-					                        <input type="number"   name="phone" placeholder="Enter Phone No"  >
+					                        <input type="number" class="currency__search"   name="phone" placeholder="Enter Phone No"  >
 					                        <!-- <span class="modal__copy-btn copy__deposit-amount"></span> -->
 					                    </div>
 					                </div>

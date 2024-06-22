@@ -26,47 +26,20 @@
 				</div>
 
 				<div class="dashboard_content">
-					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
 						<h2>Referral levels</h2>
-					</div>
-					<div class="levels row mb_40">					
-                        
-						
-						<div class="col-12 col-lg-6 mb_20">
-							<div class="levels__item levels__item_statistick d-flex flex-column">
-								<p class="statistick__title">Overall statistics</p>
-								<div class="statistick__items d-flex justify-content-center align-items-center">
-									<div class="statistick__item">
-										<p>Total referrals</p>
-										<p>1</p>
-									</div>
-									<div class="statistick__item">
-										<p>All money earned</p>
-										<p>≈ $0</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					</div> -->
+					
 					
 										
 					<div class="title__row d-flex align-items-center justify-content-between mb_50">
-						<h2>Referral contest</h2>
+						<h2>Referral Team</h2>
 					</div>
 					
 					
 					
 					<div class="list__hisory">
-						<div class="d-flex mb_40">
-							<div class="list__btns">
-								<button class="list__btn check" data-list="list">
-								    Deposit list
-								</button>
-								<button class="list__btn" data-list="links">
-									Referral list
-								</button>
-							</div>
-						</div>
+						
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
 								<p class="coins__item">Nmae:</p>

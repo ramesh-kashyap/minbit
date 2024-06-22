@@ -288,7 +288,7 @@ class WithdrawRequest extends Controller
 
        $this->data['search'] =$search;
        $this->data['withdraw_report'] =$notes;
-       $this->data['page'] = 'user.withdraw.WithdrawHistory';
+       $this->data['page'] = 'user.withdraw.WithdrawRequest';
        return $this->dashboard_layout();
     } 
     

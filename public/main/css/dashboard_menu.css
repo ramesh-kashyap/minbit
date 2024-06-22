@@ -26,7 +26,7 @@ body.enter_body {
           box-shadow: 0px 0px 2px 0px rgba(139, 139, 157, 0.06), 0px 0px 24px 0px rgba(139, 139, 157, 0.04);
   overflow: hidden;
   height: calc(100vh - 30px);
-  min-height: 580px;
+  /* min-height: 580px; */
   width: 100%;
   margin-bottom: 30px;
 }
@@ -2373,7 +2373,9 @@ body.enter_body {
   .dashboard .dashboard__sidebar .sidebar__wrap {
     height: 100%;
     border-radius: 0;
-  }
+    overflow-y:scroll; /* This will add a scrollbar if needed */
+}
+
   .dashboard .dashboard__sidebar.open_menu {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -2799,7 +2801,7 @@ body.enter_body {
     margin-bottom: 20px;
   }
   .mining__row .mining__item {
-    width: 230px;
+    width: 280px;
   }
   .dashboard__wrap_mining .mining__row {
     position: relative;

@@ -56,6 +56,15 @@
             background: rgba(0, 0, 0, .5);
             border-radius: 4px;
         }
+        
+       
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .search__block .currency__search {
+                width: 260px;
+            }
+        }
+    
 
     </style>
 </head>

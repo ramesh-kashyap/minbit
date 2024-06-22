@@ -70,7 +70,7 @@
 
 					    <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:50%">
 					        <div class="modal__inner">
-					            <form id="deposit_form" class="contact__form" action="{{ route('user.edit-password') }}" method="post">
+					            <form id="deposit_form" class="contact__form" action="{{ route('user.edit-password') }}" method="POST">
                                 
                                 {{ csrf_field() }}
 								@if ($errors->any())

@@ -64,16 +64,16 @@ class WithdrawRequest extends Controller
         $balance=Auth::user()->available_balance();
         
         
-        $bank = Bank::where('user_id',$user->id)->first();
+        // $bank = Bank::where('user_id',$user->id)->first();
         
-        if ($request->PSys=="USDT") 
-        {
-          $account =  $user->usdtBep20;
-        }
-        else
-        {
-          $account =($bank)?$bank->account_no:"";
-        }
+        // if ($request->PSys=="USDT") 
+        // {
+        //   $account =  $user->usdtBep20;
+        // }
+        // else
+        // {
+        //   $account =($bank)?$bank->account_no:"";
+        // }
        
         if ($balance>=$request->amount)
         {
@@ -96,8 +96,8 @@ class WithdrawRequest extends Controller
          {
             
          
-          if(!empty($account))
-              {
+          // if(!empty($account))
+          //     {
               
               if (Hash::check($password, $user->tpassword))
                {     
@@ -106,7 +106,7 @@ class WithdrawRequest extends Controller
                         'user_id' => $user->id,
                         'user_id_fk' => $user->username,
                         'amount' => $request->amount,
-                        'account' => $account,
+                        // 'account' => $account,
                         'payment_mode' =>$request->PSys,
                         'status' => 'Pending',
                         'walletType' => 1,
@@ -124,11 +124,11 @@ class WithdrawRequest extends Controller
                 return Redirect::back()->withErrors(array('Invalid Transaction Pin'));
                 }     
                 
-              }
-              else
-                {
-                return Redirect::back()->withErrors(array('Please Update Your Usdt and Bank Details!'));
-                }  
+              // }
+              // else
+              //   {
+              //   return Redirect::back()->withErrors(array('Please Update Your Usdt and Bank Details!'));
+              //   }  
 
 
          }

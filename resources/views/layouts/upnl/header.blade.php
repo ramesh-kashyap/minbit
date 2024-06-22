@@ -56,18 +56,15 @@
             background: rgba(0, 0, 0, .5);
             border-radius: 4px;
         }
-        .logout-btn {
-    background-color: #f1f2ff; /* Green */
-    border: none;
-    color: #9e9fb0;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+        
+       
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .search__block .currency__search {
+                width: 260px;
+            }
+        }
+    
 
     </style>
 

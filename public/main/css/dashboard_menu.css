@@ -30,6 +30,12 @@ body.enter_body {
   width: 100%;
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .currency__search1 {
+      width: 200px;
+  }
+}
+
 .dashboard .dashboard__sidebar .sidebar__top {
   padding: 24px 27px 30px;
   -webkit-box-align: center;

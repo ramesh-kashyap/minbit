@@ -1,6 +1,6 @@
 <div class="dashboard_content">
     <div class="deposit__list row">
-        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:50%">
+        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:100%;max-width:500px">
             <div class="modal__inner">
                 <form id="deposit_form" class="contact__form" action="{{ route('user.Withdraw-Request') }}" method="POST">
                     {{ csrf_field() }}
@@ -64,6 +64,7 @@
         </div>
     </div>
 </div>
+
 <script>
 function validateForm() {
     let amount = document.getElementsByName('amount')[0].value;

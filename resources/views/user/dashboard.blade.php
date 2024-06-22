@@ -62,11 +62,13 @@
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
                 <p>Total referrals</p>
-                <p>1</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
                 <p>All money earned</p>
-                <p>≈ $0</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->investment->sum('amount'), 2) }}</p>
             </div>
         </div>
     </div>
@@ -77,11 +79,13 @@
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
                 <p>Total referrals</p>
-                <p>1</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
                 <p>All money earned</p>
-                <p>≈ $0</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->investment->sum('amount'), 2) }}</p>
             </div>
         </div>
     </div>
@@ -96,11 +100,12 @@
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
                 <p>Total referrals</p>
-                <p>1</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
                 <p>All money earned</p>
-                <p>≈ $0</p>
+                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
             </div>
         </div>
     </div>
@@ -111,11 +116,11 @@
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
                 <p>Total referrals</p>
-                <p>1</p>
+                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
             </div>
             <div class="statistick__item">
                 <p>All money earned</p>
-                <p>≈ $0</p>
+                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
             </div>
         </div>
     </div>

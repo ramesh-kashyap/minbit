@@ -30,7 +30,7 @@
                     <br>
 
                     <div class="search__block_input">
-                        <div class="modal__input-title">Minimal payment amount:</div>
+                        <div class="modal__input-title">Amount:</div>
                         <div class="search__block">
                             <input type="text" class="currency__search" name="amount" value="{{ old('amount') }}"
                                 placeholder="Enter Amount"
@@ -48,7 +48,7 @@
                         <div class="modal__input-title">Payment Type:</div>
                         <div class="search__block">
                             <select id="deposit_address" name="PSys">
-                                <option data-icon="INR" value="INR">INR</option>
+                                <!-- <option data-icon="INR" value="INR">INR</option> -->
                                 <option data-icon="USDT" value="USDT"> USDT</option>
                             </select>
                         </div>
@@ -87,7 +87,7 @@
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
 								<p class="coins__item">S no:</p>
-								<p class="coins__item">User Id:</p>
+								<p class="coins__item">User Id FK</p>
 								<p class="coins__item coins__item_color">
 									Amount
 								</p>
@@ -109,10 +109,10 @@
                                         <span>{{ $key+1 }}</span>
                                     </p>
                                       <p class="coins__item fw_medium">
-                                        <span>{{ $value->user_id }}</span>
+                                        <span>{{ $value->user_id_fk}}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->amount }}</span>
+                                        <span>${{ $value->amount }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
                                         <span>{{$value->payment_mode}}</span>

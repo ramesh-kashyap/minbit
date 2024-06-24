@@ -78,25 +78,65 @@
             </div>
         </div>
     </div>
-    <div class="title__row d-flex align-items-center justify-content-between mb_30">
-        <h2 style="padding-top:20px">History</h2>
-    </div>
-    <div class="list__hisory mb_40">
-        <div class="d-flex mb_40">
-            <div class="list__btns">
-                <button class="list__btn check">Transactions</button>
-            </div>
-        </div>
-        <div class="coins__list active transactions" id="depsoits_history">
-            <div class="coins__row coins__row_title">
-                <p class="coins__item">S.No</p>
-                <p class="coins__item">User_id</p>
-                <p class="coins__item">Amount</p>
-                <p class="coins__item coins__item_color">Status</p>
-                <p class="coins__item">Created At</p>
-            </div>
-        </div>
-    </div>
+    <div class="dashboard_content">
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Referral levels</h2>
+					</div> -->
+					
+					
+										
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2> Deposit History </h2>
+					</div>
+					
+					
+					
+					<div class="list__hisory">
+						
+						<div class="coins__list coins__list_affilate active list">
+							<div class="coins__row coins__row_title">
+								<p class="coins__item">S no:</p>
+								<p class="coins__item">User Id FK</p>
+								<p class="coins__item coins__item_color">
+									Amount
+								</p>
+                                <p class="coins__item">Payment Mode:</p>
+
+								<p class="coins__item">date:</p>
+								<p class="coins__item coins__item_color">Status:</p>
+							</div>
+                            <!-- rfr-->
+                          
+                            @foreach($data as $key=>$value)
+                                <div class="coins__row coins__row_main" data-prc="nan">
+
+                                    <p class="coins__item fw_medium">
+                                        <span>{{ $key+1 }}</span>
+                                    </p>
+                                      <p class="coins__item fw_medium">
+                                        <span>{{ $value->user_id_fk }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>${{ $value->amount }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{$value->payment_mode}}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->sdate }}</span>
+                                    </p>
+                                 
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->status }}</span>
+                                    </p>
+                                </div>
+                            @endforeach
+
+                   
+						</div>
+
+					</div>
+				</div>
 </div>
 
 <script>

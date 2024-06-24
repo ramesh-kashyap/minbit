@@ -21,14 +21,29 @@ class Invest extends Controller
 
   private $downline = "";
 
-    public function index()
+    public function index(Request $request)
     {
         $user=Auth::user();
-        $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
+        $limit = $request->limit ? $request->limit : paginationLimit();
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
+        $notes = Investment::where('user_id',$user->id)->orderBy('sdate','DESC');
+       if($search <> null && $request->reset!="Reset"){
+        $notes = $notes->where(function($q) use($search){
+           $q->Where('sdate', 'LIKE', '%' . $search . '%')
+             ->orWhere('amount', 'LIKE', '%' . $search . '%')
+             ->orWhere('status', 'LIKE', '%' . $search . '%');  
+        });
 
-        $this->data['last_package'] = ($invest_check)?$invest_check->amount:0;
+       }
+
+        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+
+      $this->data['search'] =$search;
+      $this->data['data'] =$notes;
         $this->data['page'] = 'user.invest.Deposit';
         return $this->dashboard_layout();
+        
     }  
     
     public function deposit()

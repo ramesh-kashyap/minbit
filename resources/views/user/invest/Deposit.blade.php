@@ -49,7 +49,7 @@
                         <div class="modal__input-title">Payment address:</div>
                         <div class="search__block">
                             <select id="deposit_address" name="PSys" class="custom-select">
-                                <option value="INR">INR</option>
+                                <!-- <option value="INR">INR</option> -->
                                 <option value="USDT">USDT</option>
                             </select>
                         </div>

@@ -1,8 +1,3 @@
-
-
-				
-			
-
 				<div class="referal">
 					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
 						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
@@ -42,13 +37,13 @@
 						
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
-								<p class="coins__item">Nmae:</p>
-								<p class="coins__item">Userregistration:</p>
+								<p class="coins__item">Name:</p>
+								<p class="coins__item">User Id</p>
 								<p class="coins__item coins__item_color">
-									eailsss
+									Email
 								</p>
-								<p class="coins__item">Email:</p>
-								<p class="coins__item coins__item_color">Package:</p>
+								<p class="coins__item">Status</p>
+								<p class="coins__item coins__item_color">Remark</p>
 							</div>
                             <!-- rfr-->
                             <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
@@ -68,11 +63,11 @@
                                     <p class="coins__item fw_bold">
                                         <span>{{ $value->email }}</span>
                                     </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
+                                    <p class="coins__item fw_bold" style="padding-right:40px">
+                                        <span>{{$value->active_status}}</span>
                                     </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->active_status }}</span>
+                                    <p class="coins__item fw_bold" style="padding-left:40px">
+                                        <span >{{$value->remarks}}</span>
                                     </p>
                                 </div>
                             @endforeach

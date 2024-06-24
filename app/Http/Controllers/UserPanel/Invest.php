@@ -108,7 +108,7 @@ public function cancel_payment($id)
         $plan ='BEGINNER';
       if ($last_package>$amount)
       {
-        return Redirect::back()->withErrors(array('Please choose amount above last package ₹ '.$amount));
+        return Redirect::back()->withErrors(array('Please choose amount above last package $ '.$amount));
       }
   
     $amountTotal= $request->Sum;

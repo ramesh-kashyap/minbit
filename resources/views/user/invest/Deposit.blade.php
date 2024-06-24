@@ -60,7 +60,7 @@
                             <input type="text" class="currency__search">
                         </div>
                     </div> -->
-                    <!-- <input type="hidden" name="plan_id" class="plan-id"> -->
+                    <!-- <input type="hidden" name="plan_id" class="plan-id"> -->       
                     <div id="dep_tag" class="search__block_input" style="display: none;">
                         <div class="modal__input-title">Payment tag (memo):</div>
                         <div class="search__block">
@@ -89,11 +89,11 @@
         </div>
         <div class="coins__list active transactions" id="depsoits_history">
             <div class="coins__row coins__row_title">
-                <p class="coins__item">Coin:</p>
-                <p class="coins__item">Power:</p>
-                <p class="coins__item">Deposit:</p>
-                <p class="coins__item coins__item_color">Expires:</p>
-                <p class="coins__item">Status:</p>
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">User_id</p>
+                <p class="coins__item">Amount</p>
+                <p class="coins__item coins__item_color">Status</p>
+                <p class="coins__item">Created At</p>
             </div>
         </div>
     </div>

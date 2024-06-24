@@ -51,17 +51,23 @@
                             <?php
                                  date_default_timezone_set('UTC');
                                  $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
-                            @foreach($direct_team as $value)
+                            @foreach($direct_team as $key=>$value)
                                 <div class="coins__row coins__row_main" data-prc="nan">
 
                                     <p class="coins__item fw_medium">
+                                        <span>{{ $key+1 }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
                                         <span>{{ $value->name }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->username }}</span>
+                                        <span>{{ $value->phone }}</span>
                                     </p>
+                                    <!-- <p class="coins__item fw_bold">
+                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
+                                    </p> -->
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->email }}</span>
+                                        <span>{{ $value->level }}</span>
                                     </p>
                                     <p class="coins__item fw_bold" style="padding-right:40px">
                                         <span>{{$value->active_status}}</span>

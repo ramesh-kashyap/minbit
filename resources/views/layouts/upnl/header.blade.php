@@ -252,8 +252,8 @@
                                 </a>
                             </li>
                             <li class="" id="withdraw_page">
-                                <a href="{{ route('user.referral-team') }}"
-                                    class="sidebar-link {{ menuActive('user.referral-team') }}">
+                                <a href="{{ route('user.level-team') }}"
+                                    class="sidebar-link {{ menuActive('user.level-team') }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
                                         <path class="stroke_hover"

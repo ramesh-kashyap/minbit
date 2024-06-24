@@ -96,10 +96,10 @@ public function cancel_payment($id)
     $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
     $last_package=($invest_check)?$invest_check->amount:0;
         $plan ='BEGINNER';
-      if ($last_package>$amount)
-      {
-        return Redirect::back()->withErrors(array('Please choose amount above last package ₹ '.$amount));
-      }
+      // if ($last_package>$amount)
+      // {
+      //   return Redirect::back()->withErrors(array('Please choose amount above last package ₹ '.$amount));
+      // }
   
     $amountTotal= $request->Sum;
     $invoice = substr(str_shuffle("0123456789"), 0, 7);

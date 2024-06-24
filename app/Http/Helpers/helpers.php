@@ -27,6 +27,11 @@ function generalDetail()
     return $general;
 }
 
+function adminaddress()
+{
+    $adminaddress = GeneralSetting::first();
+    return $adminaddress->usdtBep20;
+}
 
 function menuActive($routeName, $type = null)
 {

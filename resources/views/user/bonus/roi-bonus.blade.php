@@ -23,9 +23,9 @@
 				</div> -->
 
 				<div class="dashboard_content">			
-					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
 						<h2>Referral contest</h2>
-					</div> -->
+					</div>
 			
 					<div class="list__hisory">
 						<!-- <div class="d-flex mb_40">

@@ -12,7 +12,7 @@
 					<div class="referal__setting d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-lg-center">
 						<p class="referal__link col-12 col-lg-auto copy_text urls__copylink" id="sponsorURL">{{ asset('') }}register?ref={{ Auth::user()->username }}</p>
 						<div class="referal__btns d-flex col-12 col-lg-auto flex-wrap flex-lg-nowrap">
-							<button class="referal__btn" type="button" id="copyBtn" onclick="copyText('sponsorURL')">							
+							<button class="referal__btn" type="button" id="copyBtn" onclick="copyFunction()">							
                                 Copy link
 							</button>
 							<button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
@@ -105,17 +105,17 @@
 
 
 <script>
-        "use strict";
-
-        function copyFunction() {
-            var copyText = document.getElementById("sponsorURL");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            /*For mobile devices*/
-            document.execCommand("copy");
-            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
-        }
-    </script>
+    function copyFunction() {
+        var copyText = document.getElementById("sponsorURL");
+        var range = document.createRange();
+        range.selectNode(copyText);
+        window.getSelection().removeAllRanges(); // Clear previous selections
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges(); // Clear the selection after copying
+        Notiflix.Notify.Success(`Copied: ${copyText.textContent}`);
+    }
+</script>
 
 
 

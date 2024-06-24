@@ -37,13 +37,13 @@
 						
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
-								<p class="coins__item">Name:</p>
-								<p class="coins__item">User Id</p>
+								<p class="coins__item">Nmae:</p>
+								<p class="coins__item">Userregistration:</p>
 								<p class="coins__item coins__item_color">
-									Email
+									eailsss
 								</p>
-								<p class="coins__item">Status</p>
-								<p class="coins__item coins__item_color">Remark</p>
+								<p class="coins__item">Email:</p>
+								<p class="coins__item coins__item_color">Package:</p>
 							</div>
                             <!-- rfr-->
                             <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
@@ -51,23 +51,29 @@
                             <?php
                                  date_default_timezone_set('UTC');
                                  $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
-                            @foreach($direct_team as $value)
+                            @foreach($direct_team as $key=>$value)
                                 <div class="coins__row coins__row_main" data-prc="nan">
 
                                     <p class="coins__item fw_medium">
+                                        <span>{{ $key+1 }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
                                         <span>{{ $value->name }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->username }}</span>
+                                        <span>{{ $value->phone }}</span>
+                                    </p>
+                                    <!-- <p class="coins__item fw_bold">
+                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
+                                    </p> -->
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->level }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->email }}</span>
+                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
                                     </p>
-                                    <p class="coins__item fw_bold" style="padding-right:40px">
-                                        <span>{{$value->active_status}}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold" style="padding-left:40px">
-                                        <span >{{$value->remarks}}</span>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->active_status }}</span>
                                     </p>
                                 </div>
                             @endforeach

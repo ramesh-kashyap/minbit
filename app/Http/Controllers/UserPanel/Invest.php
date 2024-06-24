@@ -141,7 +141,7 @@ try{
  $validation =  Validator::make($request->all(), [
      'amount' => 'required|numeric|min:5',
      'paymentMode' => 'required',
-     'transaction_id' => 'required|unique:investments,transaction_id',
+    //  'transaction_id' => 'required|unique:investments,transaction_id',
  ]);
 
  if($validation->fails()) {

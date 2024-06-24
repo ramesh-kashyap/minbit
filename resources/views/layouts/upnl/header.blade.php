@@ -349,7 +349,7 @@
                         </ul>
                     </div>
 
-                    <div class="mining__row mining__row_sticky d-flex flex-column justify-content-between">
+                    <!-- <div class="mining__row mining__row_sticky d-flex flex-column justify-content-between">
 
 
                         <div class="mining__item swiper-slide">
@@ -444,7 +444,7 @@
                             <div class="line"></div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
 
 

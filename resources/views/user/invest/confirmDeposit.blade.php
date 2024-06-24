@@ -43,7 +43,7 @@
                         <div class="modal__input-title">Amount:</div>
                         <div class="search__block">
                             <input type="text" class="currency__search"value="{{$amount}}"
-                            placeholder="Enter Amount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            placeholder="Enter Amount" name="amount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                         </div>
                     </div>
                     <div id="dep_address" class="search__block_input" style="display:none">
@@ -55,7 +55,7 @@
                     <div id="dep_address" class="search__block_input">
                         <div class="modal__input-title">Payment Mode:</div>
                         <div class="search__block">
-                            <select id="deposit_address" name="PSys" class="custom-select">
+                            <select id="deposit_address" name="paymentMode" class="custom-select">
                                 <!-- <option value="INR">INR</option> -->
                                 <option value="USDT">USDT</option>
                             </select>
@@ -74,7 +74,7 @@
                     </div> -->
                     <div id="dep_address" class="search__block_input">
                         <div class="modal__input-title">Payment address:</div>
-                        <div class="search__block"><input type="text" class="currency__search"value="{{generalDetail()->usdtBep20}}">
+                        <div class="search__block"><input class="currency__search"value="{{generalDetail()->usdtBep20}}" readonly>
                         </div>
                     </div>
                     <!-- <input type="hidden" name="plan_id" class="plan-id"> -->

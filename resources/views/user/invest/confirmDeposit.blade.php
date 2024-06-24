@@ -42,13 +42,13 @@
                     <div class="search__block_input">
                         <div class="modal__input-title">Amount:</div>
                         <div class="search__block">
-                            <input type="text" class="currency__search"value="{{$amount}}"
+                            <input type="text" name="sum" class="currency__search"value="{{$amount}}"
                             placeholder="Enter Amount" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                         </div>
                     </div>
                     <div id="dep_address" class="search__block_input" style="display:none">
                         <div class="modal__input-title">Payment address:</div>
-                        <div class="search__block"><input type="text" class="currency__search"value="{{$paymentMode}}" placeholder="Secret Password">
+                        <div class="search__block"><input type="text" class="currency__search"value="{{$paymentMode}}" name="PSys" placeholder="Secret Password">
                         </div>
                     </div>
 

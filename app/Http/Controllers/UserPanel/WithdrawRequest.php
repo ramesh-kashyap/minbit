@@ -20,11 +20,30 @@ use Hash;
 
 class WithdrawRequest extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user=Auth::user();
         $bank = Bank::where('user_id',$user->id)->orderBy('id','desc')->get();
         $this->data['bank'] = $bank;
+        $limit = $request->limit ? $request->limit : paginationLimit();
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
+        $notes = Withdraw::where('user_id',$user->id)->orderBy('wdate','DESC');
+       if($search <> null && $request->reset!="Reset"){
+        $notes = $notes->where(function($q) use($search){
+           $q->Where('wdate', 'LIKE', '%' . $search . '%')
+             ->orWhere('amount', 'LIKE', '%' . $search . '%')
+             ->orWhere('status', 'LIKE', '%' . $search . '%')
+             ->orWhere('txn_id', 'LIKE', '%' . $search . '%');
+        });
+
+       }
+
+        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+
+      $this->data['search'] =$search;
+      $this->data['withdraw_report'] =$notes;
+
         $this->data['page'] = 'user.withdraw.WithdrawRequest';
         return $this->dashboard_layout();
     }
@@ -65,15 +84,9 @@ class WithdrawRequest extends Controller
         
         
         // $bank = Bank::where('user_id',$user->id)->first();
-        
-        // if ($request->PSys=="USDT") 
-        // {
-        //   $account =  $user->usdtBep20;
-        // }
-        // else
-        // {
-        //   $account =($bank)?$bank->account_no:"";
-        // }
+      
+         $account =  $user->usdtBep20;
+       
        
         if ($balance>=$request->amount)
         {
@@ -96,8 +109,8 @@ class WithdrawRequest extends Controller
          {
             
          
-          // if(!empty($account))
-          //     {
+          if(!empty($account))
+              {
               
               if (Hash::check($password, $user->tpassword))
                {     
@@ -124,11 +137,11 @@ class WithdrawRequest extends Controller
                 return Redirect::back()->withErrors(array('Invalid Transaction Pin'));
                 }     
                 
-              // }
-              // else
-              //   {
-              //   return Redirect::back()->withErrors(array('Please Update Your Usdt and Bank Details!'));
-              //   }  
+              }
+              else
+                {
+                return Redirect::back()->withErrors(array('Please Update Your Usdt and Bank Details!'));
+                }  
 
 
          }

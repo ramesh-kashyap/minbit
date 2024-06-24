@@ -54,11 +54,11 @@
                             <?php
                                  date_default_timezone_set('UTC');
                                  $cnt = $level_income->perPage() * ($level_income->currentPage() - 1); ?>
-                            @foreach($level_income as $value)
+                            @foreach($level_income as $key=>$value)
                                 <div class="coins__row coins__row_main" data-prc="nan">
 
                                     <p class="coins__item fw_medium">
-                                        <span>{{ $value->user_id }}</span>
+                                        <span>{{ $key+1 }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
                                         <span>{{ $value->user_id }}</span>
@@ -67,10 +67,10 @@
                                         <span>{{ $value->comm }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{currency()}} {{ $value->investment->sum('amt') }}</span>
+                                        <span>{{$value->created_at}}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->remark }}</span>
+                                        <span>{{ $value->remarks }}</span>
                                     </p>
                                 </div>
                             @endforeach

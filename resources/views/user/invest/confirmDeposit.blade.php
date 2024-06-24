@@ -53,7 +53,7 @@
                     </div>
 
                     <div id="dep_address" class="search__block_input">
-                        <div class="modal__input-title">Payment address:</div>
+                        <div class="modal__input-title">Payment Mode:</div>
                         <div class="search__block">
                             <select id="deposit_address" name="PSys" class="custom-select">
                                 <!-- <option value="INR">INR</option> -->
@@ -72,6 +72,11 @@
                             <input type="text" class="currency__search">
                         </div>
                     </div> -->
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Payment address:</div>
+                        <div class="search__block"><input type="text" class="currency__search"value="{{generalDetail()->usdtBep20}}">
+                        </div>
+                    </div>
                     <!-- <input type="hidden" name="plan_id" class="plan-id"> -->
                     <div id="dep_tag" class="search__block_input" style="display: none;">
                         <div class="modal__input-title">Payment tag (memo):</div>

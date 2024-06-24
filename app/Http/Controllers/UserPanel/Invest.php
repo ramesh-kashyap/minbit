@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Investment;
+use App\Models\GeneralSetting;
 use App\Models\Income;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\URL;
@@ -53,6 +54,14 @@ public function cancel_payment($id)
     
 }
 
+
+// public function showAddress()
+// {
+//     // Fetch the usdtBep20 address from the general_settings table
+//     $adminAddress = GeneralSetting::first()->usdtBep20;
+//     return $adminAddress;
+// }
+
     public function confirmDeposit(Request $request)
     {
    try{
@@ -74,6 +83,7 @@ public function cancel_payment($id)
 
     $user=Auth::user();
     $invest_check=Investment::where('user_id',$user->id)->where('status','Pending')->first();
+   
 
     if ($invest_check) 
     {
@@ -257,4 +267,7 @@ catch(\Exception $e){
           $this->data['page'] = 'user.invest.open_deposit';
           return $this->dashboard_layout();
         }
+
+
+       
 }

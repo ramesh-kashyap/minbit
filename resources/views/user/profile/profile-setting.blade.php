@@ -1,6 +1,7 @@
 <div class="dashboard_content">
     <div class="deposit__list row">
-        <div class="modal__body modal__deposit address col-xl-6" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
+
+        <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
                 <form id="profile_update_form" class="contact__form" action="{{ route('user.update-profile') }}" method="post">
                     {{ csrf_field() }}
@@ -54,7 +55,7 @@
             </div>
         </div>
 
-        <div class="modal__body modal__deposit address col-xl-6" style="visibility: visible;height:510px; display: flex; width:100% ;max-width: 500px;">
+        <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible;height:510px; display: flex; width:100% ;max-width: 500px;">
             <div class="modal__inner">
                 <form id="password_change_form" class="contact__form" action="{{ route('user.edit-password') }}" method="post">
                     {{ csrf_field() }}
@@ -98,6 +99,8 @@
                 </form>
             </div>
         </div>
+
+
     </div>
 </div>
 

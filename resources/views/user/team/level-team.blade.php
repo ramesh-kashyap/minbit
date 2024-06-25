@@ -1,9 +1,4 @@
-
-
-				
-			
-
-				<div class="referal">
+<div class="referal">
 					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
 						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
 							Your referral link
@@ -12,13 +7,13 @@
 					<div class="referal__setting d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-lg-center">
 						<p class="referal__link col-12 col-lg-auto copy_text urls__copylink" id="sponsorURL">{{ asset('') }}register?ref={{ Auth::user()->username }}</p>
 						<div class="referal__btns d-flex col-12 col-lg-auto flex-wrap flex-lg-nowrap">
-							<button class="referal__btn" type="button" id="copyBtn" onclick="copyText('sponsorURL')">							
+							<button class="referal__btn" type="button" id="copyBtn" onclick="copyFunction()">							
                                 Copy link
 							</button>
-							<button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
+							<!-- <button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
 								<img src="/images/icon_promo_btn.svg" alt="">
 								Promo material
-							</button>
+							</button> -->
 													    
 						    							
 						</div>
@@ -42,15 +37,13 @@
 						
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
-								<p class="coins__item">S No</p>
+								<p class="coins__item">S No:</p>
 								<p class="coins__item">Name</p>
 								<p class="coins__item coins__item_color">
-								Phone
+									User Name
 								</p>
-								<p class="coins__item">Level</p>
-								<p class="coins__item coins__item_color">Date</p>
-								<p class="coins__item coins__item_color">Status</p>
-
+								<p class="coins__item">Created At</p>
+								<p class="coins__item coins__item_color">Remark</p>
 							</div>
                             <!-- rfr-->
                             <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
@@ -68,19 +61,17 @@
                                         <span>{{ $value->name }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->phone }}</span>
+                                        <span>{{ $value->username}}</span>
                                     </p>
                                     <!-- <p class="coins__item fw_bold">
                                         <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
                                     </p> -->
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->level }}</span>
+                                        <span>{{ $value->created_at}}</span>
                                     </p>
-									<p class="coins__item fw_bold">
-                                        <span>{{ $value->jdate }}</span>
-                                    </p>
-									<p class="coins__item fw_bold">
-                                        <span>{{ $value->active_status}}</span>
+                                    
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->active_status }}</span>
                                     </p>
                                 </div>
                             @endforeach
@@ -113,17 +104,17 @@
 
 
 <script>
-        "use strict";
-
-        function copyFunction() {
-            var copyText = document.getElementById("sponsorURL");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            /*For mobile devices*/
-            document.execCommand("copy");
-            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
-        }
-    </script>
+    function copyFunction() {
+        var copyText = document.getElementById("sponsorURL");
+        var range = document.createRange();
+        range.selectNode(copyText);
+        window.getSelection().removeAllRanges(); // Clear previous selections
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges(); // Clear the selection after copying
+        Notiflix.Notify.Success(`Copied: ${copyText.textContent}`);
+    }
+</script>
 
 
 

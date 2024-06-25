@@ -10,10 +10,10 @@
 							<button class="referal__btn" type="button" id="copyBtn" onclick="copyFunction()">							
                                 Copy link
 							</button>
-							<button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
+							<!-- <button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
 								<img src="/images/icon_promo_btn.svg" alt="">
 								Promo material
-							</button>
+							</button> -->
 													    
 						    							
 						</div>

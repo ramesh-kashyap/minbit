@@ -41,7 +41,7 @@
 						<div class="coins__list coins__list_affilate active list">
 							<div class="coins__row coins__row_title">
 								<p class="coins__item">S.No</p>
-								<p class="coins__item">User Id:</p>
+								<p class="coins__item">User Id</p>
 								<p class="coins__item coins__item_color">
 								Amount:
 								</p>
@@ -61,7 +61,7 @@
                                         <span>{{ $key+1}}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->user_id }}</span>
+                                        <span>{{ $value->user_id_fk }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
                                         <span>{{ $value->comm }}</span>

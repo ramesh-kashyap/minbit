@@ -3180,3 +3180,13 @@ button.btn.btn_dark:hover {
 .gotovideo{
     cursor: pointer;
 }
+.page-link{
+  color:#fff
+}
+.pagination{
+  --bs-pagination-bg:#7e7ee2 ;
+  --bs-pagination-hover-color:#ecedfe;
+}
+.active>.page-link{
+  background-color:#7d34ee;
+}

@@ -64,7 +64,7 @@
                                         <span>{{ $value->user_id_fk }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
-                                        <span>{{ $value->comm }}</span>
+                                        <span>${{ $value->comm }}</span>
                                     </p>
                                     <p class="coins__item fw_bold">
                                         <span>{{$value->created_at}}</span>

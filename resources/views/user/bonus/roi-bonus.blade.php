@@ -1,6 +1,4 @@
-
-
-				<!-- <div class="referal">
+<!-- <div class="referal">
 					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
 						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
 							Your referral link
@@ -22,13 +20,13 @@
 					</div>
 				</div> -->
 
-				<div class="dashboard_content">			
-					<div class="title__row d-flex align-items-center justify-content-between mb_50">
-						<h2>Referral contest</h2>
-					</div>
-			
-					<div class="list__hisory">
-						<!-- <div class="d-flex mb_40">
+<div class="dashboard_content">
+    <div class="title__row d-flex align-items-center justify-content-between mb_50">
+        <h2>Referral contest</h2>
+    </div>
+
+    <div class="list__hisory">
+        <!-- <div class="d-flex mb_40">
 							<div class="list__btns">
 								<button class="list__btn check" data-list="list">
 								    Deposit list
@@ -38,93 +36,93 @@
 								</button>
 							</div>
 						</div> -->
-						<div class="coins__list coins__list_affilate active list">
-							<div class="coins__row coins__row_title">
-								<p class="coins__item">S.No</p>
-								<p class="coins__item">User Id</p>
-								<p class="coins__item coins__item_color">
-								Amount:
-								</p>
-								<p class="coins__item">Created At</p>
-								<p class="coins__item coins__item_color">Remark:</p>
-							</div>
-                            <!-- rfr-->
-                            <?php if(is_array($level_income) || is_object($level_income)){ ?>
+        <div class="coins__list coins__list_dashboard active coins">
+            <div class="coins__row coins__row_title">
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">User Id</p>
+                <p class="coins__item coins__item_color">Amount:</p>
+                <p class="coins__item">Created At</p>
+                <p class="coins__item">Remark:</p>
+            </div>
+            <!-- rfr-->
+            <?php if(is_array($level_income) || is_object($level_income)){ ?>
 
-                            <?php
-                                 date_default_timezone_set('UTC');
-                                 $cnt = $level_income->perPage() * ($level_income->currentPage() - 1); ?>
-                            @foreach($level_income as $key=>$value)
-                                <div class="coins__row coins__row_main" data-prc="nan">
+            <?php
+     date_default_timezone_set('UTC');
+     $cnt = $level_income->perPage() * ($level_income->currentPage() - 1); ?>
+            @foreach($level_income as $key=>$value)
+                <div class="coins__row coins__row_main" data-prc="nan">
+                    <p class="coins__item coins__item_first">
+                        <span class="coins__item_name">S No</span>
+                        <span>
+                            <!-- <img src="./images/dashboard_icons/dash.png" class="icon" alt=""> -->
+                            <span class="content">
+                                <span>{{ $key+1 }}</span>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="coins__item fw_medium">
+                        <span class="coins__item_name">User Id</span>
+                        <span>{{ $value->user_id_fk }}</span>
+                    </p>
+                    <p class="coins__item fw_bold">
+                        <span class="coins__item_name">Amount: </span>
+                        <span>${{ $value->comm }}</span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Created At</span>
+                        <span class="portfolio_visible" style=""> {{ $value->created_at }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Remark </span>
+                        <span class="portfolio_visible" style=""> {{ $value->remarks }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                </div>
+            @endforeach
 
-                                    <p class="coins__item fw_medium">
-                                        <span>{{ $key+1}}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->user_id_fk }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>${{ $value->comm }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{$value->created_at}}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->remarks }}</span>
-                                    </p>
-                                </div>
-                            @endforeach
+            <?php }?>
+            {{ $level_income->withQueryString()->links() }}
+        </div>
 
-                            <?php }?>
-                            {{ $level_income->withQueryString()->links() }}
-						</div>
-
-					</div>
-				</div>
+    </div>
+</div>
 
 
 
-				</div>
-		</div>
-	</div>
+</div>
+</div>
+</div>
 </section>
 
-    
-    </div>
-    
-  
+
+</div>
 
 
-	<script>
-		$(".get__bonus-button, .bonus_page_href").click(function() {
-			window.location.href = '/bonus';
-		});
-	</script>
 
 
 <script>
-        "use strict";
+    $(".get__bonus-button, .bonus_page_href").click(function () {
+        window.location.href = '/bonus';
+    });
 
-        function copyFunction() {
-            var copyText = document.getElementById("sponsorURL");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            /*For mobile devices*/
-            document.execCommand("copy");
-            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
-        }
-    </script>
+</script>
 
 
+<script>
+    "use strict";
 
+    function copyFunction() {
+        var copyText = document.getElementById("sponsorURL");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        /*For mobile devices*/
+        document.execCommand("copy");
+        Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+    }
 
-
-
-
-
-
-
-
+</script>
 
 
 
@@ -135,4 +133,15 @@
 
 
 
-	<body>
+
+
+
+
+
+
+
+
+
+
+
+<body>

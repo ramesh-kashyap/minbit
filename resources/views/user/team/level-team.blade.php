@@ -35,50 +35,55 @@
 					
 					<div class="list__hisory">
 						
-						<div class="coins__list coins__list_affilate active list">
-							<div class="coins__row coins__row_title">
-								<p class="coins__item">S No:</p>
-								<p class="coins__item">Name</p>
-								<p class="coins__item coins__item_color">
-									User Name
-								</p>
-								<p class="coins__item">Created At</p>
-								<p class="coins__item coins__item_color">Remark</p>
-							</div>
-                            <!-- rfr-->
-                            <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
+					<div class="coins__list coins__list_dashboard active coins">
+            <div class="coins__row coins__row_title">
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">Name</p>
+                <p class="coins__item coins__item_color">Username</p>
+                <p class="coins__item">Created At</p>
+                <p class="coins__item">Remark:</p>
+            </div>
+            <!-- rfr-->
+            <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
 
-                            <?php
-                                 date_default_timezone_set('UTC');
-                                 $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
-                            @foreach($direct_team as $key=>$value)
-                                <div class="coins__row coins__row_main" data-prc="nan">
+<?php
+	 date_default_timezone_set('UTC');
+	 $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
+@foreach($direct_team as $key=>$value)
+                <div class="coins__row coins__row_main" data-prc="nan">
+                    <p class="coins__item coins__item_first">
+                        <span class="coins__item_name">S No</span>
+                        <span>
+                            <!-- <img src="./images/dashboard_icons/dash.png" class="icon" alt=""> -->
+                            <span class="content">
+                                <span>{{ $key+1 }}</span>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="coins__item fw_medium">
+                        <span class="coins__item_name">Name</span>
+                        <span>{{ $value->name }}</span>
+                    </p>
+                    <p class="coins__item fw_bold">
+                        <span class="coins__item_name">Username</span>
+                        <span>{{ $value->username}}</span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Created At</span>
+                        <span class="portfolio_visible" style="">{{ $value->created_at}}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Remark </span>
+                        <span class="portfolio_visible" style="">{{ $value->active_status }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                </div>
+				@endforeach
 
-                                    <p class="coins__item fw_medium">
-                                        <span>{{ $key+1 }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->name }}</span>
-                                    </p>
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->username}}</span>
-                                    </p>
-                                    <!-- <p class="coins__item fw_bold">
-                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
-                                    </p> -->
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->created_at}}</span>
-                                    </p>
-                                    
-                                    <p class="coins__item fw_bold">
-                                        <span>{{ $value->active_status }}</span>
-                                    </p>
-                                </div>
-                            @endforeach
-
-                            <?php }?>
-                            {{ $direct_team->withQueryString()->links() }}
-						</div>
+<?php }?>
+{{ $direct_team->withQueryString()->links() }}
+        </div>
 
 					</div>
 				</div>

@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   color: #000d1d;
-  padding-bottom: 88px;
+  /* padding-bottom: 88px; */
   line-height: 1.2em;
 }
 
@@ -259,7 +259,7 @@ button.btn.btn_dark:hover {
   display: block;
   width: 100%;
   height: 2px;
-  background: url(../images/line.svg) repeat-x;
+  background: url(../main/images/line.svg) repeat-x;
   position: absolute;
   left: 0;
   top: 100%;
@@ -2533,7 +2533,7 @@ button.btn.btn_dark:hover {
   position: absolute;
   left: calc(50% - 15px);
   top: -11px;
-  background: url(../images/allocation_triangle_wh.svg) no-repeat center;
+  background: url(main/images/allocation_triangle_wh.svg) no-repeat center;
 }
 .enter__popup.newlink .popup__content .newlink__get::after,
 .popup.newlink .popup__content .newlink__get::after {
@@ -3179,4 +3179,14 @@ button.btn.btn_dark:hover {
 
 .gotovideo{
     cursor: pointer;
+}
+.page-link{
+  color:#fff
+}
+.pagination{
+  --bs-pagination-bg:#7e7ee2 ;
+  --bs-pagination-hover-color:#ecedfe;
+}
+.active>.page-link{
+  background-color:#7d34ee;
 }

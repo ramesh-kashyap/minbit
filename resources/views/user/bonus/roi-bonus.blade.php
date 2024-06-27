@@ -1,82 +1,147 @@
-<!-- main -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="header-text-full">
-                <h3 class="ms-2 mb-0 mt-2">Roi Income</h3>
-            </div>
-        </div>
+<!-- <div class="referal">
+					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
+						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
+							Your referral link
+						</h3>
+					</div>
+					<div class="referal__setting d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-lg-center">
+						<p class="referal__link col-12 col-lg-auto copy_text urls__copylink" id="sponsorURL">{{ asset('') }}register?ref={{ Auth::user()->username }}</p>
+						<div class="referal__btns d-flex col-12 col-lg-auto flex-wrap flex-lg-nowrap">
+							<button class="referal__btn" type="button" id="copyBtn" onclick="copyText('sponsorURL')">							
+                                Copy link
+							</button>
+							<button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
+								<img src="/images/icon_promo_btn.svg" alt="">
+								Promo material
+							</button>
+													    
+						    							
+						</div>
+					</div>
+				</div> -->
+
+<div class="dashboard_content">
+    <div class="title__row d-flex align-items-center justify-content-between mb_50">
+        <h2>Referral contest</h2>
     </div>
-    <div class="main row">
-        <div class="col-12">
-            <!-- table -->
-            <div class="table-parent table-responsive mt-4">
-                <div class="table-search-bar">
-                    <div>
-                        <form action="{{ route('user.roi-bonus') }}" method="get">
-                            <div class="row g-3 align-items-end">
-                                <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
-                                    <input type="text" name="search" value="{{ @$search }}" class="form-control"
-                                        placeholder="Search for operation" />
-                                </div>
 
-                                <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
-                                    <input type="text" name="remark" value="" class="form-control"
-                                        placeholder="Remark" />
-                                </div>
+    <div class="list__hisory">
+        <!-- <div class="d-flex mb_40">
+							<div class="list__btns">
+								<button class="list__btn check" data-list="list">
+								    Deposit list
+								</button>
+								<button class="list__btn" data-list="links">
+									Referral list
+								</button>
+							</div>
+						</div> -->
+        <div class="coins__list coins__list_dashboard active coins">
+            <div class="coins__row coins__row_title">
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">User Id</p>
+                <p class="coins__item coins__item_color">Amount:</p>
+                <p class="coins__item">Created At</p>
+                <p class="coins__item">Remark:</p>
+            </div>
+            <!-- rfr-->
+            <?php if(is_array($level_income) || is_object($level_income)){ ?>
 
-
-
-                                <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
-                                    <button class="btn-custom w-100" type="submit"><i class="fal fa-search"></i>
-                                        Search</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <?php
+     date_default_timezone_set('UTC');
+     $cnt = $level_income->perPage() * ($level_income->currentPage() - 1); ?>
+            @foreach($level_income as $key=>$value)
+                <div class="coins__row coins__row_main" data-prc="nan">
+                    <p class="coins__item coins__item_first">
+                        <span class="coins__item_name">S No</span>
+                        <span>
+                            <!-- <img src="./images/dashboard_icons/dash.png" class="icon" alt=""> -->
+                            <span class="content">
+                                <span>{{ $key+1 }}</span>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="coins__item fw_medium">
+                        <span class="coins__item_name">User Id</span>
+                        <span>{{ $value->user_id_fk }}</span>
+                    </p>
+                    <p class="coins__item fw_bold">
+                        <span class="coins__item_name">Amount: </span>
+                        <span>${{ $value->comm }}</span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Created At</span>
+                        <span class="portfolio_visible" style=""> {{ $value->created_at }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Remark </span>
+                        <span class="portfolio_visible" style=""> {{ $value->remarks }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
                 </div>
-                <table class="table table-striped mb-5">
-                    <thead>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">amount</th>
-                            <th scope="col">operation</th>
-                            <th scope="col">payment system</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            @endforeach
 
-                        <?php if(is_array($level_income) || is_object($level_income)){ ?>
-
-                        <?php date_default_timezone_set('UTC');
-                        $cnt = $level_income->perPage() * ($level_income->currentPage() - 1); ?>
-                        @foreach ($level_income as $value)
-                            <tr>
-
-                                <td data-label="Date">{{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}</td>
-                                <td data-label="Amount">
-                                    <span class="fontBold text-success">+{{ $value->comm }}
-                                        {{ generalDetail()->cur_text }}</span>
-                                </td>
-                                <td data-label="operation"> {{ $value->remarks }} </td>
-                                <td data-label="payment system">INR</td>
-                            </tr>
-                        @endforeach
-
-                        <?php }?>
-
-                    </tbody>
-                </table>
-
-                {{ $level_income->withQueryString()->links() }}
-                              
-
-            </div>
+            <?php }?>
+            {{ $level_income->withQueryString()->links() }}
         </div>
+
     </div>
 </div>
 
 
+
 </div>
 </div>
 </div>
+</section>
+
+
+</div>
+
+
+
+
+<script>
+    $(".get__bonus-button, .bonus_page_href").click(function () {
+        window.location.href = '/bonus';
+    });
+
+</script>
+
+
+<script>
+    "use strict";
+
+    function copyFunction() {
+        var copyText = document.getElementById("sponsorURL");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        /*For mobile devices*/
+        document.execCommand("copy");
+        Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>

@@ -1,121 +1,161 @@
-<!-- main -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="header-text-full">
-                <h3 class="ms-2 mb-0 mt-2">Withdraw</h3>
-            </div>
-        </div>
-    </div>
-    <div class="main row">
-        <div class="col-md-6">
-            <!-- table -->
-            <div class="table-parent table-responsive mt-4">
-                <div class="table-search-bar">
-                    <div>
-                        <form action="{{ route('user.Withdraw-Request') }}" method="post">
-                          {{ csrf_field() }}
-                            <div class="row g-3 align-items-end">
+<div class="dashboard_content">
+    <div class="deposit__list row">
+        <div class="modal__body modal__deposit address"
+            style="visibility: visible; display: flex; width:100%;max-width:500px">
+            <div class="modal__inner">
+                <form id="deposit_form" class="contact__form" action="{{ route('user.Withdraw-Request') }}"
+                    method="POST">
+                    {{ csrf_field() }}
+                    @if (session('success'))
+                    <script>
+                        alert('{{ session('
+                            success ') }}');
 
-                                <code class=""  style="font-weight: 900;    color: #9ef54f;font-size:15px;text-align: center">Available Balance : <b>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}  </b></code>
-                
+                    </script>
+                    @endif
 
-                               
-                                
-
-                                <div class="input-box col-lg-12 col-md-12 col-xl-12 col-12">
-                                    <input class="form-control" type="text" name="amount" value=""
-                                        placeholder="Enter Amount"
-                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
-                                        
-                                </div>
-                                    <span class="cashback-info-label"> </span>
-                                
-                                 <div class="input-box col-lg-12 col-md-12 col-xl-12 col-12">
-                                    <select class="form-control" name="PSys"
-                                        id="wallet_type">
-                                        <option data-icon="INR" value="INR">
-                                           INR</option>
-                                        <option data-icon="USDT" value="USDT">
-                                         USDT</option>
-                                  
-                                    </select>
-                                </div>
-                                
-                                   <div class="input-box col-lg-12 col-md-12 col-xl-12 col-12">
-                                  <input class="form-control" type="password" id="transaction_password"  name="transaction_password" value=""
-                                      placeholder="Transaction Pin" />
-                              </div>
-                                
-                            
-
-                             
-
-
-                                <div class="input-box col-lg-12 col-md-12 col-xl-12 col-12">
-                                    <button class="btn-custom w-100" type="submit"><i
-                                            class="fal fa-dollar-sign submit-btn "></i>Withdraw</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="modal__header">
+                        <h2 class="modal__title" style="">
+                            Withdraw
+                            <g style="font-family: 'sansationbold'; display: none;" id="deposit_short">Bitcoin</g>
+                        </h2>
+                        <span class="modal__close"></span>
                     </div>
-                </div>
+                    <ul class="deposit_milist">
+                        <li>Available Balance:</li>
+                        <li id="deposit_coin_name">{{ currency() }}
+                            {{ number_format(Auth::user()->available_balance(), 2) }}</li>
+                    </ul>
+
+                    <br>
+
+                    <div class="search__block_input">
+                        <div class="modal__input-title">Amount:</div>
+                        <div class="search__block">
+                            <input type="text" class="currency__search" name="amount" value="{{ old('amount') }}"
+                                placeholder="Enter Amount"
+                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                        </div>
+                    </div>
+                    <div class="search__block_input">
+                        <div class="modal__input-title">Transaction Password</div>
+                        <div class="search__block">
+                            <input type="password" class="currency__search" id="transaction_password"
+                                name="transaction_password" value="" placeholder="Transaction Pin">
+                        </div>
+                    </div>
+                    <div id="dep_address" class="search__block_input" style="">
+                        <div class="modal__input-title">Payment Type:</div>
+                        <div class="search__block">
+                            <select id="deposit_address" name="PSys">
+                                <!-- <option data-icon="INR" value="INR">INR</option> -->
+                                <option data-icon="USDT" value="USDT"> USDT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="dep_tag" class="modal__item-input" style="display: none;">
+                        <div class="modal__input-title">Payment tag (memo):</div>
+                        <div class="modal__deposit-cover-row">
+                            <span class="modal__copy-btn copy__payment"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal__button modal__form-bottom">
+                        <button id="make_deposit" class="submit-btn" type="submit"
+                            onclick="validateForm()">Withdraw</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    
+             <div class="dashboard_content">
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Referral levels</h2>
+					</div> -->
+					
+					
+										
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>    Withdraw History </h2>
+					</div>
+					
+					
+					
+                    <div class="coins__list coins__list_dashboard active coins">
+            <div class="coins__row coins__row_title">
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">User Id FK</p>
+                <p class="coins__item coins__item_color">Amount</p>
+                <p class="coins__item">Payment Mode</p>
+                <p class="coins__item">Date</p>
+                <p class="coins__item">Status</p>
+            </div>
+            <?php if(is_array($withdraw_report) || is_object($withdraw_report)){ ?>
+
+<?php
+     date_default_timezone_set('UTC');
+     $cnt = $withdraw_report->perPage() * ($withdraw_report->currentPage() - 1); ?>
+@foreach($withdraw_report as $key=>$value)
+                <div class="coins__row coins__row_main" data-prc="nan">
+                    <p class="coins__item coins__item_first">
+                        <span class="coins__item_name">S No</span>
+                        <span>
+                            <!-- <img src="./images/dashboard_icons/dash.png" class="icon" alt=""> -->
+                            <span class="content">
+                                <span>{{ $key+1 }}</span>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="coins__item fw_medium">
+                        <span class="coins__item_name">Name</span>
+                        <span>{{ $value->user_id_fk}}</span>
+                    </p>
+                    <p class="coins__item fw_bold">
+                        <span class="coins__item_name">Amount:</span>
+                        <span>${{ $value->amount }}</span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Payment Mode</span>
+                        <span class="portfolio_visible" style="">{{$value->payment_mode}}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Date </span>
+                        <span class="portfolio_visible" style="">{{ $value->wdate }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Status</span>
+                        <span class="portfolio_visible" style="">{{ $value->status }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                </div>
+                @endforeach
+
+                            <?php }?>
+                            {{ $withdraw_report->withQueryString()->links() }}
+        </div>
+				</div>
 </div>
 
-</div>
-</div>
-</div>
-<script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
 
 <script>
+    function validateForm() {
+        let amount = document.getElementsByName('amount')[0].value;
+        let password = document.getElementsByName('transaction_password')[0].value;
 
+        if (amount.trim() === '' || isNaN(amount) || parseFloat(amount) < 5) {
+            alert('Please enter a valid amount (minimum 5)');
+            return;
+        }
 
-	$(function(){
-		$('input[name="amount"]').on('change keyup',function () {
-			let str = $(this).val();
-			str = str.replace(',','.');
-			$(this).val(str);
-           let min =  500;
-      
-			let amount = parseFloat(str);
-		
-			
-            if (amount>=min) 
-            {
-                $(".submit-btn").prop("disabled", false);
-                $('.cashback-info-label').html('');
-            }
-            else
-            {
+        if (password.trim() === '') {
+            alert('Please enter your transaction password');
+            return;
+        }
 
-            $(".submit-btn").prop("disabled", true);
-            $('.cashback-info-label').html("minimum Withdrawal is "+min+" INR").css('color', 'red');
-
-            }
-            
-            	
-		
-            
-		
-			//console.log(summ_usd);
-		});
-
-        $('#wallet_type').change(function () {
-          let icon = $(this).val();
-          // alert(icon);
-            if (icon=="USDT.TRC20") {
-                $('#walletAddress').val('{{Auth::user()->usdtTrc20}}');
-                
-            }else{
-                $('#walletAddress').val('{{Auth::user()->usdtBep20}}');
-            }
-			
-		});
-
-
-    })
+        document.getElementById('deposit_form').submit();
+    }
 
 </script>

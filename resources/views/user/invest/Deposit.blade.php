@@ -1,213 +1,167 @@
-<!-- main -->
+<style>
+    .custom-input,
+    .custom-select {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #7E7EE2;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 
-<div class="container-fluid">
+    .alert {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        color: #fff;
+        background-color: #f44336; /* Red */
+        border-radius: 4px;
+    }
+</style>
 
-    <!-- plan start -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="row">
-                <div class="header-text text-center">
-                    <h5>INVEST OFFER</h5>
-                    <h2>Investment <span class="text-stroke">Plans</span>
-                    </h2>
-                    <p class="mx-auto">
-                        Help agencies to define their new business objectives and then create professional software.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center g-4 g-lg-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-box">
-                        <h4>BEGINNER PLAN</h4>
-                        <h3 class="text-primary">{{currency()}} 10000-{{currency()}}50000</h3>
-                        <h6>8% Monthly</h6>
-
-                        <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>8% Monthly
-                          </li>
-
-                        </ul>
-                        <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}} 10000 - {{currency()}} 50000"
-                            data-resource="{&quot;id&quot;:1,&quot;name&quot;:&quot;BEGINNER PLAN&quot;,&quot;badge&quot;:&quot;Popular&quot;,&quot;minimum_amount&quot;:&quot;10000&quot;,&quot;maximum_amount&quot;:&quot;50000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;8&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot; {{currency()}} 10000 - {{currency()}} 50000&quot;}">Invest
-                            now</button>
-
+<div class="dashboard_content">
+    <div class="alert" id="error-alert"></div>
+    <div class="deposit__list row">
+        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
+            <div class="modal__inner">
+                <form class="contact__form" action="{{ route('user.confirm') }}" method="POST" id="invest-form">
+                      @csrf
+                <div class="modal__header">
+                        <h2 class="modal__title">
+                            Deposit
+                            <g style="font-family: 'sansationbold'; display: none;" id="deposit_short">Bitcoin</g>
+                        </h2>
+                        <span class="modal__close"></span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="pricing-box">
-                      <h4>BRONZE PLAN</h4>
-                      <h3 class="text-primary">{{currency()}}51,000-{{currency()}} 1,00,000</h3>
-                      <h6>9% Monthly</h6>
-
-                      <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>9% Monthly
-                          </li>
-
-
-                      </ul>
-                      <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}} 51,000 - {{currency()}} 1,00,000"
-                          data-resource="{&quot;id&quot;:2,&quot;name&quot;:&quot;BRONZE PLAN&quot;,&quot;badge&quot;:&quot;&quot;,&quot;minimum_amount&quot;:&quot;51000&quot;,&quot;maximum_amount&quot;:&quot;100000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;9&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot;{{currency()}} 51,000 - {{currency()}} 1,00,000&quot;}">Invest
-                          now</button>
-
-                  </div>
-              </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-box">
-                        <h4>SILVER PLAN</h4>
-                        <h3 class="text-primary">{{currency()}} 1,10,000-{{currency()}} 2.5Lac</h3>
-                        <h6>10%Monthly</h6>
-
-                        <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>10% Monthly
-                          </li>
-
-
-                        </ul>
-                        <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}}1,10,000-{{currency()}}2.5 Lac"
-                            data-resource="{&quot;id&quot;:3,&quot;name&quot;:&quot;SILVER PLAN&quot;,&quot;badge&quot;:&quot;&quot;,&quot;minimum_amount&quot;:&quot;110000&quot;,&quot;maximum_amount&quot;:&quot;250000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;10&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot;{{currency()}}1,10,000-{{currency()}}2.5Lac&quot;}">Invest
-                            now</button>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-box">
-                        <h4>PLATINUM PLAN</h4>
-                        <h3 class="text-primary">{{currency()}}2.51 Lac-{{currency()}} 10 Lac</h3>
-                        <h6>12%monthly</h6>
-
-                        <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>12% Monthly
-                          </li>
-
-
-
-                        </ul>
-                        <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}}2.51Lac-{{currency()}}10Lac"
-                            data-resource="{&quot;id&quot;:4,&quot;name&quot;:&quot;PLATINUM PLAN&quot;,&quot;badge&quot;:&quot;Steller&quot;,&quot;minimum_amount&quot;:&quot;251000&quot;,&quot;maximum_amount&quot;:&quot;1000000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;12&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot;{{currency()}}2.51Lac-{{currency()}}10 Lac&quot;}">Invest
-                            now</button>
-
-                    </div>
-                </div>
-              <div class="col-lg-4 col-md-6">
-                    <div class="pricing-box">
-                        <h4>DAIMOND PLAN</h4>
-                        <h3 class="text-primary">{{currency()}}11 Lac-{{currency()}} 30 Lac</h3>
-                        <h6>15% monthly</h6>
-
-                        <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>15% Monthly
-                          </li>
-
-
-
-                        </ul>
-                        <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}}11 Lac-{{currency()}}30Lac"
-                            data-resource="{&quot;id&quot;:5,&quot;name&quot;:&quot;DAIMOND PLAN&quot;,&quot;badge&quot;:&quot;Steller&quot;,&quot;minimum_amount&quot;:&quot;1100000&quot;,&quot;maximum_amount&quot;:&quot;3000000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;15&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot;{{currency()}}11 Lac-{{currency()}}30 Lac&quot;}">Invest
-                            now</button>
-
-                    </div>
-                </div> 
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-box">
-                        <h4>CROWN DAIMOND PLAN</h4>
-                        <h3 class="text-primary">{{currency()}}31 Lac- Above</h3>
-                        <h6>20% monthly</h6>
-
-                        <ul>
-                          <li>Profit till 200 %</li>
-                          <li>Capital will Include : <span class="bg-success">Yes</span></li>
-                          <li>20% Monthly
-                          </li>
-
-
-
-                        </ul>
-                        <button class="btn-custom w-100 investNow" type="button" data-price="{{currency()}}31 Lac-Above"
-                            data-resource="{&quot;id&quot;:6,&quot;name&quot;:&quot;CROWN DAIMOND PLAN&quot;,&quot;badge&quot;:&quot;Steller&quot;,&quot;minimum_amount&quot;:&quot;3100000&quot;,&quot;maximum_amount&quot;:&quot;100000000&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;profit&quot;:&quot;20&quot;,&quot;profit_type&quot;:1,&quot;schedule&quot;:24,&quot;status&quot;:1,&quot;is_capital_back&quot;:1,&quot;is_lifetime&quot;:0,&quot;repeatable&quot;:200,&quot;featured&quot;:1,&quot;created_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-12-17T04:01:01.000000Z&quot;,&quot;price&quot;:&quot;{{currency()}}31 Lac-Above&quot;}">Invest
-                            now</button>
-
-                    </div>
-                </div>
-              
-            </div>
-        </div>
-    </section>
-</div>
-<!-- Modal -->
-<div class="modal fade addFundModal" id="investNowModal" tabindex="-1" data-bs-backdrop="static" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="investModalLabel">Invest Now</h5>
-                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fal fa-times"></i>
-                </button>
-            </div>
-        
-
-            <div class="modal-body">
-                <div class="text-center">
-                    <h4 class="title plan-name"></h4>
-                    <p class="price-range"></p>
-                    <p class="profit-details"></p>
-                    <p class="profit-validity"></p>
-                </div>
-                <form class="login-form" id="invest-form"
-                    action="{{route('user.confirm')}}" method="post">
-              
-                    {{ csrf_field() }}
-                    {{-- hidden value  --}}
-                    
-                    <input type="hidden" name="minimum_amount" id="minimum_amount">
+                    <!-- <input type="hidden" name="minimum_amount" id="minimum_amount">
                     <input type="hidden" name="maximum_amount" id="maximum_amount">
-                    <input type="hidden" name="plan" id="plan-name">
+                    <input type="hidden" name="plan" id="plan-name"> -->
+                    <br>
                     
-                    <div class="row g-3 align-items-end">
-                       
-                        <div class="input-box col-12">
-                            <div class="input-group">
-                                <input type="text" class="invest-amount form-control" name="Sum" id="amount"
-                                    value="" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')"
-                                    autocomplete="off" placeholder="Enter amount">
-                                <button class="btn-custom input-group-text show-currency" type="button"
-                                    id="button-addon2"></button>
-                            </div>
-                            <span class="cashback-info-label"> </span>
+                    <div class="search__block_input">
+                        <div class="modal__input-title">Amount:</div>
+                        <div class="search__block">
+                            <input type="text" class="currency__search" name="Sum" id="amount" placeholder="Enter Amount">
                         </div>
-
-                        <div class="input-box col-12">
-                          <select class="form-select" name="PSys" >
-                              <option value="INR">INR</option>
-                              <option value="USDT">USDT</option>
-                          </select>
-                      </div>
-
-                        <input type="hidden" name="plan_id" class="plan-id">
-
-                        <div class="input-box modal-footer col-12">
-                            <button class="btn-custom w-100 submit-btn">Invest Now</button>
+                    </div>
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Payment address:</div>
+                        <div class="search__block">
+                            <select id="deposit_address" name="PSys" class="custom-select">
+                                <!-- <option value="INR">INR</option> -->
+                                <option value="USDT">USDT</option>
+                            </select>
                         </div>
+                    </div>
+                    <!-- <div class="modal__item-input" style="visibility:hidden; height:0px;">
+                        <div class="modal__input-title">T-Password:</div>
+                        <div class="modal__deposit-cover-row">
+                            <input type="text" class="currency__search">
+                        </div>
+                    </div> -->
+                    <!-- <input type="hidden" name="plan_id" class="plan-id"> -->       
+                    <div id="dep_tag" class="search__block_input" style="display: none;">
+                        <div class="modal__input-title">Payment tag (memo):</div>
+                        <div class="search__block">
+                            <span class="modal__copy-btn copy__payment"></span>
+                        </div>
+                    </div>
+                    <!-- <input id="deposit_cur" type="hidden" name="currency" value="usdt.trc20">
+                    <input id="deposit_id" type="hidden" name="deposit_id">
+                    <input id="_token" type="hidden" name="_token" value="65d9c7945ac2e153d72230e388744c1d41">
+                    <input id="post_ajax" type="hidden" name="_token" value="/data/deposit/depositKassa.php"> -->
+                    <div class="modal__button modal__form-bottom">
+                        <button id="make_deposit" class="submit-btn" type="submit">Deposit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <div class="dashboard_content">
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Referral levels</h2>
+					</div> -->
+					
+					
+										
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2> Deposit History </h2>
+					</div>
+					
+					
+					
+					<div class="list__hisory">
+						
+					<div class="coins__list coins__list_dashboard active coins">
+            <div class="coins__row coins__row_title">
+                <p class="coins__item">S.No</p>
+                <p class="coins__item">User Id FK</p>
+                <p class="coins__item coins__item_color">Amount</p>
+                <p class="coins__item">Payment Mode</p>
+                <p class="coins__item">Date</p>
+                <p class="coins__item">Status</p>
+            </div>
+            @foreach($data as $key=>$value)
+                <div class="coins__row coins__row_main" data-prc="nan">
+                    <p class="coins__item coins__item_first">
+                        <span class="coins__item_name">S No</span>
+                        <span>
+                            <!-- <img src="./images/dashboard_icons/dash.png" class="icon" alt=""> -->
+                            <span class="content">
+                                <span>{{ $key+1 }}</span>
+                            </span>
+                        </span>
+                    </p>
+                    <p class="coins__item fw_medium">
+                        <span class="coins__item_name">Name</span>
+                        <span>{{ $value->user_id_fk }}</span>
+                    </p>
+                    <p class="coins__item fw_bold">
+                        <span class="coins__item_name">Amount:</span>
+                        <span>${{ $value->amount }}</span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Payment Mode</span>
+                        <span class="portfolio_visible" style="">{{$value->payment_mode}}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Date </span>
+                        <span class="portfolio_visible" style="">{{ $value->sdate }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                    <p class="coins__item coins__item_income">
+                        <span class="coins__item_name">Status</span>
+                        <span class="portfolio_visible" style="">{{ $value->status }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                    </p>
+                </div>
+                @endforeach
+        </div>
+
+					</div>
+				</div>
 </div>
 
+<script>
+    document.getElementById('make_deposit').addEventListener('click', function () {
+        var form = document.getElementById('invest-form');
+        var errorAlert = document.getElementById('error-alert');
 
-</div>
-</div>
-</div>
+        // Perform your validation or AJAX request here
+        // Example validation:
+        var amount = document.getElementById('amount').value;
+        if (!amount) {
+            errorAlert.style.display = 'block';
+            errorAlert.innerText = 'Amount is required.';
+            return;
+        }
+
+        // Hide the alert if no error
+        errorAlert.style.display = 'none';
+
+        // If using AJAX, handle the form submission here, otherwise:
+        form.submit();
+    });
+</script>

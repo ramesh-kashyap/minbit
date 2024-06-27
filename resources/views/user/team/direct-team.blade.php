@@ -1,132 +1,141 @@
+				<div class="referal">
+					<div class="d-flex align-items-md-center justify-content-between mb_10 flex-wrap flex-md-nowrap">
+						<h3 class="referal__title mb-2 mb-md-0 col-12 col-md-auto">
+							Your referral link
+						</h3>
+					</div>
+					<div class="referal__setting d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-lg-center">
+						<p class="referal__link col-12 col-lg-auto copy_text urls__copylink" id="sponsorURL">{{ asset('') }}register?ref={{ Auth::user()->username }}</p>
+						<div class="referal__btns d-flex col-12 col-lg-auto flex-wrap flex-lg-nowrap">
+							<button class="referal__btn" type="button" id="copyBtn" onclick="copyFunction()">							
+                                Copy link
+							</button>
+							<!-- <button class="referal__btn referal__btn_promo open__popup" data-popup="promo_popup">
+								<img src="/images/icon_promo_btn.svg" alt="">
+								Promo material
+							</button> -->
+													    
+						    							
+						</div>
+					</div>
+				</div>
 
-                <!-- My Referral -->
-                <section class="refferal-link">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">
-                                <div class="header-text-full">
-                                    <h3 class="ms-2 mb-0 mt-2">My Referral</h3>
+				<div class="dashboard_content">
+					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Referral levels</h2>
+					</div> -->
+					
+					
+										
+					<div class="title__row d-flex align-items-center justify-content-between mb_50">
+						<h2>Referral Team</h2>
+					</div>
+					
+					
+					
+					<div class="list__hisory">
+						
+						<div class="coins__list coins__list_affilate active list">
+							<div class="coins__row coins__row_title">
+								<p class="coins__item">Nmae:</p>
+								<p class="coins__item">Userregistration:</p>
+								<p class="coins__item coins__item_color">
+									eailsss
+								</p>
+								<p class="coins__item">Email:</p>
+								<p class="coins__item coins__item_color">Package:</p>
+							</div>
+                            <!-- rfr-->
+                            <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
+
+                            <?php
+                                 date_default_timezone_set('UTC');
+                                 $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
+                            @foreach($direct_team as $key=>$value)
+                                <div class="coins__row coins__row_main" data-prc="nan">
+
+                                    <p class="coins__item fw_medium">
+                                        <span>{{ $key+1 }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->name }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->phone }}</span>
+                                    </p>
+                                    <!-- <p class="coins__item fw_bold">
+                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
+                                    </p> -->
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->level }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{currency()}} {{ $value->investment->sum('amount') }}</span>
+                                    </p>
+                                    <p class="coins__item fw_bold">
+                                        <span>{{ $value->active_status }}</span>
+                                    </p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="main row mt-4">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-                                <div class="card-box refferal-box">
-                                    <h5>Your referral link</h5>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control"
-                                            value="{{ asset('') }}register?ref={{ Auth::user()->username }}"
-                                            id="sponsorURL" disabled="" />
-                                        <button id="copyBtn" onclick="copyText('sponsorURL')"
-                                            class="btn text-white">
-                                            Copy Link </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
 
-                        <div class="row mt-5">
-                            <div class="col-md-12">
-                                <div class="d-flex justify-content-start " id="ref-label">
-                                    <div class="nav flex-column nav-pills mx-2" id="v-pills-tab" role="tablist"
-                                        aria-orientation="vertical">
+                            <?php }?>
+                            {{ $direct_team->withQueryString()->links() }}
+						</div>
 
-                                        @for ($l=1;$l<=15;$l++)
-                                        <a  class=" nav-link <?php echo  (Session::get('selected_level')==$l)?"active":""?>   " id="v-pills-1-tab"
-                                          href="{{route('user.referral-team') }}?selected_level={{$l}}" >Level {{$l}}</a>
-                                        @endfor
-                                       
-                                      
-                                    </div>
-                                    <div class="tab-content w-90" id="v-pills-tabContent">
-                                        <div class="tab-pane fade  show active   " id="v-pills-1" role="tabpanel"
-                                            aria-labelledby="v-pills-1-tab">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped">
-                                                    <thead class="thead-dark">
-                                                        <tr>
-                                                            <th scope="col">Name</th>
-                                                            <th scope="col">User Id</th>
-                                                            <th scope="col">Registration date</th>
-                                                            <th scope="col">E-mail</th>
-                                                            <th scope="col">Package</th>
-                                                            <th scope="col">Status</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
+					</div>
+				</div>
 
-                                                      <?php if(is_array($direct_team) || is_object($direct_team)){ ?>
 
-                                                        <?php
-                                                           date_default_timezone_set('UTC');
-                                                        $cnt = $direct_team->perPage() * ($direct_team->currentPage() - 1); ?>
-                                                        @foreach ($direct_team as $value)
 
-                                                        <tr>
+				</div>
+		</div>
+	</div>
+</section>
 
-                                                            <td data-label="Name">
-                                                              {{ $value->name }} </td>
-
-                                                              <td data-label="User ID">
-                                                                {{ $value->username }} </td>
-
-                                                            <td data-label="Registration date" class="">
-                                                              {{ date('D, d M Y H:i:s', strtotime($value->created_at)) }}</td>
-
-                                                                <td data-label="E-mail" class="">
-                                                                  {{ $value->email }}</td>
+    
+    </div>
+    
   
 
 
-                                                            <td data-label="Package">
-                                                              {{currency()}} {{ $value->investment->sum('amount') }}
-                                                            </td>
-                                                            <td data-label="Status">
-                                                              {{ $value->active_status }}
-                                                            </td>
-
-                                                        </tr>
-                                                        @endforeach
-
-                                                        <?php }?>
-                                                    </tbody>
-                                                </table>
-                                                {{ $direct_team->withQueryString()->links() }}
-
-                                            </div>
-                                        </div>
-                                 
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+	<script>
+		$(".get__bonus-button, .bonus_page_href").click(function() {
+			window.location.href = '/bonus';
+		});
+	</script>
 
 
-
-
-            </div>
-        </div>
-    </div>
+<script>
+    function copyFunction() {
+        var copyText = document.getElementById("sponsorURL");
+        var range = document.createRange();
+        range.selectNode(copyText);
+        window.getSelection().removeAllRanges(); // Clear previous selections
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges(); // Clear the selection after copying
+        Notiflix.Notify.Success(`Copied: ${copyText.textContent}`);
+    }
+</script>
 
 
 
 
 
 
-    <script>
-        "use strict";
-
-        function copyFunction() {
-            var copyText = document.getElementById("sponsorURL");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            /*For mobile devices*/
-            document.execCommand("copy");
-            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
-        }
-    </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<body>

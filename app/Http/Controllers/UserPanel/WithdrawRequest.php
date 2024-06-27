@@ -20,11 +20,30 @@ use Hash;
 
 class WithdrawRequest extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user=Auth::user();
         $bank = Bank::where('user_id',$user->id)->orderBy('id','desc')->get();
         $this->data['bank'] = $bank;
+        $limit = $request->limit ? $request->limit : paginationLimit();
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
+        $notes = Withdraw::where('user_id',$user->id)->orderBy('wdate','DESC');
+       if($search <> null && $request->reset!="Reset"){
+        $notes = $notes->where(function($q) use($search){
+           $q->Where('wdate', 'LIKE', '%' . $search . '%')
+             ->orWhere('amount', 'LIKE', '%' . $search . '%')
+             ->orWhere('status', 'LIKE', '%' . $search . '%')
+             ->orWhere('txn_id', 'LIKE', '%' . $search . '%');
+        });
+
+       }
+
+        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+
+      $this->data['search'] =$search;
+      $this->data['withdraw_report'] =$notes;
+
         $this->data['page'] = 'user.withdraw.WithdrawRequest';
         return $this->dashboard_layout();
     }
@@ -46,7 +65,7 @@ class WithdrawRequest extends Controller
         try{
 
              $validation =  Validator::make($request->all(), [
-            'amount' => 'required|numeric|min:500',
+            'amount' => 'required|numeric|min:5',
             'PSys' => 'required',    
              'transaction_password' => 'required',               
 
@@ -64,16 +83,10 @@ class WithdrawRequest extends Controller
         $balance=Auth::user()->available_balance();
         
         
-        $bank = Bank::where('user_id',$user->id)->first();
-        
-        if ($request->PSys=="USDT") 
-        {
-          $account =  $user->usdtBep20;
-        }
-        else
-        {
-          $account =($bank)?$bank->account_no:"";
-        }
+        // $bank = Bank::where('user_id',$user->id)->first();
+      
+         $account =  $user->usdtBep20;
+       
        
         if ($balance>=$request->amount)
         {
@@ -106,7 +119,7 @@ class WithdrawRequest extends Controller
                         'user_id' => $user->id,
                         'user_id_fk' => $user->username,
                         'amount' => $request->amount,
-                        'account' => $account,
+                        // 'account' => $account,
                         'payment_mode' =>$request->PSys,
                         'status' => 'Pending',
                         'walletType' => 1,
@@ -152,7 +165,7 @@ class WithdrawRequest extends Controller
 
 
     }
-
+    
 
 
     public function WithdrawRequestPrinciple(Request $request)
@@ -288,7 +301,7 @@ class WithdrawRequest extends Controller
 
        $this->data['search'] =$search;
        $this->data['withdraw_report'] =$notes;
-       $this->data['page'] = 'user.withdraw.WithdrawHistory';
+       $this->data['page'] = 'user.withdraw.WithdrawRequest';
        return $this->dashboard_layout();
     } 
     

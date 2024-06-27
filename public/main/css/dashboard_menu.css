@@ -26,10 +26,22 @@ body.enter_body {
           box-shadow: 0px 0px 2px 0px rgba(139, 139, 157, 0.06), 0px 0px 24px 0px rgba(139, 139, 157, 0.04);
   overflow: hidden;
   height: calc(100vh - 30px);
-  min-height: 580px;
+  /* min-height: 580px; */
   width: 100%;
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .currency__search1 {
+      width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+      width: 200px;
+  }
+}
+
 .dashboard .dashboard__sidebar .sidebar__top {
   padding: 24px 27px 30px;
   -webkit-box-align: center;
@@ -867,10 +879,21 @@ body.enter_body {
 
 .search__block {
   width: 100%;
-  max-width: 300px;
+  max-width: 410px;
 }
 .search__block input {
-  background: #dfdfff url(../images/icon_search.svg) no-repeat 14px center/18px;
+  background: #dfdfff  no-repeat 14px center/18px;
+  color: #7e7ee2;
+  font-size: 12px;
+  padding-left: 36px;
+  display: block;
+  border-radius: 50px;
+  height: 44px;
+  border: none;
+  width: 100%;
+}
+.search__block select {
+  background: #dfdfff  no-repeat 14px center/18px;
   color: #7e7ee2;
   font-size: 12px;
   padding-left: 36px;
@@ -2362,7 +2385,9 @@ body.enter_body {
   .dashboard .dashboard__sidebar .sidebar__wrap {
     height: 100%;
     border-radius: 0;
-  }
+    overflow-y:scroll; /* This will add a scrollbar if needed */
+}
+
   .dashboard .dashboard__sidebar.open_menu {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -2788,7 +2813,7 @@ body.enter_body {
     margin-bottom: 20px;
   }
   .mining__row .mining__item {
-    width: 230px;
+    width: 280px;
   }
   .dashboard__wrap_mining .mining__row {
     position: relative;

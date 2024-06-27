@@ -1,0 +1,89 @@
+.trc20__net::before{
+	content: "";
+	background-color: #ef0027;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: 1;
+	background-image: url('../images/crypto_logo/tron.svg');
+	background-size: 65%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bep20__net::before{
+	content: "";
+	background-color: #272727;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: 1;
+	background-image: url('../images/crypto_logo/bnb.svg');
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bep2__net::before{
+	content: "";
+	background-color: #ffd83f;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: 1;
+	background-image: url('../images/crypto_logo/bnb.svg');
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.erc20__net::before{
+	content: "";
+	background-color: #7562EA;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: 1;
+	background-image: url('../images/crypto_logo/eth.svg');
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prc20__net::before{
+	content: "";
+	background-color: #8247e5;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: 1;
+	background-image: url('../images/crypto_logo/matic.svg');
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.mn_cryptoCircle.trc20__net::before, .mn_cryptoCircle.erc20__net::before, .mn_cryptoCircle.bep2__net::before, .mn_cryptoCircle.bep20__net::before, .mn_cryptoCircle.prc20__net::before{
+
+	width: 35%;
+	height: 35%;
+	bottom: -5;
+	right: -5;
+	border-radius: 50%;
+
+}

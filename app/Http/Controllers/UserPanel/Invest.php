@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Investment;
+use App\Models\GeneralSetting;
 use App\Models\Income;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\URL;
@@ -20,14 +21,29 @@ class Invest extends Controller
 
   private $downline = "";
 
-    public function index()
+    public function index(Request $request)
     {
         $user=Auth::user();
-        $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
+        $limit = $request->limit ? $request->limit : paginationLimit();
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
+        $notes = Investment::where('user_id',$user->id)->orderBy('sdate','DESC');
+       if($search <> null && $request->reset!="Reset"){
+        $notes = $notes->where(function($q) use($search){
+           $q->Where('sdate', 'LIKE', '%' . $search . '%')
+             ->orWhere('amount', 'LIKE', '%' . $search . '%')
+             ->orWhere('status', 'LIKE', '%' . $search . '%');  
+        });
 
-        $this->data['last_package'] = ($invest_check)?$invest_check->amount:0;
+       }
+
+        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+
+      $this->data['search'] =$search;
+      $this->data['data'] =$notes;
         $this->data['page'] = 'user.invest.Deposit';
         return $this->dashboard_layout();
+        
     }  
     
     public function deposit()
@@ -53,11 +69,19 @@ public function cancel_payment($id)
     
 }
 
+
+// public function showAddress()
+// {
+//     // Fetch the usdtBep20 address from the general_settings table
+//     $adminAddress = GeneralSetting::first()->usdtBep20;
+//     return $adminAddress;
+// }
+
     public function confirmDeposit(Request $request)
     {
    try{
      $validation =  Validator::make($request->all(), [
-        'Sum' => 'required|numeric|min:30',
+        'Sum' => 'required|numeric|min:3',
         'PSys' => 'required',
      ]);
 
@@ -74,6 +98,7 @@ public function cancel_payment($id)
 
     $user=Auth::user();
     $invest_check=Investment::where('user_id',$user->id)->where('status','Pending')->first();
+   
 
     if ($invest_check) 
     {
@@ -89,16 +114,16 @@ public function cancel_payment($id)
 
    
        
-    if ($amount<$min_amount || $amount>$max_amount) 
-    {
-      return Redirect::back()->withErrors(array('minimum deposit is $ '.$min_amount.' and maximum is $ '.$max_amount));
-    }
+    // if ($amount<$min_amount || $amount>$max_amount) 
+    // {
+    //   return Redirect::back()->withErrors(array('minimum deposit is $ '.$min_amount.' and maximum is $ '.$max_amount));
+    // }
     $invest_check=Investment::where('user_id',$user->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
     $last_package=($invest_check)?$invest_check->amount:0;
         $plan ='BEGINNER';
       if ($last_package>$amount)
       {
-        return Redirect::back()->withErrors(array('Please choose amount above last package ₹ '.$amount));
+        return Redirect::back()->withErrors(array('Please choose amount above last package $ '.$amount));
       }
   
     $amountTotal= $request->Sum;
@@ -123,102 +148,94 @@ public function cancel_payment($id)
 
 
 
-    public function fundActivation(Request $request)
+ public function fundActivation(Request $request)
+ {
+
+try{
+
+ $validation =  Validator::make($request->all(), [
+     'amount' => 'required|numeric|min:5',
+     'paymentMode' => 'required',
+    //  'transaction_id' => 'required|unique:investments,transaction_id',
+ ]);
+
+ if($validation->fails()) {
+     Log::info($validation->getMessageBag()->first());
+
+     return redirect()->route('user.invest')->withErrors($validation->getMessageBag()->first())->withInput();
+ }
+
+
+
+    $user=Auth::user();
+    
+    $plan="1";
+
+    $user_detail=User::where('username',$user->username)->orderBy('id','desc')->limit(1)->first();
+    $invest_check=Investment::where('user_id',$user_detail->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
+    $invoice = substr(str_shuffle("0123456789"), 0, 7);
+    $joining_amt = $user->package+$request->amount;
+    if ($joining_amt>=100 && $joining_amt<=200) 
     {
-
-      // dd("hiii");
-  try{
-    $validation =  Validator::make($request->all(), [
-        'amount' => 'required|numeric|min:10000',
-        'paymentMode' => 'required',
-        'icon_image'=>'max:4096|mimes:jpeg,png,jpg,svg',
-    ]);
-
-    if($validation->fails()) {
-        Log::info($validation->getMessageBag()->first());
-
-        return redirect()->route('user.invest')->withErrors($validation->getMessageBag()->first())->withInput();
+     $plan ='BEGINNER';
+    }
+    elseif($joining_amt>=400 && $joining_amt<=800)
+    {
+     $plan ='STANDARD';
+    }
+    elseif($joining_amt>=1000 && $joining_amt<=2000)
+    {
+     $plan ='EXCLUSIVE';
+    }
+    elseif($joining_amt>=2500 && $joining_amt<=5000)
+    {
+     $plan ='ULTIMATE';
     }
 
- 
+    elseif($joining_amt>=5000 && $joining_amt<=10000)
+    {
+     $plan ='PREMIUM';
+    }
 
-       $user=Auth::user();
-       
-       $plan="1";
-
-       $user_detail=User::where('username',$user->username)->orderBy('id','desc')->limit(1)->first();
-       $invest_check=Investment::where('user_id',$user_detail->id)->where('status','!=','Decline')->orderBy('id','desc')->limit(1)->first();
-       $invoice = substr(str_shuffle("0123456789"), 0, 7);
-       $joining_amt =$request->amount;
-        $plan ='BEGINNER';
-       if ($joining_amt>=10000 && $joining_amt<=50000) 
-       {
-        $plan ='BEGINNER';
-       }
-       elseif($joining_amt>=51000 && $joining_amt<=100000)
-       {
-        $plan ='BRONZE';
-       }
-       elseif($joining_amt>=110000 && $joining_amt<=250000)
-       {
-        $plan ='SILVER';
-       }
-       elseif($joining_amt>=251000 && $joining_amt<=1000000)
-       {
-        $plan ='PLATINUM';
-       } 
-       elseif($joining_amt>=1100000 && $joining_amt<=3000000)
-       {
-        $plan ='DAIMOND';
-       }
-       elseif($joining_amt>=3100000 )
-       {
-        $plan ='CROWN DAIMOND';
-       }
-
-       
-
-
-
-       $icon_image = $request->file('icon_image');
-       $imageName = time().'.'.$icon_image->extension();
-       $request->icon_image->move(public_path('slip/'),$imageName);
-
-      $last_package = ($invest_check)?$invest_check->amount:0;
-      $invoice = substr(str_shuffle("0123456789"), 0, 7);
-
-        
-           $data = [
-                'plan' => $plan,
-                'orderId' => $invoice,
-                'transaction_id' =>md5(uniqid(rand(), true)),
-                'user_id' => $user_detail->id,
-                'user_id_fk' => $user_detail->username,
-                'amount' => $request->amount,
-                'payment_mode' =>$request->paymentMode,
-                'slip' => 'public/slip/'.$imageName,
-                'status' => 'Pending',
-                'sdate' => Date("Y-m-d"),
-                'active_from' => $user->username,
-            ];
-            $payment =  Investment::insert($data);
-            
-
-        $notify[] = ['success','Deposit request submitted successfully'];
-        return redirect()->route('user.invest')->withNotify($notify);
-
+    elseif($joining_amt>=5000)
+    {
+     $plan ='PREMIUM';
+    }
    
 
-  }
-   catch(\Exception $e){
-    Log::info('error here');
-    Log::info($e->getMessage());
-    print_r($e->getMessage());
-    die("hi");
-    return  redirect()->route('user.invest')->withErrors('error', $e->getMessage())->withInput();
-      }
 
- }
+   $last_package = ($invest_check)?$invest_check->amount:0;
+
+     
+        $data = [
+             'plan' => $plan,
+             'transaction_id' =>$request->transaction_id,
+             'user_id' => $user_detail->id,
+             'user_id_fk' => $user_detail->username,
+             'amount' => $request->amount,
+             'payment_mode' =>$request->paymentMode,
+             'status' => 'Pending',
+             'sdate' => Date("Y-m-d"),
+             'active_from' => $user->username,
+         ];
+         $payment =  Investment::insert($data);
+         
+
+     $notify[] = ['success','Deposit request submitted successfully'];
+     return redirect()->route('user.invest')->withNotify($notify);
+
+
+
+}
+catch(\Exception $e){
+ Log::info('error here');
+ Log::info($e->getMessage());
+ print_r($e->getMessage());
+ die("hi");
+ return  redirect()->route('user.invest')->withErrors('error', $e->getMessage())->withInput();
+   }
+
+}
 
 
 
@@ -265,4 +282,7 @@ public function cancel_payment($id)
           $this->data['page'] = 'user.invest.open_deposit';
           return $this->dashboard_layout();
         }
+
+
+       
 }

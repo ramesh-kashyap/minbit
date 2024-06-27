@@ -129,14 +129,14 @@ class Register extends Controller
             $user = User::find($registered_user_id);
             // Auth::loginUsingId($registered_user_id);
           
-             sendEmail($user->email, 'Welcome to '.siteName(), [
-                'name' => $user->name,
-                'username' => $user->username,
-                'password' => $user->PSR,
-                'tpassword' => $user->TPSR,
-                'viewpage' => 'register_sucess',
-                 'link'=>route('login'),
-            ]);
+            //  sendEmail($user->email, 'Welcome to '.siteName(), [
+            //     'name' => $user->name,
+            //     'username' => $user->username,
+            //     'password' => $user->PSR,
+            //     'tpassword' => $user->TPSR,
+            //     'viewpage' => 'register_sucess',
+            //      'link'=>route('login'),
+            // ]);
             
             
 

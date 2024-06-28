@@ -479,51 +479,59 @@ function add_level_income($id, $amt)
     $user_mid = $data->id;
 
     $cnt = 1;
-    $amount = $amt / 100;
+    $amount = $amt;
+
 
     // Define commission percentages and levels
-    $commissions = [
-        1 => 30,
-        2 => 10,
-        3 => 2.5,
-        4 => 2.5,
-        5 => 2, // Fixed amount for level 5
-        6 => 2.5, // Percentage for level 6
+    $commissions = [0,
+         30,
+         10,
+          2.5,
+         2.5,
+         2.5, 
+         2.5 
     ];
 
     while ($user_mid != "" && $user_mid != "8" && $cnt <= 6) {
         // Fetch sponsor ID
-        $sponsor_data = User::where('id', $user_mid)->orderBy('id', 'desc')->first();
-        $sponsor_id = $sponsor_data->sponsor;
-
+        $Sposnor_id = User::where('id', $user_mid)->orderBy('id', 'desc')->first();
+        $sponsor = $Sposnor_id->sponsor;
         // Fetch sponsor status and active referral count
-        if (!empty($sponsor_id)) {
-            $sponsor_status = User::where('id', $sponsor_id)->orderBy('id', 'desc')->first();
-            $sponsor_active_status = $sponsor_status->active_status;
+        if (!empty($sponsor)) {
+            $Sposnor_status = User::where('id', $sponsor)->orderBy('id', 'desc')->first();
+            $Sposnor_cnt = User::where('sponsor', $sponsor)->where('active_status', 'Active')->count("id");
+            $sp_status = $Sposnor_status->active_status;
         } else {
-            $sponsor_status = null;
-            $sponsor_active_status = "Pending";
+            $Sposnor_status = [];
+            $sp_status = "Pending";
+            $Sposnor_cnt = 0;
         }
 
         $pp = 0;
-        $remarks = "Referral Income";
+        $remarks = "Level Income";
 
         // Calculate commission if sponsor is active
-        if ($sponsor_active_status == "Active" && array_key_exists($cnt, $commissions)) {
-            if ($cnt <= 4) {
-                $pp = $amount * $commissions[$cnt] / 100;
-            } elseif ($cnt == 5) {
-                $pp = $commissions[5]; // $2 fixed for level 5
-            } elseif ($cnt == 6) {
-                $pp = $amount * $commissions[6] / 100;
+        if ($sp_status == "Active") {
+            if (array_key_exists($cnt, $commissions)) {
+                if ($cnt <= 4) {
+                    $pp = $amount * $commissions[$cnt] / 100;
+                } 
+                elseif ($cnt == 5) {
+                    $pp = $commissions[5]; 
+                } elseif ($cnt == 6) {
+                    $pp = $amount * $commissions[6] / 100;
+                }
             }
         }
 
-        // Prepare data and insert into Income table if conditions are met
-        if ($sponsor_id && $pp > 0) {
+        $user_mid = @$Sposnor_status->id;
+        $spid = @$Sposnor_status->id;
+
+        $user_id_fk = $sponsor;
+        if ($spid > 0 && $pp > 0) {
             $data = [
-                'user_id' => $sponsor_id,
-                'user_id_fk' => $sponsor_status->username,
+                'user_id' => $user_mid,
+                'user_id_fk' => $Sposnor_status->username,
                 'amt' => $amt,
                 'comm' => $pp,
                 'remarks' => $remarks,
@@ -532,17 +540,13 @@ function add_level_income($id, $amt)
                 'fullname' => $fullname,
                 'ttime' => date("Y-m-d"),
             ];
-            $income_record = Income::create($data);
+            $user_data = Income::create($data);
         }
-
-        // Move to the next sponsor level
-        $user_mid = $sponsor_id;
         $cnt++;
     }
 
     return true;
 }
-
 
   
 

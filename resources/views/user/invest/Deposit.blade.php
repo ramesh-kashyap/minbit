@@ -32,7 +32,7 @@
 <div class="dashboard_content">
     <div class="alert" id="error-alert"></div>
     <div class="deposit__list row">
-        <div class="modal__body modal__deposit address" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
+        <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
                 <form class="contact__form" action="{{ route('user.confirm') }}" method="POST" id="invest-form">
                       @csrf
@@ -61,6 +61,66 @@
                                 <!-- <option value="INR">INR</option> -->
                                 <option value="USDT">USDT</option>
                             </select>
+                        </div>
+                    </div>
+                    <!-- <div class="modal__item-input" style="visibility:hidden; height:0px;">
+                        <div class="modal__input-title">T-Password:</div>
+                        <div class="modal__deposit-cover-row">
+                            <input type="text" class="currency__search">
+                        </div>
+                    </div> -->
+                    <!-- <input type="hidden" name="plan_id" class="plan-id"> -->       
+                    <div id="dep_tag" class="search__block_input" style="display: none;">
+                        <div class="modal__input-title">Payment tag (memo):</div>
+                        <div class="search__block">
+                            <span class="modal__copy-btn copy__payment"></span>
+                        </div>
+                    </div>
+                    <!-- <input id="deposit_cur" type="hidden" name="currency" value="usdt.trc20">
+                    <input id="deposit_id" type="hidden" name="deposit_id">
+                    <input id="_token" type="hidden" name="_token" value="65d9c7945ac2e153d72230e388744c1d41">
+                    <input id="post_ajax" type="hidden" name="_token" value="/data/deposit/depositKassa.php"> -->
+                    <div class="modal__button modal__form-bottom">
+                        <button id="make_deposit" class="submit-btn" type="submit">Deposit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
+            <div class="modal__inner">
+                <form class="contact__form" action="{{ route('user.confirm') }}" method="POST" id="invest-form">
+                      @csrf
+                <div class="modal__header">
+                        <h2 class="modal__title">
+                            Reinvest
+                            <g style="font-family: 'sansationbold'; display: none;" id="deposit_short">Bitcoin</g>
+                        </h2>
+                        <span class="modal__close"></span>
+                    </div>
+                    <!-- <input type="hidden" name="minimum_amount" id="minimum_amount">
+                    <input type="hidden" name="maximum_amount" id="maximum_amount">
+                    <input type="hidden" name="plan" id="plan-name"> -->
+                    <br>
+                    
+                    <div class="search__block_input">
+                        <div class="modal__input-title">Amount:</div>
+                        <div class="search__block">
+                            <input type="text" class="currency__search" name="Sum" id="amount" placeholder="Enter Amount">
+                        </div>
+                    </div>
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Payment address:</div>
+                        <div class="search__block">
+                            <select id="deposit_address" name="PSys" class="custom-select">
+                                <!-- <option value="INR">INR</option> -->
+                                <option value="USDT">USDT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Transaction Id:</div>
+                        <div class="search__block">
+                            <input id="deposit_address" name="TID" class="custom-select">                                
                         </div>
                     </div>
                     <!-- <div class="modal__item-input" style="visibility:hidden; height:0px;">

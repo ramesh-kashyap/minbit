@@ -107,6 +107,9 @@ Route::any('/SubmitBuyFund', [App\Http\Controllers\UserPanel\AddFund::class, 'Su
 // end add fund
 
 // invest
+Route::get('/re-invest', [App\Http\Controllers\UserPanel\Invest::class, 'invest_view'])->name('user.re_invest');
+Route::post('/re-invest', [App\Http\Controllers\UserPanel\Invest::class, 're-invest'])->name('user.reinvest');
+
 Route::get('/invest', [App\Http\Controllers\UserPanel\Invest::class, 'index'])->name('user.invest');
 Route::get('/my_deposit', [App\Http\Controllers\UserPanel\Invest::class, 'my_deposit'])->name('user.my_deposit');
 Route::get('/open_deposit', [App\Http\Controllers\UserPanel\Invest::class, 'open_deposit'])->name('user.open_deposit');

@@ -34,13 +34,15 @@
     <div class="deposit__list row">
         <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
-                <form class="contact__form" action="{{ route('user.confirm') }}" method="POST" id="invest-form">
+                <form class="contact__form" action="{{route('user.reinvest')}}" method="POST" id="invest-form">
                       @csrf
                 <div class="modal__header">
                         <h2 class="modal__title">
-                            Deposit
+                            Re-invest
                             <g style="font-family: 'sansationbold'; display: none;" id="deposit_short">Bitcoin</g>
                         </h2>
+                        <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}
+                                    </p>
                         <span class="modal__close"></span>
                     </div>
                     <!-- <input type="hidden" name="minimum_amount" id="minimum_amount">
@@ -61,6 +63,12 @@
                                 <!-- <option value="INR">INR</option> -->
                                 <option value="USDT">USDT</option>
                             </select>
+                        </div>
+                    </div>
+                    <div id="dep_address" class="search__block_input">
+                        <div class="modal__input-title">Transaction Password</div>
+                        <div class="search__block">
+                            <input id="deposit_address" name="transaction_id" class="custom-select" placeholder="Transaction Password">
                         </div>
                     </div>
                     <!-- <div class="modal__item-input" style="visibility:hidden; height:0px;">
@@ -88,11 +96,6 @@
         </div>
         
     </div>
-</div>
-@else
-    <p>The form is currently unavailable.</p>
-@endif
-
     <div class="dashboard_content">
 					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
 						<h2>Referral levels</h2>
@@ -148,8 +151,8 @@
                     </p>
                     <p class="coins__item coins__item_income">
                         <span class="coins__item_name">Status</span>
-                        <span class="portfolio_visible" style="">{{$value->status}}<span></span></span>
-                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●●</span></span>
+                        <span class="portfolio_visible" style="">{{ $value->status }}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
                     </p>
                 </div>
                 @endforeach

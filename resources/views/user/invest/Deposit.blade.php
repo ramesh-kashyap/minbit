@@ -174,7 +174,7 @@
         form.submit();
     });
 </script>
-<script>
+<!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             var currentTime = new Date();
             var currentHour = currentTime.getHours();
@@ -187,4 +187,4 @@
                 document.getElementById('no-invest-message').style.display = 'none';
             }
         });
-    </script>
+    </script> -->

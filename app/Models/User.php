@@ -143,7 +143,7 @@ class User extends Authenticatable
     
     public function available_balance()
     {
-    $balance = (Auth::user()->users_incomes()) - (Auth::user()->withdraw());
+    $balance = (Auth::user()->users_incomes()) - (Auth::user()->withdraw()+Auth::user()->buy_packageAmt());
     return $balance;
     } 
 

@@ -124,7 +124,6 @@ class DepositController extends Controller
           User::where('id',$user->user_id)->update($user_update); 
          }
          add_direct_income($user->user_id,$user->amount);
-         
     
                  
         $notify[] = ['success', 'Deposit request Approved successfully'];

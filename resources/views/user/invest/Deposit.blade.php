@@ -18,6 +18,15 @@
         background-color: #f44336; /* Red */
         border-radius: 4px;
     }
+
+    .hidden {
+            display: none;
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            color: red;
+        }
 </style>
 
 <div class="dashboard_content">
@@ -165,3 +174,17 @@
         form.submit();
     });
 </script>
+<!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+
+            if (currentHour >= 12) {
+                document.getElementById('invest-form').classList.add('hidden');
+                document.getElementById('no-invest-message').style.display = 'block';
+            } else {
+                document.getElementById('invest-form').classList.remove('hidden');
+                document.getElementById('no-invest-message').style.display = 'none';
+            }
+        });
+    </script> -->

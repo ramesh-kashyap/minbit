@@ -345,129 +345,206 @@ return true;
 
 
 
- function add_level_income($id,$amt)
-        {
+//  function add_level_income($id,$amt)
+//         {
 
-          //$user_id =$this->session->userdata('user_id_session')
-      $data = User::where('id',$id)->orderBy('id','desc')->first();
+//           //$user_id =$this->session->userdata('user_id_session')
+//       $data = User::where('id',$id)->orderBy('id','desc')->first();
 
-        $user_id = $data->username;
-        $fullname=$data->name;
+//         $user_id = $data->username;
+//         $fullname=$data->name;
 
-        $rname = $data->username;
-        $user_mid = $data->id;
-
-
-              $cnt = 1;
-
-              $amount = $amt/100;
+//         $rname = $data->username;
+//         $user_mid = $data->id;
 
 
-                while ($user_mid!="" && $user_mid!="1"){
+//               $cnt = 1;
 
-                      $Sposnor_id = User::where('id',$user_mid)->orderBy('id','desc')->first();
-                      $sponsor=$Sposnor_id->sponsor;
-                      if (!empty($sponsor))
-                       {
-                        $Sposnor_status = User::where('id',$sponsor)->orderBy('id','desc')->first();
-                        $Sposnor_cnt = User::where('sponsor',$sponsor)->where('active_status','Active')->count("id");
-                        $sp_status=$Sposnor_status->active_status;
-                        $rank=$Sposnor_status->rank;
-                        $lastPackage = \DB::table('investments')->where('user_id',$Sposnor_status->id)->where('status','Active')->orderBy('id','DESC')->limit(1)->first();
-                        $plan = ($lastPackage)?$lastPackage->plan:0;
-                      }
-                      else
-                      {
-                        $Sposnor_status =array();
-                        $sp_status="Pending";
-                        $Sposnor_cnt=0;
-                        $rank=0;
-                      }
+//               $amount = $amt/100;
 
-                      $pp=0;
-                      $remarks= "Leadership Income";
-                       if($sp_status=="Active")
-                       {
-                         if($cnt==1 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*15;
+
+//                 while ($user_mid!="" && $user_mid!="1"){
+
+//                       $Sposnor_id = User::where('id',$user_mid)->orderBy('id','desc')->first();
+//                       $sponsor=$Sposnor_id->sponsor;
+//                       if (!empty($sponsor))
+//                        {
+//                         $Sposnor_status = User::where('id',$sponsor)->orderBy('id','desc')->first();
+//                         $Sposnor_cnt = User::where('sponsor',$sponsor)->where('active_status','Active')->count("id");
+//                         $sp_status=$Sposnor_status->active_status;
+//                         $rank=$Sposnor_status->rank;
+//                         $lastPackage = \DB::table('investments')->where('user_id',$Sposnor_status->id)->where('status','Active')->orderBy('id','DESC')->limit(1)->first();
+//                         $plan = ($lastPackage)?$lastPackage->plan:0;
+//                       }
+//                       else
+//                       {
+//                         $Sposnor_status =array();
+//                         $sp_status="Pending";
+//                         $Sposnor_cnt=0;
+//                         $rank=0;
+//                       }
+
+//                       $pp=0;
+//                       $remarks= "Leadership Income";
+//                        if($sp_status=="Active")
+//                        {
+//                          if($cnt==1 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*15;
                           
-                          } if($cnt==2 && $Sposnor_cnt>=$cnt )
-                          {
-                            $pp= $amount*9;
+//                           } if($cnt==2 && $Sposnor_cnt>=$cnt )
+//                           {
+//                             $pp= $amount*9;
 
-                          } if($cnt==3 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*7;
+//                           } if($cnt==3 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*7;
 
-                          } if($cnt==4 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*6;
+//                           } if($cnt==4 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*6;
 
-                          }  
+//                           }  
                           
-                          if($cnt==5 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*5;
+//                           if($cnt==5 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*5;
 
-                          }  
-                           if($cnt==6 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*5;
+//                           }  
+//                            if($cnt==6 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*5;
 
-                          }  
-                         if($cnt==7 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*3;
+//                           }  
+//                          if($cnt==7 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*3;
 
-                          }  
+//                           }  
                          
-                          if($cnt>=8 && $cnt<=15 && $Sposnor_cnt>=$cnt)
-                          {
-                            $pp= $amount*1;
+//                           if($cnt>=8 && $cnt<=15 && $Sposnor_cnt>=$cnt)
+//                           {
+//                             $pp= $amount*1;
 
-                          } 
-                        }
-                        else
-                        {
-                          $pp=0;
-                        }
-
-
-
-                      $user_mid = @$Sposnor_status->id;
-                      $spid = @$Sposnor_status->id;
-                      $idate = date("Y-m-d");
-
-                      $user_id_fk=$sponsor;
-                      if($spid>0 && $cnt<=15){
-                        if($pp>0){
-
-                         $data = [
-                        'user_id' => $user_mid,
-                        'user_id_fk' =>$Sposnor_status->username,
-                        'amt' => $amt,
-                        'comm' => $pp,
-                        'remarks' =>$remarks,
-                        'level' => $cnt,
-                        'rname' => $rname,
-                        'fullname' => $fullname,
-                        'ttime' => Date("Y-m-d"),
-
-                    ];
-                     $user_data =  Income::create($data);
+//                           } 
+//                         }
+//                         else
+//                         {
+//                           $pp=0;
+//                         }
 
 
-                }
-               }
 
-                $cnt++;
-     }
+//                       $user_mid = @$Sposnor_status->id;
+//                       $spid = @$Sposnor_status->id;
+//                       $idate = date("Y-m-d");
 
-     return true;
-  }
+//                       $user_id_fk=$sponsor;
+//                       if($spid>0 && $cnt<=15){
+//                         if($pp>0){
+
+//                          $data = [
+//                         'user_id' => $user_mid,
+//                         'user_id_fk' =>$Sposnor_status->username,
+//                         'amt' => $amt,
+//                         'comm' => $pp,
+//                         'remarks' =>$remarks,
+//                         'level' => $cnt,
+//                         'rname' => $rname,
+//                         'fullname' => $fullname,
+//                         'ttime' => Date("Y-m-d"),
+
+//                     ];
+//                      $user_data =  Income::create($data);
 
 
+//                 }
+//                }
+
+//                 $cnt++;
+//      }
+
+//      return true;
+//   }
+
+
+function add_level_income($id, $amt)
+{
+    // Fetch user data by ID
+    $data = User::where('id', $id)->orderBy('id', 'desc')->first();
+
+    $user_id = $data->username;
+    $fullname = $data->name;
+    $rname = $data->username;
+    $user_mid = $data->id;
+
+    $cnt = 1;
+    $amount = $amt / 100;
+
+    // Define commission percentages and levels
+    $commissions = [
+        1 => 30,
+        2 => 10,
+        3 => 2.5,
+        4 => 2.5,
+        5 => 2, // Fixed amount for level 5
+        6 => 2.5, // Percentage for level 6
+    ];
+
+    while ($user_mid != "" && $user_mid != "8" && $cnt <= 6) {
+        // Fetch sponsor ID
+        $sponsor_data = User::where('id', $user_mid)->orderBy('id', 'desc')->first();
+        $sponsor_id = $sponsor_data->sponsor;
+
+        // Fetch sponsor status and active referral count
+        if (!empty($sponsor_id)) {
+            $sponsor_status = User::where('id', $sponsor_id)->orderBy('id', 'desc')->first();
+            $sponsor_active_status = $sponsor_status->active_status;
+        } else {
+            $sponsor_status = null;
+            $sponsor_active_status = "Pending";
+        }
+
+        $pp = 0;
+        $remarks = "Referral Income";
+
+        // Calculate commission if sponsor is active
+        if ($sponsor_active_status == "Active" && array_key_exists($cnt, $commissions)) {
+            if ($cnt <= 4) {
+                $pp = $amount * $commissions[$cnt] / 100;
+            } elseif ($cnt == 5) {
+                $pp = $commissions[5]; // $2 fixed for level 5
+            } elseif ($cnt == 6) {
+                $pp = $amount * $commissions[6] / 100;
+            }
+        }
+
+        // Prepare data and insert into Income table if conditions are met
+        if ($sponsor_id && $pp > 0) {
+            $data = [
+                'user_id' => $sponsor_id,
+                'user_id_fk' => $sponsor_status->username,
+                'amt' => $amt,
+                'comm' => $pp,
+                'remarks' => $remarks,
+                'level' => $cnt,
+                'rname' => $rname,
+                'fullname' => $fullname,
+                'ttime' => date("Y-m-d"),
+            ];
+            $income_record = Income::create($data);
+        }
+
+        // Move to the next sponsor level
+        $user_mid = $sponsor_id;
+        $cnt++;
+    }
+
+    return true;
+}
+
+
+  
 
 function add_direct_income_new($id,$amt,$newDate,$newDateTime)
 {

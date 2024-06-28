@@ -1,6 +1,12 @@
 <?php
 namespace App\Http\Helpers;
 
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Investment;
+use App\Models\Income;
+use App\Models\User;
+
 class Helper 
 {
     
@@ -202,6 +208,10 @@ public static function Gettxninfo($txn) {
   // end coinpayment 
    
     // Total price with shipping and coupon
+
+    
+    
+    
    
 
 

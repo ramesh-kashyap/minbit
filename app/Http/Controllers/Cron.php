@@ -132,114 +132,68 @@ if ($allResult)
 
 public function generate_roi()
 {
-
-$allResult=Investment::where('status','Active')->where('roiCandition',0)->get();
-$todays=Date("Y-m-d");
-$day=Date("l");
-
-if ($allResult)
-{
-
- foreach ($allResult as $key => $value)
- {
-
-  $userID=$value->user_id;
-   $joining_amt = $value->amount;
-   $plan = $value->plan;
-   $startDate = $value->sdate;
-
-  $userDetails=User::where('id',$userID)->where('active_status','Active')->first();
-  $today=date("Y-m-d");
-   $previous_date =date('Y-m-d',(strtotime ( '-1 day' , strtotime ( $today) ) ));
-  
-  if ($userDetails)
-  {
-     
-     $checkRoi = Income::where('user_id',$userID)->where('remarks','Roi Income')->where('invest_id',$value->id)->first();
-     if($checkRoi)
-     {
-       $startDate= $checkRoi->ttime;
-     }
-      $days = (strtotime($today) - strtotime($startDate)) / (60 * 60 * 24);
-      
-      
-        $total_get=$joining_amt*200/100;
-        $total_profit_b = Income::where('user_id', $userID)->sum('comm');
-        $total_profit=($total_profit_b)?$total_profit_b:0;
-   
-          $percent= 8;
+    $allResult = Investment::where('status', 'Active')->where('roiCandition', 0)->get();
+    $todays = date("Y-m-d");
+    $day = date("l");
     
-            if ($joining_amt>=10000 && $joining_amt<=50000) 
-           {
-            $percent= 8;
-           }
-           elseif($joining_amt>=51000 && $joining_amt<=100000)
-           {
-             $percent= 9;
-           }
-           elseif($joining_amt>=110000 && $joining_amt<=250000)
-           {
-            $percent= 10;
-           }
-           elseif($joining_amt>=251000 && $joining_amt<=1000000)
-           {
-            $percent= 12;
-           } 
-           elseif($joining_amt>=1100000 && $joining_amt<=3000000)
-           {
-            $percent= 15;
-           }    
-           elseif($joining_amt>=3100000 )
-           {
-            $percent= 20;
-           }
-             
-           
-       
-       $roi = ($joining_amt*$percent/100)/30;
-     
-     
-     $roi = $roi*$days;
-       $max_income=$total_get;
-       $n_m_t = $max_income - $total_profit;
-       // dd($total_received);
-         if($roi >= $n_m_t)
-         {
-             $roi = $n_m_t;
-         }  
-       
-      if ($roi>0)
-      {
 
-        echo "ID:".$userDetails->username." Package:".$joining_amt." Roi:".$roi."<br>";
-         $data['remarks'] = 'Roi Income';
-        $data['comm'] = $roi;
-        $data['amt'] = $joining_amt;
-        $data['invest_id']=$value->id;
-        $data['level']=0;
-        $data['ttime'] = date("Y-m-d");
-        $data['user_id_fk'] = $userDetails->username;
-        $data['user_id']=$userDetails->id;
-       $income = Income::firstOrCreate(['remarks' => 'Roi Income','ttime'=>date("Y-m-d"),'user_id'=>$userID,'invest_id'=>$value->id],$data);
-          add_level_income($userDetails->id,$roi);
-       
-      }
-      else
-      {
-      Investment::where('id',$value->id)->update(['roiCandition' => 1]);
-      }
-      
+    if ($allResult) {      
+        foreach ($allResult as $key => $value) {        
+            $userID = $value->user_id;
+            $joining_amt = $value->amount;
+            $startDate = $value->sdate;
 
-  }
+            // Check if investment meets the minimum investment amount
+            // if ($joining_amt >= 1000) {        
+            
+                $userDetails = User::where('id', $userID)->where('active_status', 'Active')->first();
+                $today = date("Y-m-d");
+                // $previous_date = date('Y-m-d', strtotime('-1 day', strtotime($today)));
 
- }
- 
+                if ($userDetails) {
+                    
+                    $checkRoi = Income::where('user_id', $userID)->where('remarks', 'Roi Income')->where('invest_id', $value->id)->first();
+                    if ($checkRoi) {
+                        $startDate = $checkRoi->ttime;
+                    }
+                    // $days = (strtotime($today) - strtotime($startDate)) / (60 * 60 * 24);
+
+                    $total_get = $joining_amt * 200 / 100;
+                    $total_profit_b = Income::where('user_id', $userID)->sum('comm');
+                    $total_profit = ($total_profit_b) ? $total_profit_b : 0;
+
+                    $percent = 1; // Fixed 1% daily return
+
+                    $roi = ($joining_amt * $percent / 100);
+                    // $roi = $roi * $days;
+                    $max_income = $total_get;
+                    $n_m_t = $max_income - $total_profit;
+
+                    if ($roi >= $n_m_t) {
+                        $roi = $n_m_t;
+                    }
+
+                    if ($roi > 0) {
+                        echo "ID:" . $userDetails->username . " Package:" . $joining_amt . " Roi:" . $roi . "<br>";
+                        $data['remarks'] = 'Roi Income';
+                        $data['comm'] = $roi;
+                        $data['amt'] = $joining_amt;
+                        $data['invest_id'] = $value->id;
+                        $data['level'] = 0;
+                        $data['ttime'] = date("Y-m-d");
+                        $data['user_id_fk'] = $userDetails->username;
+                        $data['user_id'] = $userDetails->id;
+                        $income = Income::firstOrCreate(['remarks' => 'Roi Income', 'ttime' => date("Y-m-d"), 'user_id' => $userID, 'invest_id' => $value->id], $data);
+                        add_level_income($userDetails->id, $roi);
+                    } else {
+                        Investment::where('id', $value->id)->update(['roiCandition' => 1]);
+                    }
+                }
+            // }
+        }
+    }
 }
 
-
-
-
-}
 
 
 

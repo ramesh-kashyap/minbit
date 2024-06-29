@@ -53,13 +53,13 @@
                     <div class="search__block_input">
                         <div class="modal__input-title">Amount:</div>
                         <div class="search__block">
-                            <input type="text" class="currency__search" name="Sum" id="amount" placeholder="Enter Amount">
+                            <input type="text" class="currency__search" name="amount" id="amount" placeholder="Enter Amount">
                         </div>
                     </div>
                     <div id="dep_address" class="search__block_input">
                         <div class="modal__input-title">Payment address:</div>
                         <div class="search__block">
-                            <select id="deposit_address" name="PSys" class="custom-select">
+                            <select id="deposit_address" name="paymentMode" class="custom-select">
                                 <!-- <option value="INR">INR</option> -->
                                 <option value="USDT">USDT</option>
                             </select>

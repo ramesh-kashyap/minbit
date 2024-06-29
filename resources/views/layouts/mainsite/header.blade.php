@@ -63,12 +63,12 @@
 	<div class="container">
 	<div class="d-flex justify-content-between align-items-center">
 		<a href="/" class="logo">
-		<img src="{{asset('')}}main/images/logo.svg" alt="">
+		<img src="{{asset('')}}main/bluelogo.png" alt="" style="height:80px">
 		</a>
 		<div class="menu">
 		<div class="menu__top">
 			<a href="/" class="logo">
-			<img src="{{asset('')}}main/images/logo.svg" alt="">
+			<img src="{{asset('')}}main/bluelogo.png" alt="" style="height:80px">
 			</a>
 			<button class="menu__close">
 			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

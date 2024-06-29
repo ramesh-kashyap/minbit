@@ -160,7 +160,7 @@
                     <div class="sidebar__wrap">
                         <div class="sidebar__top d-flex justify-content-between">
                             <a href="/" class="logo">
-                                <img src="{{ asset('') }}main/images/logo.svg" alt="">
+                                <img src="{{asset('')}}main/bluelogo.png" alt="" style="height:80px">
                             </a>
                             <a href="dashboard" class="sidebar__home d-none d-xl-flex">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none"

@@ -34,7 +34,7 @@
     <div class="deposit__list row">
         <div class="modal__body modal__deposit address col-12 col-lg-6 mb_20" style="visibility: visible; display: flex; width:100%; max-width: 500px;">
             <div class="modal__inner">
-            <form class="contact__form" action="{{route('user.reinvest')}}" method="POST" id="invest-form" style="{{ App\Models\GeneralSetting::where('sitename', 'MIM Trading')->value('hide_type') == 0? 'display:none;' : '' }}">
+            <form class="contact__form" action="{{route('user.reinvest')}}" method="POST" id="invest-form" style="{{ App\Models\GeneralSetting::where('sitename', 'MIM Trading')->value('hide_type') ==1? 'display:none;' : '' }}">
     @csrf
 
     @if ($errors->any())

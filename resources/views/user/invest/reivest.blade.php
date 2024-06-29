@@ -183,22 +183,6 @@
         form.submit();
     });
 </script>
-<script>
-    $(document).ready(function() {
-        // Example function to toggle form visibility
-        function toggleFormVisibility(depositOn) {
-            if (depositOn == 0) {
-                $('.dashboard_content').show(); // Show the form
-            } else {
-                $('.dashboard_content').hide(); // Hide the form
-            }
-        }
 
-        // Initial check on page load (assuming deposit_on is fetched from backend)
-        var depositOnValue = {{ $settings->deposit_on }}; // Replace with actual value from backend
-
-        toggleFormVisibility(depositOnValue);
-    });
-</script>
 
 

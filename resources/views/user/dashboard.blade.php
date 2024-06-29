@@ -61,7 +61,7 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Total referrals</p>
+                <p>Roi Income</p>
                 <p>{{ currency() }}
                 {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
             </div>

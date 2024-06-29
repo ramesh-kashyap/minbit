@@ -89,9 +89,7 @@
         
     </div>
 </div>
-@else
-    <p>The form is currently unavailable.</p>
-@endif
+
 
     <div class="dashboard_content">
 					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">

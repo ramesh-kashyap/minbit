@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Investment;
 use App\Models\User;
+use App\Models\GeneralSetting;
+
+
 use Auth;
 class DepositController extends Controller
 {
@@ -124,7 +127,6 @@ class DepositController extends Controller
           User::where('id',$user->user_id)->update($user_update); 
          }
          add_direct_income($user->user_id,$user->amount);
-    
                  
         $notify[] = ['success', 'Deposit request Approved successfully'];
         return redirect()->back()->withNotify($notify);
@@ -134,8 +136,7 @@ class DepositController extends Controller
             $update_data['status']= 'Decline'; 
     //   $user =  Investment::where('id',$id)->delete(); 
         Investment::where('id',$id)->update($update_data); 
-       
-        
+      
         $notify[] = ['success', 'Deposit request Rejected successfully'];
         return redirect()->back()->withNotify($notify);
         }

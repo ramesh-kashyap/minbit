@@ -28,7 +28,7 @@ date_default_timezone_set("Asia/Kolkata");   //India time (GMT+5:30)
 }
 public function tradeAmt()
 {
-  User::where('id','>=',0)->update(['tradeAmt' => 0]);
+  \DB::table('general_settings')->where('id',1)->update(['hide_type' => 0]);
 }
 
 

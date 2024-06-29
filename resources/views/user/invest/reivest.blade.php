@@ -183,17 +183,22 @@
         form.submit();
     });
 </script>
-<!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var currentTime = new Date();
-            var currentHour = currentTime.getHours();
-
-            if (currentHour >= 12) {
-                document.getElementById('invest-form').classList.add('hidden');
-                document.getElementById('no-invest-message').style.display = 'block';
+<script>
+    $(document).ready(function() {
+        // Example function to toggle form visibility
+        function toggleFormVisibility(depositOn) {
+            if (depositOn == 0) {
+                $('.dashboard_content').show(); // Show the form
             } else {
-                document.getElementById('invest-form').classList.remove('hidden');
-                document.getElementById('no-invest-message').style.display = 'none';
+                $('.dashboard_content').hide(); // Hide the form
             }
-        });
-    </script> -->
+        }
+
+        // Initial check on page load (assuming deposit_on is fetched from backend)
+        var depositOnValue = {{ $settings->deposit_on }}; // Replace with actual value from backend
+
+        toggleFormVisibility(depositOnValue);
+    });
+</script>
+
+

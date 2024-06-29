@@ -179,7 +179,7 @@ public function cancel_payment($id)
         $validation = Validator::make($request->all(), [
             'amount' => 'required|numeric|min:1',
             'paymentMode' => 'required',
-            'transaction_id' => 'required|unique:investments,transaction_id',
+            'transaction_id' => 'required',
         ]);
 
         if ($validation->fails()) {

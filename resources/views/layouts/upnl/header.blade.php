@@ -220,7 +220,7 @@
                                     </div>
                                     <div class="info">
                                         <p>User account:</p>
-                                        <p>sachink</p>
+                                        <p> {{Auth::user()->username}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -557,9 +557,8 @@
                                         alt="">
                                 </div>
                                 <div class="info">
-                                    <p>Direct Income</p>
-                                    <p>{{ currency() }}
-                                        {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}
+                                    <p>{{Auth::user()->name}}</p>
+                                    <p>{{Auth::user()->username}}
                                     </p>
                                 </div>
                             </div>

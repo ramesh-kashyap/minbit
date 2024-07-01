@@ -1,10 +1,4 @@
-
-
-
 @include('layouts.mainsite.header')
-
-
-
 <script>
 	$('.home_page').addClass('current_menu');
 </script>
@@ -15,7 +9,7 @@
 			<div class="col-xl-5 col-lg-6 offer">
 				<p class="offer__label ff_tt">
 					<img src="{{asset('')}}main/images/offer_label.svg" width="50" alt="" />
-					<span> MintBit.co</span>
+					<span>Vanguard Elite</span>
 				</p>
 				<h1>
 					<img src="{{asset('')}}main/images/head_text_icon.svg" alt="" />
@@ -79,7 +73,7 @@
 					</button>
 				</div>
 			</div>
-			<a href="/video">
+			<a href="">
     			<p class="video__watch">
     				<img src="{{asset('')}}main/images/video_icon_btn.svg" alt="" />
     				Watch video now
@@ -93,7 +87,7 @@
 		<div class="row">
 			<div class="col-lg-5 col-xl-6 pos_rel order-1 order-lg-0">
 				<div class="about__img">
-					<img src="{{asset('')}}main/images/about_img.jpg" alt="" />
+					<img src="{{asset('')}}main/images/abouticon.png" alt="" />
 				</div>
 			</div>
 			<div class="col-lg-7 col-xl-6">
@@ -103,18 +97,18 @@
 				</div>
 				<div class="text__content mb_30">
 					<p>                        
-                        Daily profitability: Our platform offers a unique opportunity to earn from 1% to 2% daily thanks to the reliable operation of our equipment and favorable conditions. The platform is located on one of the coasts of Spain, where the cost of electricity is available at an advantageous price, making cryptocurrency mining accessible.
+					Vanguard Elite is a dynamic and innovative multilevel marketing platform dedicated to helping individuals achieve financial independence and success. Founded on the principles of integrity, transparency, and mutual growth, we are committed to creating a supportive environment where our members can thrive.
                     </p>
 					<p>                        
-                        Transparency through live streaming: We provide our users with the unique opportunity to monitor the operation of our equipment in real-time through live streaming. This ensures maximum transparency and your trust in the platform.
+                    Our mission is to empower entrepreneurs with the tools, resources, and community support they need to build prosperous network marketing businesses. At Vanguard Elite, we believe in the power of collective effort and the potential of each individual to reach new heights.
                     </p>
 					<p>                        
-                        Transparency through live streaming: We provide our users with the unique opportunity to monitor the operation of our equipment in real-time through live streaming. This ensures maximum transparency and your trust in the platform.
+                    Our comprehensive training programs, cutting-edge marketing tools, and tiered commission structure are designed to ensure that every member has the opportunity to succeed. Join us at Vanguard Elite and become a part of a family that values your growth and celebrates your achievements. Together, we can reach new pinnacles of success.
                     </p>
                     <p><a href="/about"> And more!</a></p>
 				</div>
 				<div class="about__social">
-					<a href="https://facebook.com/profile.php/?id=61557032113574&name=xhp_nt__fb__action__open_user" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M7.5 18.8706C3.25 18.1206 0 14.4206 0 9.97058C0 5.02058 4.05 0.970581 9 0.970581C13.95 0.970581 18 5.02058 18 9.97058C18 14.4206 14.75 18.1206 10.5 18.8706L10 18.4706H8L7.5 18.8706Z"
@@ -131,7 +125,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://twitter.com/MintBit_co" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M11.6849 8.59958L18.3869 0.970581H16.7993L10.9775 7.59338L6.3311 0.970581H0.970703L7.9985 10.9864L0.970703 18.9856H2.5583L8.7023 11.9902L13.6103 18.9856H18.9707M3.1313 2.14298H5.5703L16.7981 17.8708H14.3585"
@@ -145,7 +139,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://instagram.com/mintbit.co.official/" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M9.00005 2.5922C11.4031 2.5922 11.6878 2.60138 12.6368 2.64468C13.5143 2.68469 13.9909 2.83131 14.308 2.95456C14.7281 3.11783 15.0279 3.31286 15.3428 3.62778C15.6578 3.94273 15.8528 4.24254 16.0161 4.66264C16.1393 4.97977 16.2859 5.45632 16.326 6.33381C16.3693 7.28282 16.3784 7.56748 16.3784 9.97056C16.3784 12.3737 16.3693 12.6583 16.326 13.6074C16.2859 14.4848 16.1393 14.9614 16.0161 15.2785C15.8528 15.6986 15.6578 15.9984 15.3429 16.3133C15.0279 16.6283 14.7281 16.8233 14.308 16.9866C13.9909 17.1099 13.5143 17.2565 12.6368 17.2965C11.6879 17.3398 11.4033 17.349 9.00005 17.349C6.59675 17.349 6.31215 17.3398 5.36325 17.2965C4.48575 17.2565 4.00921 17.1099 3.69207 16.9866C3.27197 16.8233 2.97216 16.6283 2.65724 16.3133C2.34232 15.9984 2.14726 15.6986 1.98399 15.2785C1.86074 14.9614 1.71412 14.4848 1.67411 13.6074C1.63081 12.6583 1.62162 12.3737 1.62162 9.97056C1.62162 7.56748 1.63081 7.28282 1.67411 6.33381C1.71412 5.45632 1.86074 4.97977 1.98399 4.66264C2.14726 4.24254 2.34228 3.94273 2.65724 3.62781C2.97216 3.31286 3.27197 3.11783 3.69207 2.95456C4.00921 2.83131 4.48575 2.68469 5.36325 2.64468C6.31226 2.60138 6.59692 2.5922 9.00005 2.5922ZM9.00005 0.970581C6.55577 0.970581 6.24928 0.980941 5.28933 1.02474C4.33138 1.06843 3.67714 1.22059 3.10467 1.44305C2.51284 1.67305 2.01093 1.98079 1.51055 2.48113C1.01021 2.9815 0.702474 3.48341 0.472508 4.07524C0.250008 4.64771 0.0978526 5.30195 0.0541601 6.25989C0.0103604 7.21984 0 7.52633 0 9.97056C0 12.4148 0.0103604 12.7213 0.0541601 13.6813C0.0978526 14.6392 0.250008 15.2935 0.472508 15.8659C0.702474 16.4578 1.01021 16.9597 1.51055 17.46C2.01093 17.9604 2.51284 18.2681 3.10467 18.4981C3.67714 18.7206 4.33138 18.8727 5.28933 18.9164C6.24928 18.9602 6.55577 18.9706 9.00005 18.9706C11.4443 18.9706 11.7508 18.9602 12.7107 18.9164C13.6687 18.8727 14.3229 18.7206 14.8954 18.4981C15.4872 18.2681 15.9891 17.9604 16.4895 17.46C16.9898 16.9597 17.2976 16.4578 17.5276 15.8659C17.75 15.2935 17.9022 14.6392 17.9459 13.6813C17.9897 12.7213 18.0001 12.4148 18.0001 9.97056C18.0001 7.52633 17.9897 7.21984 17.9459 6.25989C17.9022 5.30195 17.75 4.64771 17.5276 4.07524C17.2976 3.48341 16.9898 2.9815 16.4895 2.48113C15.9891 1.98079 15.4872 1.67305 14.8954 1.44305C14.3229 1.22059 13.6687 1.06843 12.7107 1.02474C11.7508 0.980941 11.4443 0.970581 9.00005 0.970581Z"
@@ -165,7 +159,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://t.me/+N0PipUltKz5lMDIy" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M2.42401 8.71954C8.32957 6.17934 12.2675 4.50469 14.2379 3.69558C19.8637 1.3854 21.0327 0.984102 21.7947 0.97071C21.9622 0.967936 22.3369 1.00894 22.5797 1.20338C22.7846 1.36755 22.841 1.58934 22.868 1.745C22.895 1.90066 22.9286 2.25525 22.9018 2.53232C22.597 5.69477 21.2778 13.3692 20.6067 16.9112C20.3228 18.41 19.7636 18.9125 19.2223 18.9617C18.0459 19.0685 17.1526 18.1941 16.0132 17.4567C14.2302 16.3029 13.2229 15.5846 11.4923 14.4586C9.4922 13.1574 10.7888 12.4422 11.9286 11.2734C12.2269 10.9675 17.4102 6.31293 17.5105 5.89069C17.5231 5.83788 17.5347 5.64103 17.4163 5.53709C17.2978 5.43315 17.123 5.4687 16.9968 5.49697C16.818 5.53703 13.9697 7.39568 8.45197 11.0729C7.64349 11.621 6.9112 11.888 6.25509 11.874C5.53178 11.8586 4.14042 11.4703 3.10609 11.1383C1.83745 10.7312 0.829151 10.5159 0.916951 9.8245C0.962682 9.46435 1.46503 9.09603 2.42401 8.71954Z"
@@ -179,7 +173,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="/cdn-cgi/l/email-protection#99eaece9e9f6ebedd9f4f8f0f5b7f4f0f7edfbf0edb7faf6" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="22" height="22" fill="#272443" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         	 viewBox="0 0 24 24" xml:space="preserve">
                         <style type="text/css">
@@ -274,7 +268,7 @@
 					</div>
 					<img src="{{asset('')}}main/images/target_item_bg.png" class="benefits__bg" alt="" />
 				</div>
-				div class="benefits__item benefits__item_5 mb_30" style="transform: translateX(90px);">
+				<div class="benefits__item benefits__item_5 mb_30" style="transform: translateX(90px);">
 					<div class="d-flex align-items-xl-center">
 						<p class="benefits__number">05</p>
 						<div class="benefits__content">
@@ -291,12 +285,12 @@
 				</div
 				<div class="benefits__item benefits__item_5 mb_30 ms-lg-auto" style="transform: translateX(30px);">
 					<div class="d-flex align-items-xl-center">
-						<p class="benefits__number">05</p>
+						<p class="benefits__number"></p>
 						<div class="benefits__content">
-							<p class="benefits__name">Target bonus</p>
+							<p class="benefits__name"></p>
 							<p class="d-flex benefits__subscribe">
 								<img src="{{asset('')}}main/images/target_icon.svg" alt="" />
-								<span>Hover over the card to learn more.</span>
+								<span></span>
 							</p>
 							<span></span>
 							<span class="last"></span>
@@ -312,7 +306,7 @@
 		<span class="benefits_circle2"></span>
 		<span class="benefits_circle3"></span>
 		<p class="benefits__center_text">
-			Bounty <br />
+			Vanguard <br />
 			Program
 		</p>
 		<div class="benefits__info text_center" id="benefits__info1"
@@ -331,11 +325,12 @@
 		
 		>
 			<img src="{{asset('')}}main/images/target_logo.svg" width="50" height="auto" alt="" />
-			<h3>Target bonus 1</h3>
+			<h3>Leadership Bonus</h3>
 			<div class="text__content">
 				<p>
-					Receive a bonus of 30 MH/s ($5)<br><br> 
-					We are pleased to announce the launch of a new Bonus program on the MintBit cryptocurrency mining platform! You can now earn bonuses by creating informative videos about MintBit and making them available to everyone!
+				Daily Leadership Bonus<br><br> 
+					
+As a leader in our network, you'll receive a daily leadership bonus from your team's daily returns. This bonus is designed to reward your efforts in building and supporting your network.
                     <br><br>
 				    Click to learn more!
 				</p>
@@ -360,11 +355,10 @@
 		
 		>
 			<img src="{{asset('')}}main/images/target_logo.svg" width="50" height="auto" alt="" />
-			<h3>Target bonus 2</h3>
+			<h3>Referral Bonus</h3>
 			<div class="text__content">
-				<p>
-					Get a bonus of 20MH/s ($3.5)<br><br>
-					We are excited to announce the launch of a new and engaging Bonus Program on the MintBit cryptocurrency mining platform! Now you have a unique opportunity to earn additional bonuses simply by creating a topic on the forum and actively participating in it. BONUS 20 Mh/s  = $3.5
+				<p>Direct Referral Bonus<br><br>
+				For example, if your direct referral invests $10,000 and earns $100 daily, you will receive $30 (30% of $100) daily. This bonus continues as long as your referral earns a daily return.
                     <br><br>
 				    Click to learn more!
 				</p>
@@ -386,11 +380,14 @@
 		";
 		>
 			<img src="{{asset('')}}main/images/target_logo.svg" width="50" height="auto" alt="" />
-			<h3>Target bonus 3</h3>
+			<h3>Extended Referral</h3>
 			<div class="text__content">
-				<p>
-					BONUS 6 MH/s (1$)<br><br>
-					We are excited to announce the launch of our new Bonus Program on the MintBit cryptocurrency mining platform! Now you can earn additional bonuses for your activity on social media.
+				<p>Extended Referral Bonuses<br><br>
+				Your Referrals: Earn 30% of their daily returns.
+Their Referrals: Earn 10% of their daily returns.
+And Theirs: Earn 2.5% of their daily returns.
+And Theirs: Earn 2.5% of their daily returns.
+And Theirs: Earn 2.5% of their daily returns.
                     <br><br>
 				    Click to learn more!
 				</p>
@@ -413,10 +410,9 @@
 			<img src="{{asset('')}}main/images/target_logo.svg" width="50" height="auto" alt="" />
 			<h3>Target bonus 4</h3>
 			<div class="text__content">
-				<p>
-					Guaranteed and Free Bonus +$3
+				<p>Unlimited Width
 					<br><br>
-                    We are pleased to announce the launch of a new and exciting Bonus Program on our MintBit cryptocurrency mining platform! Starting from today, every participant on our platform has the opportunity to earn additional bonuses by inviting new users and making them active members of our community.
+                    Your leadership bonuses are not limited to a specific number of referrals. You can build your network as wide as you wish, and you will continue to earn from each referral's daily returns.
 					<br><br>
 				    Click to learn more!
 				</p>
@@ -448,11 +444,11 @@
 			<h3>Target bonus 5</h3>
 			<div class="text__content">
 				<p>
-					📣 Promotional materials - double bonus! 🚀
+					📣 Additional Bonus 🚀
 					<br><br>
-                    Place our banners and get a double bonus! 💰💰
+                    Additional Bonus 💰💰
                     <br><br>
-                    You can find all banners by logging into your account and going to the `Affiliate Program` page and clicking on the `Promo material` button
+                    Earn an additional $2 from the daily returns of even further levels of referrals, ensuring continuous growth and earnings.
 					<br><br>
 				    Click to learn more!
 				</p>
@@ -476,7 +472,7 @@
 					<div class="bg__style lzy_bg affiliate__item" data-image="{{asset('')}}main/images/affilate_bgtest.png">
 						<h3 class="affiliate__name">Referral levels</h3>
 						<p class="affiliate__subname">
-							We are excited to introduce our innovative Аffiliate program that consists of three levels, providing generous rewards.
+							We are excited to introduce our innovative Аffiliate program that consists of SIX levels, providing generous rewards.
 
 						</p>
 						<div class="affiliate__swiper swiper-container">
@@ -485,8 +481,8 @@
 									<div class="affiliate__slide bg__style lzy_bl"
 										data-image="{{asset('')}}main/images/affilate_slide_bg.jpg">
 										<p class="affiliate__level">1 level</p>
-										<p class="affiliate__percent">5<span>%</span></p>
-										<p style="font-size: 16px;color: #7e7ee2;border-radius: 25px;height: 24px;display: flex;align-items: center;padding-bottom: 10px;width: max-content;margin: 0 auto; font-weight: 700;">+$3 for referral deposit</p>
+										<p class="affiliate__percent">30<span>%</span></p>
+										<p style="font-size: 16px;color: #7e7ee2;border-radius: 25px;height: 24px;display: flex;align-items: center;padding-bottom: 10px;width: max-content;margin: 0 auto; font-weight: 700;">Earn $100 fron your DIrect referrals</p>
 										<button class="affiliate__invite">Invite</button>
 									</div>
 								</div>
@@ -494,7 +490,7 @@
 									<div class="affiliate__slide bg__style lzy_bl"
 										data-image="{{asset('')}}main/images/affilate_slide_bg.jpg">
 										<p class="affiliate__level">2 level</p>
-										<p class="affiliate__percent" style="margin: 10px;">3<span>%</span></p>
+										<p class="affiliate__percent" style="margin: 10px;">10<span>%</span></p>
 										<button class="affiliate__invite">Invite</button>
 									</div>
 								</div>
@@ -502,7 +498,7 @@
 									<div class="affiliate__slide bg__style lzy_bl"
 										data-image="{{asset('')}}main/images/affilate_slide_bg.jpg">
 										<p class="affiliate__level">3 level</p>
-										<p class="affiliate__percent" style="margin: 10px;">1<span>%</span></p>
+										<p class="affiliate__percent" style="margin: 10px;">2.5<span>%</span></p>
 										<button class="affiliate__invite">Invite</button>
 									</div>
 								</div>
@@ -517,7 +513,7 @@
 				
 				    $(".affiliate__invite").click( function(e) {
 				        
-    					                            window.location.href = "/signup";
+    					                            window.location.href = "/register";
     					    				        
 				    });
 				
@@ -558,7 +554,7 @@
 
 
 		
-<section class="calculate lzy_bg_container" id="calculator">
+<!-- <section class="calculate lzy_bg_container" id="calculator">
 	<div class="container">
 		<div class="calculate__bg">
 			<img src="{{asset('')}}main/images/calc_left.svg" alt="" />
@@ -581,10 +577,10 @@
 						<button class="chose__btn open_currency">
 							<img class="selected_icon" src="http://127.0.0.1:8000/main/images/usdt.png" alt="">
 							<span class="selected_name">usdt</span>
-							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 								<path d="M4.4705 11.9339C5.33917 8.23067 8.23068 5.33916 11.9339 4.4705C14.6083 3.84317 17.3917 3.84317 20.0661 4.4705C23.7693 5.33916 26.6608 8.23068 27.5295 11.9339C28.1568 14.6083 28.1568 17.3917 27.5295 20.0661C26.6608 23.7693 23.7693 26.6608 20.0661 27.5295C17.3917 28.1568 14.6083 28.1568 11.9339 27.5295C8.23068 26.6608 5.33917 23.7693 4.4705 20.0661C3.84317 17.3917 3.84317 14.6083 4.4705 11.9339Z" stroke="#7E7EE2" stroke-width="2"></path>
 								<path d="M19.3334 14.6667L16.0001 18L12.6667 14.6667" stroke="#7E7EE2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-							</svg> -->
+							</svg>
 						</button>
 					</div>
 				</div>
@@ -769,7 +765,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 
 

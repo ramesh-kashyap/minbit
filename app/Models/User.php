@@ -62,6 +62,7 @@ class User extends Authenticatable
     public function buy_fundAmt(){
         return $this->hasMany('App\Models\CoinpaymentTransaction','buyer_name','username')->where('status','>=',1);
     }
+   
 
 
 
@@ -89,8 +90,15 @@ class User extends Authenticatable
         
     public function level_bonus()
     {
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Level Income');
+    } 
+
+          
+    public function direct_bonus()
+    {
         return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Direct Income');
     } 
+      
       
     public function trading_profit()
     {
@@ -167,7 +175,7 @@ class User extends Authenticatable
 
     public function withdraw()
     {
-        return  Withdraw::where('user_id',Auth::user()->id)->where('status','!=','Failed')->sum('amount');
+        return  Withdraw::where('user_id',Auth::user()->id)->where('status','Approved')->sum('amount');
     } 
     public function withdrawPrinciple()
     {

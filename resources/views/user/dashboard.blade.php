@@ -66,7 +66,7 @@
                 {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
-                <p>All money earned</p>
+                <p>Investment</p>
                 <p>{{ currency() }}
                 {{ number_format(Auth::user()->investment->sum('amount'), 2) }}</p>
             </div>
@@ -78,14 +78,14 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Total referrals</p>
+                <p>Level Income</p>
                 <p>{{ currency() }}
-                {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
+                {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
-                <p>All money earned</p>
+                <p>Direct Income</p>
                 <p>{{ currency() }}
-                {{ number_format(Auth::user()->investment->sum('amount'), 2) }}</p>
+                {{ number_format(Auth::user()->direct_bonus->sum('amount'), 2) }}</p>
             </div>
         </div>
     </div>
@@ -99,13 +99,13 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Total referrals</p>
+                <p>Withdraw</p>
                 <p>{{ currency() }}
-                {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}</p>
+                {{ number_format(Auth::user()->withdrawal->sum('comm'), 2) }}</p>
             </div>
             <div class="statistick__item">
-                <p>All money earned</p>
-                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
+                <p>Direct User</p>
+                <p> {{(Auth::user()->user_direct)->sum('sponsor') }}</p>
             </div>
         </div>
     </div>

@@ -195,21 +195,22 @@ public function reinvest(Request $request)
 
         $balance = round($user->available_balance(), 2);
 
-        // Check if the user has enough available balance
+       
+        if ($user->TPSR !== $request->transaction_id) {
+          $notify[] = ['error', 'Transaction ID not correct'];
+          return redirect()->route('user.re_invest')->withNotify($notify)->withInput();
+       
+      }
         if ($balance < $request->amount) {
             $notify[] = ['error', 'Insufficient balance.'];
             return redirect()->route('user.re_invest')->withNotify($notify)->withInput();
         }
-        if ($request->transaction_id != $user->tpassword) {
-          return redirect()->route('user.re_invest')->withErrors('Transaction ID does not match your transaction password.')->withInput();
-      }
 
         $plan = "1";
 
         $user_detail = User::where('username', $user->username)->orderBy('id','desc')->limit(1)->first();
         $invest_check = Investment::where('user_id', $user_detail->id)->where('status', '!=', 'Decline')->orderBy('id', 'desc')->limit(1)->first();
         $invoice = substr(str_shuffle("0123456789"), 0, 7);
-
         if ($balance >= $request->amount) {
             $data = [
                 'plan' => $plan,
@@ -226,15 +227,12 @@ public function reinvest(Request $request)
 
             $payment = Investment::insert($data);
 
-            // Deduct the amount from the user's available balance
-
-
-            // Call the add_level_income function
             
 
             $notify[] = ['success', 'Deposit request submitted successfully'];
             return redirect()->route('user.re_invest')->withNotify($notify);
         }
+
 
     } catch (\Exception $e) {
         Log::info('error here');

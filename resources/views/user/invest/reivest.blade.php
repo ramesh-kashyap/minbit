@@ -11,11 +11,10 @@
     }
 
     .alert {
-        display: none;
         margin-top: 20px;
         padding: 10px;
         color: #fff;
-        background-color: #f44336; /* Red */
+        background-color: ; /* Red */
         border-radius: 4px;
     }
 
@@ -38,7 +37,7 @@
     $hideType = App\Models\GeneralSetting::where('id', 1)->value('hide_type');
 @endphp
 
-@if ($hideType == 0)
+@if ($hideType == 1)
     <div class="alert alert-info">
         Deposit is closed.
     </div>
@@ -192,17 +191,6 @@
         form.submit();
     });
 </script>
-<!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var currentTime = new Date();
-            var currentHour = currentTime.getHours();
 
-            if (currentHour >= 12) {
-                document.getElementById('invest-form').classList.add('hidden');
-                document.getElementById('no-invest-message').style.display = 'block';
-            } else {
-                document.getElementById('invest-form').classList.remove('hidden');
-                document.getElementById('no-invest-message').style.display = 'none';
-            }
-        });
-    </script> -->
+
+

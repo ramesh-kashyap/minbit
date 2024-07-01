@@ -29,6 +29,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/update-setting', [App\Http\Controllers\Cron::class, 'tradeAmt'])->name('update-setting');
 Route::get('/generate_roi', [App\Http\Controllers\Cron::class, 'generate_roi'])->name('generate_roi');
 Route::get('/rank-update', [App\Http\Controllers\Cron::class, 'rank_update'])->name('rank-update');
 Route::get('/reward_bonus', [App\Http\Controllers\Cron::class, 'reward_bonus'])->name('reward_bonus');
@@ -108,7 +109,7 @@ Route::any('/SubmitBuyFund', [App\Http\Controllers\UserPanel\AddFund::class, 'Su
 
 // invest
 Route::get('/re-invest', [App\Http\Controllers\UserPanel\Invest::class, 'invest_view'])->name('user.re_invest');
-Route::post('/re-invest', [App\Http\Controllers\UserPanel\Invest::class, 'reinvest'])->name('user.reinvest');
+Route::post('/submit-re-invest', [App\Http\Controllers\UserPanel\Invest::class, 'reinvest'])->name('user.reinvest');
 
 Route::get('/invest', [App\Http\Controllers\UserPanel\Invest::class, 'index'])->name('user.invest');
 Route::get('/my_deposit', [App\Http\Controllers\UserPanel\Invest::class, 'my_deposit'])->name('user.my_deposit');

@@ -88,6 +88,9 @@
         </div>
         
     </div>
+</div>
+
+
     <div class="dashboard_content">
 					<!-- <div class="title__row d-flex align-items-center justify-content-between mb_50">
 						<h2>Referral levels</h2>
@@ -143,8 +146,8 @@
                     </p>
                     <p class="coins__item coins__item_income">
                         <span class="coins__item_name">Status</span>
-                        <span class="portfolio_visible" style="">{{ $value->status }}<span></span></span>
-                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●● </span></span>
+                        <span class="portfolio_visible" style="">{{$value->status}}<span></span></span>
+                        <span class="portfolio_hidden" style="display: none;"> $●●●.<span>●●</span></span>
                     </p>
                 </div>
                 @endforeach

@@ -539,6 +539,8 @@
                                     </p>
                                 </div>
                             </div>
+
+                            
                             <div class="user__info d-none d-md-flex">
                                 <div class="icon">
                                     <img src="{{ asset('') }}main/images/icon_balance_dashboard.svg"

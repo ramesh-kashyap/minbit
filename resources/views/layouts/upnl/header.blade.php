@@ -322,12 +322,32 @@
                                     Setting
                                 </a>
                             </li>
+                            <li>
+                                <a>
+                                    <button onclick="document.getElementById('logout-form').submit();" class="exit_btn open__popup" data-popup="exit" style="padding: 0;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path class="stroke_hover"
+                                                d="M3.35288 8.95043C4.00437 6.17301 6.17301 4.00437 8.95043 3.35288C10.9563 2.88237 13.0437 2.88237 15.0496 3.35288C17.827 4.00437 19.9956 6.17301 20.6471 8.95044C21.1176 10.9563 21.1176 13.0437 20.6471 15.0496C19.9956 17.827 17.827 19.9956 15.0496 20.6471C13.0437 21.1176 10.9563 21.1176 8.95044 20.6471C6.17301 19.9956 4.00437 17.827 3.35288 15.0496C2.88237 13.0437 2.88237 10.9563 3.35288 8.95043Z"
+                                                stroke="#8B8B9D" stroke-width="1.5" stroke-linejoin="round"></path>
+                                            <path class="stroke_hover"
+                                                d="M12 7.83891C10.5637 7.83891 9.39932 9.00327 9.39932 10.4396C9.39932 11.3416 9.85851 12.1363 10.5559 12.6028L9.84196 14.7993C9.62349 15.4714 10.1245 16.1611 10.8313 16.1611H13.1687C13.8755 16.1611 14.3765 15.4714 14.158 14.7993L13.4441 12.6028C14.1415 12.1363 14.6007 11.3416 14.6007 10.4396C14.6007 9.00327 13.4363 7.83891 12 7.83891Z"
+                                                stroke="#8B8B9D" stroke-width="1.5" stroke-linejoin="round"></path>
+                                        </svg>
+
+                                        Logout
+                                    </button>
+                                </a>
+                            </li>
+                            
+                            
                           
                             <div class="dashboard_content">
     <!-- Other content -->
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
+    
     <button onclick="document.getElementById('logout-form').submit();" class="logout-btn">Logout</button>
 </div>
 
@@ -340,9 +360,9 @@
                                         src="{{ asset('') }}main/images/promo/MB-300.gif" alt=""
                                         style="height: 104%;width: 104%;margin: -2%;"></a>
                             </li>
-                            <li>
-                                <a href="/logout">
-                                    <button class="exit_btn open__popup" data-popup="exit" style="padding: 0;">
+                            <!-- <li>
+                                <a>
+                                    <button onclick="document.getElementById('logout-form').submit();" class="exit_btn open__popup" data-popup="exit" style="padding: 0;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
                                             <path class="stroke_hover"
@@ -356,7 +376,7 @@
                                         Exit
                                     </button>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -516,7 +536,7 @@
                         <h1 class="main__header__text" id="withdraw_text">Withdraw</h1>
                         <h1 class="main__header__text" id="affilate_text">Affiliate Program</h1>
                         <div class="col-auto ms-auto d-none d-lg-flex align-items-center">
-                            <div class="user__info d-none d-md-flex">
+                            <!-- <div class="user__info d-none d-md-flex">
                                 <div class="icon">
                                     <img src="{{ asset('') }}main/images/icon_profit_dashboard.svg"
                                         alt="">
@@ -526,8 +546,8 @@
                                     <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}
                                     </p>
                                 </div>
-                            </div>
-                            <div class="user__info d-none d-md-flex">
+                            </div> -->
+                            <!-- <div class="user__info d-none d-md-flex">
                                 <div class="icon">
                                     <img src="{{ asset('') }}main/images/icon_mining_dashboard.svg"
                                         alt="">
@@ -552,7 +572,7 @@
                                         {{ number_format(Auth::user()->investment->sum('amount'), 2) }}
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="user__info d-none d-md-flex">
                                 <div class="icon">
                                     <img src="{{ asset('') }}main/images/icon_user_dashboard.svg"

@@ -3,10 +3,10 @@
 
 
 
-<div class="social-right">
+<!-- <div class="social-right">
     <a href="https://t.me/mintbit_support" target="_blank"><i></i></a>
     <a href="https://t.me/+N0PipUltKz5lMDIy" target="_blank"><i></i></a>
-</div>
+</div> -->
 
 <style>
 

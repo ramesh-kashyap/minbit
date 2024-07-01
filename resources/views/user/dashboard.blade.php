@@ -128,7 +128,7 @@
 </div>
 <div class="levels row mb_40">
 
-
+<!-- 
 <div class="col-12 col-lg-6 mb_20">
     <div class="levels__item levels__item_statistick d-flex flex-column">
 
@@ -162,7 +162,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
 
 </body>
 

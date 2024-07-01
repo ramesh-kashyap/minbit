@@ -14,9 +14,9 @@
 
         .mining__item {
             height: 300px;
-            /* Increase height */
+            / Increase height /
             margin-right: 20px;
-            /* Horizontal gap */
+            / Horizontal gap /
             background-color: #f5f5f5;
             padding: 20px;
             box-sizing: border-box;
@@ -26,7 +26,7 @@
 
         .mining__item:last-child {
             margin-right: 0;
-            /* Remove margin from the last item */
+            / Remove margin from the last item /
         }
 
         .mining__percent,
@@ -46,7 +46,7 @@
 
         .mining__item {
             margin-bottom: 20px;
-            /* Add some space between the items */
+            / Add some space between the items /
         }
 
     </style>
@@ -91,6 +91,7 @@
     </div>
 </div>
 </div>
+<div class="levels row mb_40">
 
 
 <div class="col-12 col-lg-6 mb_20">

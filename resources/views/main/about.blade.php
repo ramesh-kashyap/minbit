@@ -33,22 +33,22 @@
 			<div class="col-lg-7 col-xl-6">
 				<div class="text__content mb_30">
                     <p>
-                        We are proud to introduce MintBit - the leading mining platform based on the use of incredibly powerful, energy-efficient, and highly reliable Bitmain Antminer L7 8800 M (8.8Gh) ASIC miners. This device represents the pinnacle of technological progress in the world of cryptocurrency mining.
+					Welcome to Vanguard Elite, a pioneering platform in the multilevel marketing industry, dedicated to fostering financial independence and entrepreneurial success. Our company was founded on the core values of integrity, innovation, and community support. We aim to create a thriving environment where individuals are empowered to achieve their dreams and build sustainable businesses.
                     </p>  
                     <p>                        
-                        What makes MintBit special?
+                        What makes Vanguard Elite special?
                     </p>  
                     <p>                       
-                        ASIC Bitmain Antminer L7 8800 M (8.8Gh): We utilize miners equipped with a specially designed chip from Bitmain, ensuring efficient energy consumption and stable operation thanks to the APW12 stabilizer. This allows us to provide maximum performance and profitability for all our users. Our ASIC miners have low power consumption of 3300W, enabling their economical and productive use. The devices are also equipped with a large number of coolers for efficient cooling and stable operation.
+					At Vanguard Elite, we understand the power of collective effort and the importance of each member's contribution to the overall success of our network. Our platform provides comprehensive training programs, state-of-the-art marketing tools, and a transparent, tiered commission structure designed to reward your hard work and dedication at every level.
                     </p>  
                     <p>                        
                         Daily profitability: Our platform offers a unique opportunity to earn from 1% to 2% daily thanks to the reliable operation of our equipment and favorable conditions. The platform is located on one of the coasts of Spain, where the cost of electricity is available at an advantageous price, making cryptocurrency mining accessible.
                     </p>  
-                    <p>                        
-                        Transparency through live streaming: We provide our users with the unique opportunity to monitor the operation of our equipment in real-time through live streaming. This ensures maximum transparency and your trust in the platform.
+                    <!-- <p>                        
+					We believe that true success is achieved through mutual growth and support. Our dedicated support team is always ready to assist you, ensuring you have all the resources you need to excel. Whether you're a seasoned network marketer or just starting out, Vanguard Elite offers unparalleled opportunities to grow your income and realize your goals.
                     </p>  
                     <p>                        
-                        Flexible referral system: We have developed an excellent referral system with many settings, allowing users to adapt it to their needs and desires.
+					Join Vanguard Elite today and become part of a family that celebrates your achievements and supports your growth. Together, we can reach new heights of success and create a brighter future for all our members.
                     </p>  
                     <p>                        
                         Convenient profit calculator: Our platform is equipped with a calculator that allows users to easily calculate their daily profit and forecast potential profitability.
@@ -61,17 +61,17 @@
                     </p>  
                     <p>                        
                         Join MintBit today and start earning with us! We offer the best equipment for the best people, and our goal is to help you achieve financial independence and success in the world of cryptocurrencies.
-					</p>
-					<p>                 
+					</p> -->
+					<!-- <p>                 
 					    Muelle Espigón Sureste, Acceso a Darsena de Escombreras, s/n, 30350 Escombreras, Murcia, Spain 
 					    <br>
                         +34967312912
                         <br>
-                        <a href="/cdn-cgi/l/email-protection#dcafa9acacb3aea89cb1bdb5b0f2b1b5b2a8beb5a8f2bfb3"><span class="__cf_email__" data-cfemail="a0d3d5d0d0cfd2d4e0cdc1c9cc8ecdc9ced4c2c9d48ec3cf">[email&#160;protected]</span></a>  
-                    </p>
+                        <a href=""><span class="__cf_email__" data-cfemail="a0d3d5d0d0cfd2d4e0cdc1c9cc8ecdc9ced4c2c9d48ec3cf">[email&#160;protected]</span></a>  
+                    </p> -->
 				</div>
 				<div class="about__social">
-					<a href="https://facebook.com/profile.php/?id=61557032113574&name=xhp_nt__fb__action__open_user" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M7.5 18.8706C3.25 18.1206 0 14.4206 0 9.97058C0 5.02058 4.05 0.970581 9 0.970581C13.95 0.970581 18 5.02058 18 9.97058C18 14.4206 14.75 18.1206 10.5 18.8706L10 18.4706H8L7.5 18.8706Z"
@@ -88,7 +88,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://twitter.com/MintBit_co" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M11.6849 8.59958L18.3869 0.970581H16.7993L10.9775 7.59338L6.3311 0.970581H0.970703L7.9985 10.9864L0.970703 18.9856H2.5583L8.7023 11.9902L13.6103 18.9856H18.9707M3.1313 2.14298H5.5703L16.7981 17.8708H14.3585"
@@ -102,7 +102,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://instagram.com/mintbit.co.official/" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M9.00005 2.5922C11.4031 2.5922 11.6878 2.60138 12.6368 2.64468C13.5143 2.68469 13.9909 2.83131 14.308 2.95456C14.7281 3.11783 15.0279 3.31286 15.3428 3.62778C15.6578 3.94273 15.8528 4.24254 16.0161 4.66264C16.1393 4.97977 16.2859 5.45632 16.326 6.33381C16.3693 7.28282 16.3784 7.56748 16.3784 9.97056C16.3784 12.3737 16.3693 12.6583 16.326 13.6074C16.2859 14.4848 16.1393 14.9614 16.0161 15.2785C15.8528 15.6986 15.6578 15.9984 15.3429 16.3133C15.0279 16.6283 14.7281 16.8233 14.308 16.9866C13.9909 17.1099 13.5143 17.2565 12.6368 17.2965C11.6879 17.3398 11.4033 17.349 9.00005 17.349C6.59675 17.349 6.31215 17.3398 5.36325 17.2965C4.48575 17.2565 4.00921 17.1099 3.69207 16.9866C3.27197 16.8233 2.97216 16.6283 2.65724 16.3133C2.34232 15.9984 2.14726 15.6986 1.98399 15.2785C1.86074 14.9614 1.71412 14.4848 1.67411 13.6074C1.63081 12.6583 1.62162 12.3737 1.62162 9.97056C1.62162 7.56748 1.63081 7.28282 1.67411 6.33381C1.71412 5.45632 1.86074 4.97977 1.98399 4.66264C2.14726 4.24254 2.34228 3.94273 2.65724 3.62781C2.97216 3.31286 3.27197 3.11783 3.69207 2.95456C4.00921 2.83131 4.48575 2.68469 5.36325 2.64468C6.31226 2.60138 6.59692 2.5922 9.00005 2.5922ZM9.00005 0.970581C6.55577 0.970581 6.24928 0.980941 5.28933 1.02474C4.33138 1.06843 3.67714 1.22059 3.10467 1.44305C2.51284 1.67305 2.01093 1.98079 1.51055 2.48113C1.01021 2.9815 0.702474 3.48341 0.472508 4.07524C0.250008 4.64771 0.0978526 5.30195 0.0541601 6.25989C0.0103604 7.21984 0 7.52633 0 9.97056C0 12.4148 0.0103604 12.7213 0.0541601 13.6813C0.0978526 14.6392 0.250008 15.2935 0.472508 15.8659C0.702474 16.4578 1.01021 16.9597 1.51055 17.46C2.01093 17.9604 2.51284 18.2681 3.10467 18.4981C3.67714 18.7206 4.33138 18.8727 5.28933 18.9164C6.24928 18.9602 6.55577 18.9706 9.00005 18.9706C11.4443 18.9706 11.7508 18.9602 12.7107 18.9164C13.6687 18.8727 14.3229 18.7206 14.8954 18.4981C15.4872 18.2681 15.9891 17.9604 16.4895 17.46C16.9898 16.9597 17.2976 16.4578 17.5276 15.8659C17.75 15.2935 17.9022 14.6392 17.9459 13.6813C17.9897 12.7213 18.0001 12.4148 18.0001 9.97056C18.0001 7.52633 17.9897 7.21984 17.9459 6.25989C17.9022 5.30195 17.75 4.64771 17.5276 4.07524C17.2976 3.48341 16.9898 2.9815 16.4895 2.48113C15.9891 1.98079 15.4872 1.67305 14.8954 1.44305C14.3229 1.22059 13.6687 1.06843 12.7107 1.02474C11.7508 0.980941 11.4443 0.970581 9.00005 0.970581Z"
@@ -122,7 +122,7 @@
 								stroke="#272443" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
-					<a href="https://t.me/+N0PipUltKz5lMDIy" target="_blank" rel="noopener noreferrer">
+					<a href="" target="_blank" rel="noopener noreferrer">
 						<svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M2.42401 8.71954C8.32957 6.17934 12.2675 4.50469 14.2379 3.69558C19.8637 1.3854 21.0327 0.984102 21.7947 0.97071C21.9622 0.967936 22.3369 1.00894 22.5797 1.20338C22.7846 1.36755 22.841 1.58934 22.868 1.745C22.895 1.90066 22.9286 2.25525 22.9018 2.53232C22.597 5.69477 21.2778 13.3692 20.6067 16.9112C20.3228 18.41 19.7636 18.9125 19.2223 18.9617C18.0459 19.0685 17.1526 18.1941 16.0132 17.4567C14.2302 16.3029 13.2229 15.5846 11.4923 14.4586C9.4922 13.1574 10.7888 12.4422 11.9286 11.2734C12.2269 10.9675 17.4102 6.31293 17.5105 5.89069C17.5231 5.83788 17.5347 5.64103 17.4163 5.53709C17.2978 5.43315 17.123 5.4687 16.9968 5.49697C16.818 5.53703 13.9697 7.39568 8.45197 11.0729C7.64349 11.621 6.9112 11.888 6.25509 11.874C5.53178 11.8586 4.14042 11.4703 3.10609 11.1383C1.83745 10.7312 0.829151 10.5159 0.916951 9.8245C0.962682 9.46435 1.46503 9.09603 2.42401 8.71954Z"

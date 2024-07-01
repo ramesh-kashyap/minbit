@@ -27,7 +27,7 @@
 
         <h1 class="video_page__title text_center">Affiliate Program</h1>
         <p class="mx-auto video_page__subtitle text_center">
-          New MintBit Аffiliate Program: Profit Levels Turning Connections into Monetary Opportunities
+          New Vantguard Аffiliate Program: Profit Levels Turning Connections into Monetary Opportunities
         </p>
 </section>
 
@@ -37,29 +37,29 @@
 			<div class="col-lg-7 col-xl-6">
 				<div class="text__content mb_30">
                     <p>
-                        We are excited to introduce our new and innovative Аffiliate program that opens unique opportunities for all our users. Our program consists of three levels, providing generous rewards for inviting new users and creating long-term relationships.
+                    At Vanguard Elite, our structured, multi-tiered system is designed to maximize your earning potential and reward your dedication at every level.
                     </p>
                     <p>
                         Level 1: First-Level Аffiliate
                     </p>
                     <p>
-                        At this level, you invite new users who become your first-level referrals. By inviting a new participant and ensuring they are active (making a minimum deposit), you will receive a guaranteed $3 bonus and an additional 5% of their deposit amount. This means your profit grows proportionally with each active first-level referral.
+                     Starting with the Direct Referral Bonus, you earn a substantial 30% bonus on the daily returns of your direct referrals, providing an immediate and significant income stream. As your network grows, so do your earnings. When your direct referrals bring in their own network, you receive a 10% bonus on the daily returns of these second-level referrals, promoting a collaborative effort to expand your network.
                     </p>
                     <p>
                         Level 2: Second-Level Аffiliate
                     </p>
                     <p>
-                        At the second level, you earn a reward of +3% of the deposit amount of second-level referrals invited by your first-level referrals. This is an additional opportunity to increase your profit and expand your referral network.
+                    Our compensation plan extends further, offering a 2.5% bonus on the daily returns of your third, fourth, and fifth-level referrals. This deep network bonus ensures continuous income growth as your network deepens. Beyond the fifth level, an additional $2 bonus from the daily returns of further referrals highlights our commitment to unlimited earning potential. Our unlimited width policy allows you to have as many direct referrals as you wish, significantly enhancing your income opportunities
                     </p>
                     <p>
                         Level 3: Third-Level Аffiliate
                     </p>
                     <p>
-                        At the third level, you receive 1% of the deposit amount of third-level referrals invited by your second-level referrals. Even at this level, you continue to earn additional profit without extra effort.
+                    By advancing through these levels, you unlock a world of financial possibilities. Vanguard Elite's multi-tiered system is designed to reward your leadership, foster network growth, and provide you with sustainable, long-term income. Join us today and start climbing the levels of success!
                     </p>
-                    <p>
+                    <!-- <p>
                         Don't miss the chance to turn your connections into a source of additional income with the new MintBit referral program. Join us today and start earning even more together with us!
-                    </p>
+                    </p> -->
 				</div>
 			</div>
 			<div class="col-lg-5 col-xl-6 pos_rel order-1 order-lg-0">
@@ -68,10 +68,10 @@
 					<div class="col-4 col-sm-4 col-md-4 about_slider_height level_height">
                         <div class="level_text_head">
                             <div class="level_name">
-                                Level 1
+                                Level 3+
                             </div>
                             <div class="level_prc">
-                                5%
+                                2.5%
                             </div>
 						</div>
 						<div class="level_color" id="column3"style="height: 185px;">
@@ -84,7 +84,7 @@
                                 Level 2
                             </div>
                             <div class="level_prc">
-                                3%
+                                10%
                             </div>
 						</div>
 						<div class="level_color" id="column3"style="height: 225px;">
@@ -94,10 +94,10 @@
 					<div class="col-4 col-sm-4 col-md-4 about_slider_height level_height">
                         <div class="level_text_head">
                             <div class="level_name">
-                                Level 3
+                                Level 1
                             </div>
                             <div class="level_prc">
-                                1%
+                                30%
                             </div>
 						</div>
 						<div  class="level_color" id="column3"style="height: 265px;">

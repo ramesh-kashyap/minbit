@@ -42,7 +42,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">I WANT TO LEARN MORE ABOUT MINTBIT COMPANY.<img
+                        <p class="faq__qwestion" data-accordion="title">I WANT TO LEARN MORE ABOUT VANGUARD ELITE COMPANY.<img
                                 src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">
@@ -53,7 +53,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">HOW MUCH CAN I EARN ON THE MINTBIT PLATFORM?<img
+                        <p class="faq__qwestion" data-accordion="title">HOW MUCH CAN I EARN ON THE VANGUARD ELITE PLATFORM?<img
                                 src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">
@@ -75,7 +75,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">WHAT IS THE MINING LEVEL SYSTEM ON THE MINTBIT
+                        <p class="faq__qwestion" data-accordion="title">WHAT IS THE MINING LEVEL SYSTEM ON THE VANGUARD ELITE
                             PLATFORM?<img src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">
@@ -86,7 +86,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">HOW CAN I EARN ON THE MINTBIT PLATFORM?<img
+                        <p class="faq__qwestion" data-accordion="title">HOW CAN I EARN ON THE VANGUARD ELITE PLATFORM?<img
                                 src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">
@@ -141,7 +141,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">IS THERE AN AFFILIATE PROGRAM ON THE MINTBIT
+                        <p class="faq__qwestion" data-accordion="title">IS THERE AN AFFILIATE PROGRAM ON THE VANGUARD ELITE
                             PLATFORM?<img src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">
@@ -164,7 +164,7 @@
                 <div class="faq__item pos_rel">
                     <div class="faq__wrap" data-accordion="item">
                         <div class="faq_item_icon"><img src="{{asset('')}}main/images/faq_item_icon.svg" alt=""></div>
-                        <p class="faq__qwestion" data-accordion="title">WHICH CURRENCIES DOES THE MINTBIT PLATFORM
+                        <p class="faq__qwestion" data-accordion="title">WHICH CURRENCIES DOES THE VANGUARD ELITE PLATFORM
                             SUPPORT?<img src="{{asset('')}}main/images/faq_qwestion_icon.svg" alt=""></p>
                         <div class="faq__answer" data-accordion="text"
                             style="opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease 0s;">

@@ -14,7 +14,7 @@
         margin-top: 20px;
         padding: 10px;
         color: #fff;
-        background-color: ; /* Red */
+        background-color: #dfdfff; /* Red */
         border-radius: 4px;
     }
 
@@ -37,7 +37,7 @@
     $hideType = App\Models\GeneralSetting::where('id', 1)->value('hide_type');
 @endphp
 
-@if ($hideType == 1)
+@if ($hideType == 0)
     <div class="alert alert-info">
         Deposit is closed.
     </div>

@@ -14,7 +14,7 @@
         margin-top: 20px;
         padding: 10px;
         color: #fff;
-        background-color: ; /* Red */
+        background-color: #dfdfff   ; /* Red */
         border-radius: 4px;
     }
 

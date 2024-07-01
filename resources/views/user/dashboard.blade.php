@@ -61,12 +61,11 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Roi Income</p>
-                <p>{{ currency() }}
-                {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
+                <p>Available Balance</p>
+                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
             </div>
             <div class="statistick__item">
-                <p>Investment</p>
+                <p>Total Deposit</p>
                 <p>{{ currency() }}
                 {{ number_format(Auth::user()->investment->sum('amount'), 2) }}</p>
             </div>
@@ -78,14 +77,14 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
+                <p>Daily Profit</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->dailyIncentive->sum('comm'), 2) }}</p>
+            </div>
+            <div class="statistick__item">
                 <p>Level Income</p>
                 <p>{{ currency() }}
                 {{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}</p>
-            </div>
-            <div class="statistick__item">
-                <p>Direct Income</p>
-                <p>{{ currency() }}
-                {{ number_format(Auth::user()->direct_bonus->sum('amount'), 2) }}</p>
             </div>
         </div>
     </div>
@@ -99,13 +98,13 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Withdraw</p>
-                <p>{{ currency() }}
-                {{ number_format(Auth::user()->withdrawal->sum('comm'), 2) }}</p>
+            <p>Total referrals</p>
+            <p>{{$user_direct}}
+            </p>
             </div>
             <div class="statistick__item">
-                <p>Direct User</p>
-                <p> {{(Auth::user()->user_direct)->sum('sponsor') }}</p>
+                <p>Direct Team</p>
+                <p> {{$total_team}}</p>
             </div>
         </div>
     </div>
@@ -115,12 +114,13 @@
 
         <div class="statistick__items d-flex justify-content-center align-items-center">
             <div class="statistick__item">
-                <p>Total referrals</p>
-                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
+                <p>Total Earned</p>
+                <p>{{ currency() }} {{ number_format(Auth::user()->users_incomes(), 2) }}</p>
             </div>
             <div class="statistick__item">
-                <p>All money earned</p>
-                <p>{{ currency() }} {{ number_format(Auth::user()->available_balance(), 2) }}</p>
+                <p>Total Withdraw</p>
+                <p>{{ currency() }}
+                {{ number_format(Auth::user()->withdrawal->sum('comm'), 2) }}</p>
             </div>
         </div>
     </div>

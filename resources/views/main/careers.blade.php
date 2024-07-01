@@ -58,7 +58,7 @@
                     By advancing through these levels, you unlock a world of financial possibilities. Vanguard Elite's multi-tiered system is designed to reward your leadership, foster network growth, and provide you with sustainable, long-term income. Join us today and start climbing the levels of success!
                     </p>
                     <!-- <p>
-                        Don't miss the chance to turn your connections into a source of additional income with the new MintBit referral program. Join us today and start earning even more together with us!
+                        Don't miss the chance to turn your connections into a source of additional income with the new VANGUARD ELITE referral program. Join us today and start earning even more together with us!
                     </p> -->
 				</div>
 			</div>

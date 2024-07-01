@@ -101,12 +101,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#10131a">
     <meta property="og:title"
-        content="MINTBIT - cloud mining service. Our platform provides remote equipment for cryptocurrency mining. Start earning on mining without the need to purchase and purchase ">
+        content="VANGUARD ELITE - cloud mining service. Our platform provides remote equipment for cryptocurrency mining. Start earning on mining without the need to purchase and purchase ">
     <meta property="og:description"
-        content="MINTBIT - cloud mining service. Our platform provides remote equipment for cryptocurrency mining. Start earning on mining without the need to purchase and purchase ">
-    <meta property="og:url" content="MINTBIT">
+        content="VANGUARD ELITE - cloud mining service. Our platform provides remote equipment for cryptocurrency mining. Start earning on mining without the need to purchase and purchase ">
+    <meta property="og:url" content="VANGUARD ELITE">
     <meta property="og:image" content="{{ asset('') }}main/images/social.png">
-    <meta property="og:site_name" content="MINTBIT">
+    <meta property="og:site_name" content="VANGUARD ELITE">
     <meta property="og:locale" content="en_EN">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

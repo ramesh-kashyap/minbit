@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-xl-7 d-flex justify-content-lg-end justify-content-center">
-				<img src="{{asset('')}}main/images/head_img.png" class="offer__img" width="643" alt="MintBit.io" />
+				<img src="{{asset('')}}main/images/head_img.png" class="offer__img" width="643" alt="VANGUARD ELITE.io" />
 			</div>
 		</div>
 	</div>
@@ -311,15 +311,15 @@
 		</p>
 		<div class="benefits__info text_center" id="benefits__info1"
 		
-		data-text="We are pleased to announce the launch of a new Bonus program on the MintBit cryptocurrency mining platform! You can now earn bonuses by creating informative videos about MintBit and making them available to everyone!
+		data-text="We are pleased to announce the launch of a new Bonus program on the VANGUARD ELITE cryptocurrency mining platform! You can now earn bonuses by creating informative videos about VANGUARD ELITE and making them available to everyone!
 
-            To become a member of the Bonus Program, you need to create a review video about MintBit that is at least 5 minutes long and publish it on your YouTube channel. In this video, you should inform new users about the benefits of the platform and explain why MintBit is the best choice for cryptocurrency mining.
+            To become a member of the Bonus Program, you need to create a review video about VANGUARD ELITE that is at least 5 minutes long and publish it on your YouTube channel. In this video, you should inform new users about the benefits of the platform and explain why VANGUARD ELITE is the best choice for cryptocurrency mining.
             
-            You must include your referral link in the video description, which you can find in your personal account on the MintBit website. After publishing the video, send the link to our support team. Only one video per week is allowed.
+            You must include your referral link in the video description, which you can find in your personal account on the VANGUARD ELITE website. After publishing the video, send the link to our support team. Only one video per week is allowed.
             
             As soon as our operator processes your link, you will automatically receive a bonus of 30MH/s ($5) credited to your account! This is a great opportunity not only to share your experience with others, but also to receive additional income. This bonus can only be received once a week.
             
-            Join the MintBit Rewards Program now and start earning bonuses for informational videos! Don't miss your chance to become part of our friendly and profitable community.
+            Join the VANGUARD ELITE Rewards Program now and start earning bonuses for informational videos! Don't miss your chance to become part of our friendly and profitable community.
 		
 		";
 		
@@ -338,17 +338,17 @@ As a leader in our network, you'll receive a daily leadership bonus from your te
 		</div>
 		<div class="benefits__info text_center" id="benefits__info2"
 		
-		data-text="We are excited to announce the launch of a new and engaging Bonus Program on the MintBit cryptocurrency mining platform! Now you have a unique opportunity to earn additional bonuses simply by creating a topic on the forum and actively participating in it. BONUS 20 MH/s  = $3.5
+		data-text="We are excited to announce the launch of a new and engaging Bonus Program on the VANGUARD ELITE cryptocurrency mining platform! Now you have a unique opportunity to earn additional bonuses simply by creating a topic on the forum and actively participating in it. BONUS 20 MH/s  = $3.5
             
-            To participate in the Bonus Program, create a new topic on forum dedicated to discussing the MintBit platform and its features. Your topic should be informative, interesting, and engaging for other forum participants.
+            To participate in the Bonus Program, create a new topic on forum dedicated to discussing the VANGUARD ELITE platform and its features. Your topic should be informative, interesting, and engaging for other forum participants.
             
-            Actively engage in discussions within your topic, answer questions from other participants, share your experience and knowledge about MintBit. The more you interact with other participants, the more chances you have to earn additional bonuses!
+            Actively engage in discussions within your topic, answer questions from other participants, share your experience and knowledge about VANGUARD ELITE. The more you interact with other participants, the more chances you have to earn additional bonuses!
             
-            Your topic must include your referral link to the MintBit platform. This is necessary to confirm your identity and credit bonuses.
+            Your topic must include your referral link to the VANGUARD ELITE platform. This is necessary to confirm your identity and credit bonuses.
             
             Once you have created a topic on the forum and actively participated in it, send us the link to your topic to our technical support. Once our operator processes your link, you will automatically receive a bonus credited to your balance 20 Mh/s  = $3.5 ! This bonus can only be received once a week.
             
-            Join the MintBit Bonus Program now and start earning additional bonuses for active participation on the forum! Don't miss your chance to become part of our friendly and profitable community.
+            Join the VANGUARD ELITE Bonus Program now and start earning additional bonuses for active participation on the forum! Don't miss your chance to become part of our friendly and profitable community.
 
 		
 		";
@@ -367,13 +367,13 @@ As a leader in our network, you'll receive a daily leadership bonus from your te
 
 		<div class="benefits__info text_center" id="benefits__info3"
 		
-		data-text="We are excited to announce the launch of our new Bonus Program on the MintBit cryptocurrency mining platform! Now you can earn additional bonuses for your activity on social media. BONUS 6 MH/s = 1$
+		data-text="We are excited to announce the launch of our new Bonus Program on the VANGUARD ELITE cryptocurrency mining platform! Now you can earn additional bonuses for your activity on social media. BONUS 6 MH/s = 1$
 
             Participating in the Bonus Program is very simple. You just need to follow our official account on social media platforms, and then regularly post our news and retweet our messages.
             
             The more active you are on social media, the more bonuses you can earn! Each of your posts and retweets will be evaluated and rewarded.
             
-            Don't miss the chance to earn extra bonuses for your activity on social media! Join our Bonus Program now and start earning even more with MintBit!
+            Don't miss the chance to earn extra bonuses for your activity on social media! Join our Bonus Program now and start earning even more with VANGUARD ELITE!
             
             Stay tuned for our news on social media and participate in the Bonus Program today!
 		
@@ -397,13 +397,13 @@ And Theirs: Earn 2.5% of their daily returns.
 		
 		data-text="Guaranteed and Free Bonus +$3
             		
-            We are pleased to announce the launch of a new and exciting Bonus Program on our MintBit cryptocurrency mining platform! Starting from today, every participant on our platform has the opportunity to earn additional bonuses by inviting new users and making them active members of our community.
+            We are pleased to announce the launch of a new and exciting Bonus Program on our VANGUARD ELITE cryptocurrency mining platform! Starting from today, every participant on our platform has the opportunity to earn additional bonuses by inviting new users and making them active members of our community.
             
             One of the key advantages of our Bonus Program is a guaranteed bonus of +$3 for each active first-level referral. To become an active referral, a new participant must make a minimum deposit on the platform. After that, as the inviting member, you will receive +$3. This means that your profit will proportionally increase with each active first-level referral you invite.
             
             We aim to make the process of earning from cryptocurrency mining even more accessible and attractive for our participants. Therefore, our Bonus Program is designed with the interests and needs of each user in mind.
             
-            Don't miss the opportunity to increase your profit and become part of our successful team! Join the MintBit Bonus Program right now and start earning more with us!
+            Don't miss the opportunity to increase your profit and become part of our successful team! Join the VANGUARD ELITE Bonus Program right now and start earning more with us!
 
 		
 		";>
@@ -429,12 +429,12 @@ And Theirs: Earn 2.5% of their daily returns.
         
         👉👉👉 The conditions are simple:
         
-        1️⃣. Place the MintBit.co platform banner on any platforms you will receive a bonus of 30Mh/s ($5).💰💰💰
+        1️⃣. Place the VANGUARD ELITE.co platform banner on any platforms you will receive a bonus of 30Mh/s ($5).💰💰💰
         
         2️⃣.You are guaranteed to receive +$3 for each active referral who registers using your referral link from the banner and makes a minimum deposit.💰💰💰
         
         
-        To receive a bonus, simply send a link to the resource where you placed the banner to our technical support in telegram <a href='https://t.me/mintbit_support'>https://t.me/mintbit_support</a>
+        To receive a bonus, simply send a link to the resource where you placed the banner to our technical support in telegram <a href='https://t.me/VANGUARD ELITE_support'>https://t.me/VANGUARD ELITE_support</a>
         
         Don't miss a great chance to double your profits.✅✅✅
 
@@ -567,7 +567,7 @@ And Theirs: Earn 2.5% of their daily returns.
 		<p class="fz_14 text_center calculate__subname">
             In the Profit Calculator, you can select a cryptocurrency from the list, enter the desired investment amount in that currency, and specify the number of days for which you want to calculate your profit. Immediately after that, you will receive the ready result on your screen - simply and quickly!
             <br>
-            This tool will help you make informed decisions about your investments by providing you with accurate data on potential profits. We aim to make your experience on the MintBit platform even more transparent and profitable.
+            This tool will help you make informed decisions about your investments by providing you with accurate data on potential profits. We aim to make your experience on the VANGUARD ELITE platform even more transparent and profitable.
 		</p>
 		<div class="calculate__wrap">
 			<div class="calculate__top row">
